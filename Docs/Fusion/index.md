@@ -21,3 +21,13 @@ Globetrotter Fusion is:
 * **Simple**: Cut down development and turnaround time through the use of modern, supported data interchange formats.
 
 The API is intended for use by technical system integrators who wish to connect their organisation's analytics, CRM, HR or operations platforms to Globetrotter. If you would prefer to see predefined charts and reports, you can access Globetrotter Insight instead. Contact your Client Relationship Manager (CRM) to get an account for Globetrotter Insight.
+
+# Endpoints
+
+The following endpoints are available:
+
+- [Bookings](Bookings.md)
+- [Itineraries](Itineraries.md)
+- [Invoices](Invoices.md)
+- [Unused Tickets](UnusedTickets.md)
+- [Traveller Location](TravellerLocation.md)
