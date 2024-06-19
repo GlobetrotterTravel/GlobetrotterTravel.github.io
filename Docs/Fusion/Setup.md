@@ -12,7 +12,7 @@ https://fusion.globetrotter.com.au/api/v1/invoices?query=totalAmount^GT1000;depa
 
 # Transport Layer Security
 
-Fusion enforces TLS 1.2 for all API communication. Unencrypted transactions are not supported.
+Fusion uses TLS 1.3 with fallback to TLS 1.2 for all API communication. Unencrypted transactions are not supported.
 
 # Organisational scope
 
