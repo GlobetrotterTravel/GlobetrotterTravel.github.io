@@ -22,6 +22,39 @@ Globetrotter Fusion is:
 
 The API is intended for use by technical system integrators who wish to connect their organisation's analytics, CRM, HR or operations platforms to Globetrotter. If you would prefer to see predefined charts and reports, you can access Globetrotter Insight instead. Contact your Client Relationship Manager (CRM) to get an account for Globetrotter Insight.
 
+# Getting an account for Globetrotter Fusion
+
+Your CRM can organise an account to access Globetrotter Fusion. Please contact them to begin a free trial account.
+
+# Getting help
+
+We've worked hard to make the Globetrotter Fusion integration experience as simple as possible. While this guide should answer most of your questions, the Globetrotter IT team is also available to assist you.
+
+We can be contacted:
+
+| | |
+|---|---|
+|By Phone|+61 9442 0150
+|By Email|itsupport@globetrotter.com.au|
+
+# Document conventions
+
+The following conventions are used in this guide.
+
+> **🛈 Notes are denoted by the information icon, and provide tips and reminders that assist with using Fusion.**
+
+> **⚠ Warnings are denoted by the alert icon. These notices should be read carefully. Failure to follow warning advice can result in security issues, data compromise or data loss.**
+
+Keys, fields, values and other items that are displayed on screen are denoted like `this`.
+
+Examples and URLs are denoted in fixed width type
+
+````html
+like this.
+````
+
+The term *field* is used generally to refer to an individual piece of information, whereas *key* refers to a specific item within a JSON document.
+
 # Endpoints
 
 The following endpoints are available:
