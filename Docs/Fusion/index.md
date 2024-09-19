@@ -64,3 +64,11 @@ The following endpoints are available:
 - [Invoices](Invoices.md)
 - [Unused Tickets](UnusedTickets.md)
 - [Traveller Location](TravellerLocation.md)
+
+# Jump to
+
+[Setting up your client](Setup.md)
+[Certificate Authentication](CertificateAuthentication.md)
+[Pre-Shared Key Authentication](PSKAuthentication.md)
+[The query engine](QueryEngine.md)
+[Fusion Swagger Documentation](Swagger.md)
