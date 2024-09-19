@@ -75,4 +75,6 @@ The following endpoints are available:
 
 [The query engine](QueryEngine.md)
 
+[Pagination](Pagination.md)
+
 [Fusion Swagger Documentation](Swagger.md)
