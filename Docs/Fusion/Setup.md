@@ -31,3 +31,7 @@ GET https://fusion.globetrotter.com.au/api/v1/invoices
 ````
 
 Versioning the API allows continual improvement of Fusion without introducing breaking changes. The previous version of a particular endpoint is supported for 12 months from the release of the next version of that endpoint, or 60 days after the last access of the previous version, whichever comes first. After this time, the endpoint is removed.
+
+# Cache and refresh
+
+Fusion's cache refreshes every ten minutes. If you receive a `503 Temporarily Unavailable` error message it means that Fusion's cache is not ready to serve your records yet. Please try again in a few minutes.
