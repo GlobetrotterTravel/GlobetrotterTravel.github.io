@@ -66,11 +66,11 @@ The term *field* is used generally to refer to an individual piece of informatio
 
 The following endpoints are available:
 
-- [Bookings](Bookings.md)
-- [Itineraries](Itineraries.md)
-- [Invoices](Invoices.md)
-- [Unused Tickets](UnusedTickets.md)
-- [Traveller Location](TravellerLocation.md)
+- [Bookings](Endpoints/Bookings.md)
+- [Itineraries](Endpoints/Itineraries.md)
+- [Invoices](Endpoints/Invoices.md)
+- [Unused Tickets](Endpoints/UnusedTickets.md)
+- [Traveller Location](Endpoints/TravellerLocation.md)
 
 # Jump to
 
