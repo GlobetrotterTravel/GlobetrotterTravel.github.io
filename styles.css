@@ -1,0 +1,148 @@
+/* General Styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f3f3f3;
+    color: #333;
+}
+
+/* Navbar Styles */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #3F4444; /* Secondary Color */
+    padding: 10px 20px;
+    color: white;
+}
+
+.navbar .logo h1 {
+    margin: 0;
+    font-weight: bold;
+    font-family: Georgia, 'Times New Roman', Times, serif; /* Header Font */
+}
+
+.navbar nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar nav ul li {
+    margin-left: 20px;
+}
+
+.navbar nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: opacity 0.3s;
+}
+
+.navbar nav ul li a:hover {
+    opacity: 0.7;
+}
+
+/* Header Content */
+.header-content {
+    text-align: center;
+    padding: 60px 20px;
+    background-color: #68D2DF; /* Primary Color */
+    color: #3F4444; /* Secondary Color for text contrast */
+}
+
+.header-content h2 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    font-family: Georgia, 'Times New Roman', Times, serif; /* Header Font */
+    font-weight: bold;
+}
+
+.header-content p {
+    font-size: 1.2em;
+}
+
+/* Main Content */
+main {
+    padding: 40px 20px;
+}
+
+.card-section {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.system-card {
+    background-color: white;
+    border-radius: 6px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    margin: 20px;
+    padding: 30px;
+    width: 300px;
+    text-align: center;
+    transition: box-shadow 0.3s;
+}
+
+.system-card:hover {
+    box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+}
+
+.system-card h3 {
+    font-size: 1.5em;
+    margin-top: 0;
+    color: #3F4444; /* Secondary Color */
+    font-family: Georgia, 'Times New Roman', Times, serif; /* Header Font */
+    font-weight: bold;
+}
+
+.system-card p {
+    font-size: 1em;
+    color: #555;
+}
+
+.system-card .btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 24px;
+    background-color: #68D2DF; /* Primary Color */
+    color: #3F4444; /* Secondary Color for text contrast */
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.system-card .btn:hover {
+    background-color: #56a4af; /* Darker shade of Primary Color */
+}
+
+/* Footer Styles */
+footer {
+    background-color: #3F4444; /* Secondary Color */
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+}
+
+footer p {
+    margin: 0;
+    font-size: 0.9em;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .navbar nav ul li {
+        margin-left: 10px;
+    }
+
+    .header-content h2 {
+        font-size: 2em;
+    }
+
+    .system-card {
+        width: 100%;
+        max-width: 400px;
+    }
+}

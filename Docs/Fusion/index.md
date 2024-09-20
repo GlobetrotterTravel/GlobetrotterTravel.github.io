@@ -1,4 +1,5 @@
 # Welcome to Globetrotter Fusion
+
 Globetrotter Fusion is Globetrotter's client-facing REST API platform.
 
 Use Globetrotter Fusion to easily query your data to gain even more insight into your travel programme. Access your information on-demand, 24 hours a day with no limitations.
@@ -21,6 +22,12 @@ Globetrotter Fusion is:
 * **Simple**: Cut down development and turnaround time through the use of modern, supported data interchange formats.
 
 The API is intended for use by technical system integrators who wish to connect their organisation's analytics, CRM, HR or operations platforms to Globetrotter. If you would prefer to see predefined charts and reports, you can access Globetrotter Insight instead. Contact your Client Relationship Manager (CRM) to get an account for Globetrotter Insight.
+
+Globetrotter Fusion is copyright (c) 2020-2024 Globetrotter. All rights reserved.
+
+## Document version
+
+This guide was last updated in September 2024.
 
 # Getting an account for Globetrotter Fusion
 
@@ -67,7 +74,7 @@ The following endpoints are available:
 
 # Jump to
 
-[Setting up your client](Setup.md)
+[Getting ready to use Fusion](Setup.md)
 
 [Certificate Authentication](CertificateAuthentication.md)
 
@@ -77,4 +84,10 @@ The following endpoints are available:
 
 [Pagination](Pagination.md)
 
-[Fusion Swagger Documentation](Swagger.md)
+[Fusion Swagger Documentation](Swagger/index.html)
+
+<div style="display: flex; justify-content: space-between; width:100%;">
+  <div style="text-align:left;"></div>
+  <div style="text-align:center;"><a href="index.md">Home</a></div>
+  <div style="text-align:right;"><a href="Setup.md">Getting ready to use Fusion &rarr;</a></div>
+</div>

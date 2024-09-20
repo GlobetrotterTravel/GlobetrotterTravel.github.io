@@ -1,10 +1,10 @@
-# The Query Engine
+# Fusion Query Engine User Guide
 
 The query engine interprets a query string provided to an endpoint and returns documents matching that search query. All endpoints support query engine searches.
 
 ## Overview
 
-Queries are appended to API endpoints using the `query` parameter in the URL. The query string consists of one or more clauses that define the filtering criteria. Each clause specifies a property, an operator, and a value.
+Queries are appended to API endpoints using the `?query` parameter in the URL. The query string consists of one or more clauses that define the filtering criteria. Each clause specifies a property, an operator, and a value.
 
 ## Query Format
 
@@ -20,7 +20,7 @@ Multiple clauses can be combined by separating them with semicolons (`;`):
 Property1^Operator1Value1;Property2^Operator2Value2;...
 ```
 
-- **Property**: The name of the data field to filter.
+- **Property**: The name of the data field to filter (case-insensitive).
 - **Operator**: The operation to perform for filtering.
 - **Value**: The value to compare against the property.
 
@@ -28,158 +28,208 @@ Property1^Operator1Value1;Property2^Operator2Value2;...
 
 The following operators are supported for constructing queries:
 
-- `^EQ`: Equal to
-- `^NE`: Not equal to
-- `^GT`: Greater than
-- `^LT`: Less than
-- `^GE`: Greater than or equal to
-- `^LE`: Less than or equal to
-- `^IN`: In a list of values
-- `^NI`: Not in a list of values
-- `^CT`: Contains (substring match)
+| Query Operator | Description                            | Applies to Types                |
+|----------------|----------------------------------------|---------------------------------|
+| `^EQ`          | Equal to                               | String, Numeric, Date, Boolean* |
+| `^NE`          | Not equal to                           | String, Numeric, Date, Boolean* |
+| `^GT`          | Greater than                           | Numeric, Date                   |
+| `^LT`          | Less than                              | Numeric, Date                   |
+| `^GE`          | Greater than or equal to               | Numeric, Date                   |
+| `^LE`          | Less than or equal to                  | Numeric, Date                   |
+| `^IN`          | In comma-separated list (inclusive)    | String, Numeric, Date           |
+| `^NI`          | Not in comma-separated list (exclusive)| String, Numeric, Date           |
+| `^CT`          | Contains string                        | String                          |
 
-### Operator Descriptions
+\* Boolean arguments can be specified as either `true`/`false` or `1`/`0`.
 
-- **Equal To (`^EQ`)**: Matches records where the property is equal to the specified value.
+## Limitations
 
-  ```
-  ?query=recordLocator^EQABC123
-  ```
+The query engine has the following general limitations:
 
-- **Not Equal To (`^NE`)**: Matches records where the property is not equal to the specified value.
+- **Semicolons in Values**: Semicolons are interpreted as clause separators. If a value contains a semicolon, it must be URL-encoded.
+- **No OR Queries**: Queries are additive and combined using logical AND. OR queries are not supported.
+- **Nested Properties**: Searching on properties within nested objects or arrays (e.g., `Travellers`, `LineItems`, `Segments`) is not supported. Only top-level properties of the DTOs can be queried.
 
-  ```
-  ?query=costCentre^NEExCo
-  ```
+## Specifying the query parameter
 
-- **Greater Than (`^GT`)**: Matches records where the property is greater than the specified value. Applicable to numeric and date properties.
+Ensure that the `?query` parameter is specified. Unknown arguments are silently ignored, e.g.
 
-  ```
-  ?query=totalAirDistance^GT1000
-  ```
+<pre><code>GET https://fusion.globetrotter.com.au/api/v1/itineraries<span style="color:red; font-weight:bold;">?query=</span>TripStartLocal^GT2023-09-01</code></pre>
 
-- **Less Than (`^LT`)**: Matches records where the property is less than the specified value. Applicable to numeric and date properties.
+is correct, whereas
 
-  ```
-  ?query=totalAirDistance^LT1000
-  ```
+```
+GET https://fusion.globetrotter.com.au/api/v1/itineraries?TripStartLocal^GT2023-09-01
+```
 
-- **Greater Than or Equal To (`^GE`)**: Matches records where the property is greater than or equal to the specified value. Applicable to numeric and date properties.
-
-  ```
-  ?query=Score^GE85
-  ```
-
-- **Less Than or Equal To (`^LE`)**: Matches records where the property is less than or equal to the specified value. Applicable to numeric and date properties.
-
-  ```
-  ?query=Date^LE2023-12-31
-  ```
-
-- **In List (`^IN`)**: Matches records where the property is equal to any value in a comma-separated list. Comparison is case-insensitive.
-
-  ```
-  ?query=department^INExCo,Operations
-  ```
-
-- **Not In List (`^NI`)**: Matches records where the property is not equal to any value in a comma-separated list. Comparison is case-insensitive.
-
-  ```
-  ?query=department^NIExCo,Operations
-  ```
-
-- **Contains (`^CT`)**: Matches records where the property contains the specified substring. Comparison is case-insensitive.
-
-  ```
-  ?query=CustomData1^CTEXT12
-  ```
+lacks the `?query` parameter and will therefore just return all itineraries.
 
 ## Value Specifications
 
 - **Strings**: Should be provided as-is. For special characters or spaces, URL encoding may be required.
 
   ```
-  ?query=Name^EQJohn%20Doe
+  GET https://fusion.globetrotter.com.au/api/v1/bookings?query=ClientNumber^EQ12345
   ```
 
 - **Numbers**: Should be provided without quotes or formatting.
 
   ```
-  ?query=Age^GT30
+  GET https://fusion.globetrotter.com.au/api/v1/invoices?query=TotalAmount^GT1000
   ```
 
-- **Dates**: Should be provided in a standard date format (e.g., `YYYY-MM-DD`). Only the date component is considered; time is ignored.
+- **Dates**: Should be provided in the format `YYYY-MM-DD`. Only the date component is considered; time is ignored.
 
   ```
-  ?query=StartDate^GE2023-01-01
+  GET https://fusion.globetrotter.com.au/api/v1/itineraries?query=BookingDate^GE2023-01-01
   ```
 
 - **Null Values**: To filter for `null` values, use the keyword `null` (case-insensitive).
 
   ```
-  ?query=EndDate^EQnull
+  GET https://fusion.globetrotter.com.au/api/v1/bookings?query=AuthorisedBy^EQnull
   ```
+
+- **Booleans**: Specify as `true`, `false`, `1`, or `0`.
+
+  ```
+  GET https://fusion.globetrotter.com.au/api/v1/bookings?query=IsInternational^EQtrue
+  ```
+
+## Operator Descriptions with Examples
+
+### Equal To (`^EQ`)
+
+Matches records where the property is equal to the specified value.
+
+**Example**: Retrieve all bookings with a specific `ClientNumber`.
+
+```
+GET https://fusion.globetrotter.com.au/api/v1/bookings?query=ClientNumber^EQ12345
+```
+
+### Not Equal To (`^NE`)
+
+Matches records where the property is not equal to the specified value.
+
+**Example**: Retrieve all invoices not associated with `ClientNumber` 12345.
+
+```
+GET https://fusion.globetrotter.com.au/api/v1/invoices?query=ClientNumber^NE12345
+```
+
+### Greater Than (`^GT`)
+
+Matches records where the property is greater than the specified value (numeric or date).
+
+**Example**: Retrieve all invoices with a `TotalAmount` greater than 1,000.
+
+```
+GET https://fusion.globetrotter.com.au/api/v1/invoices?query=TotalAmount^GT1000
+```
+
+### Less Than (`^LT`)
+
+Matches records where the property is less than the specified value (numeric or date).
+
+**Example**: Retrieve all itineraries booked before January 1, 2023.
+
+```
+GET https://fusion.globetrotter.com.au/api/v1/itineraries?query=BookingDate^LT2023-01-01
+```
+
+### Greater Than or Equal To (`^GE`)
+
+Matches records where the property is greater than or equal to the specified value.
+
+**Example**: Retrieve all bookings modified on or after July 1, 2023.
+
+```
+GET https://fusion.globetrotter.com.au/api/v1/bookings?query=ModifiedDateTime^GE2023-07-01
+```
+
+### Less Than or Equal To (`^LE`)
+
+Matches records where the property is less than or equal to the specified value.
+
+**Example**: Retrieve all invoices with a `BalanceAmount` less than or equal to zero.
+
+```
+GET https://fusion.globetrotter.com.au/api/v1/invoices?query=BalanceAmount^LE0
+```
+
+### In List (`^IN`)
+
+Matches records where the property is equal to any value in a comma-separated list (case-insensitive).
+
+**Example**: Retrieve all bookings made by specific agencies.
+
+```
+GET https://fusion.globetrotter.com.au/api/v1/bookings?query=OriginatingAgency^INAgencyA,AgencyB
+```
+
+### Not In List (`^NI`)
+
+Matches records where the property is not equal to any value in a comma-separated list (case-insensitive).
+
+**Example**: Retrieve all itineraries not associated with certain departments.
+
+```
+GET https://fusion.globetrotter.com.au/api/v1/itineraries?query=Department^NIHR,Finance
+```
+
+### Contains (`^CT`)
+
+Matches records where the property contains the specified substring (case-insensitive).
+
+**Example**: Retrieve all bookings where `Traveller` contains "Smith".
+
+```
+GET https://fusion.globetrotter.com.au/api/v1/bookings?query=Traveller^CTSmith
+```
 
 ## Combining Multiple Clauses
 
-Multiple clauses can be combined to create complex queries. Clauses are evaluated using an implicit logical AND, meaning that all conditions must be met for a record to be included in the results.
+Multiple clauses can be combined to create complex queries. Clauses are evaluated using an implicit logical AND.
+
+**Example**: Retrieve all international bookings that are ticketed.
 
 ```
-?query=Status^EQActive;Age^GT25;Department^INHR,Finance
+GET https://fusion.globetrotter.com.au/api/v1/bookings?query=IsInternational^EQtrue;IsTicketed^EQtrue
 ```
 
-This query filters records where:
+**Example**: Retrieve all invoices for `ClientNumber` 12345 with a `TotalAmount` greater than 1,000.
 
-- `Status` is equal to `Active`.
-- `Age` is greater than `25`.
-- `Department` is either `HR` or `Finance`.
+```
+GET https://fusion.globetrotter.com.au/api/v1/invoices?query=ClientNumber^EQ12345;TotalAmount^GT1000
+```
 
 ## Case Sensitivity
 
-- Property names are case-insensitive.
-- String values are compared in a case-insensitive manner for all operators.
-- The `^CT` (Contains) operator performs a case-insensitive substring search.
+- **Property Names**: Case-insensitive.
+- **String Values**: Compared in a case-insensitive manner for all operators.
+- **`^CT` Operator**: Performs a case-insensitive substring search.
 
 ## Handling Special Characters
 
-When values contain special characters (e.g., spaces, commas, semicolons), URL encoding must be used to ensure proper parsing of the query string.
+When values contain special characters (e.g., spaces, commas, semicolons), URL encoding must be used.
 
 - Space: `%20`
 - Comma: `%2C`
 - Semicolon: `%3B`
 - Caret (`^`): `%5E`
 
-Example:
+**Example**: Retrieve bookings with `AuthorisedBy` equal to "John Doe".
 
 ```
-?query=Department^EQMinistry%20Of%20Silly%20Walks
+GET https://fusion.globetrotter.com.au/api/v1/bookings?query=AuthorisedBy^EQJohn%20Doe
 ```
-
-## Data Type Considerations
-
-- **Numeric Comparisons**: Operators such as `^GT`, `^LT`, `^GE`, and `^LE` require numeric or date values. If a non-numeric value is provided, an error will occur.
-
-  ```
-  ?query=Price^GT199.99
-  ```
-
-- **Date Comparisons**: Date strings should be in a recognizable format (e.g., `YYYY-MM-DD`). Only the date component is compared, not the time.
-
-  ```
-  ?query=OrderDate^LE2023-06-30
-  ```
-
-- **String Comparisons**: For operators like `^EQ`, `^NE`, `^IN`, `^NI`, and `^CT`, values are treated as strings.
-
-  ```
-  ?query=Status^EQPending
-  ```
 
 ## Error Handling
 
 Invalid queries will result in error messages indicating the issue. Common errors include:
 
-- **Missing Operator**: Occurs when a caret (`^`) operator is not provided between the property and value.
+- **Missing Operator**: Occurs when the operator is not provided.
 
   ```
   Error: "Invalid query format: Missing operator."
@@ -194,119 +244,170 @@ Invalid queries will result in error messages indicating the issue. Common error
 - **Null or Empty Value**: Occurs when a value is not provided after the operator.
 
   ```
-  Error: "Invalid query format: Argument for property 'Age' is null or empty."
+  Error: "Invalid query format: Argument for property 'ClientNumber' is null or empty."
   ```
 
 - **Invalid Numeric or Date Value**: Occurs when a non-numeric value is used with a numeric operator.
 
   ```
-  Error: "Invalid query format: Expected numeric or date value for operator '^GT' on property 'Age', but got 'abc'."
+  Error: "Invalid query format: Expected numeric or date value for operator '^GT' on property 'TotalAmount', but got 'abc'."
   ```
 
 - **Unknown Property**: Occurs when the specified property does not exist in the data model.
 
   ```
-  Error: "Unknown search property: 'InvalidProperty' not found on type Employee."
+  Error: "Unknown search property: 'InvalidProperty' not found on type BookingGetDtoV1."
   ```
 
 ## Examples
 
-### Example 1: Filtering by Exact Match
+### Example 1: Filtering Bookings by Client Number
 
-Retrieve all records where the `Status` is `Active`.
-
-```
-?query=Status^EQActive
-```
-
-### Example 2: Filtering by Range
-
-Retrieve all records where the `Age` is between `18` and `30`.
+Retrieve all bookings for `ClientNumber` 12345.
 
 ```
-?query=Age^GE18;Age^LE30
+GET https://fusion.globetrotter.com.au/api/v1/bookings?query=ClientNumber^EQ12345
 ```
 
-### Example 3: Filtering by Inclusion in a List
+### Example 2: Filtering Invoices by Date Range
 
-Retrieve all records where the `Category` is either `Books`, `Electronics`, or `Clothing`.
-
-```
-?query=Category^INBooks,Electronics,Clothing
-```
-
-### Example 4: Filtering by Exclusion from a List
-
-Retrieve all records where the `Region` is not `North America` or `Europe`.
+Retrieve all invoices dated between January 1, 2023, and June 30, 2023.
 
 ```
-?query=Region^NINorth%20America,Europe
+GET https://fusion.globetrotter.com.au/api/v1/invoices?query=InvoiceDate^GE2023-01-01;InvoiceDate^LE2023-06-30
 ```
 
-### Example 5: Filtering by Substring Match
+### Example 3: Filtering Itineraries by Departments
 
-Retrieve all records where the `Title` contains the word `Manager`.
-
-```
-?query=Title^CTManager
-```
-
-### Example 6: Filtering by Null Values
-
-Retrieve all records where the `Supervisor` field is `null`.
+Retrieve all itineraries associated with the `Sales` or `Marketing` departments.
 
 ```
-?query=Supervisor^EQnull
+GET https://fusion.globetrotter.com.au/api/v1/itineraries?query=Department^INSales,Marketing
+```
+
+### Example 4: Filtering Bookings by International Status
+
+Retrieve all domestic (non-international) bookings.
+
+```
+GET https://fusion.globetrotter.com.au/api/v1/bookings?query=IsInternational^EQfalse
+```
+
+### Example 5: Filtering Invoices by Outstanding Balance
+
+Retrieve all invoices with an outstanding `BalanceAmount` greater than zero.
+
+```
+GET https://fusion.globetrotter.com.au/api/v1/invoices?query=BalanceAmount^GT0
+```
+
+### Example 6: Filtering Itineraries by Travel Dates
+
+Retrieve all itineraries with a `TripStartLocal` date after September 1, 2023.
+
+```
+GET https://fusion.globetrotter.com.au/api/v1/itineraries?query=TripStartLocal^GT2023-09-01
 ```
 
 ### Example 7: Combining Multiple Conditions
 
-Retrieve all active employees in the `Engineering` department over the age of `30`.
+Retrieve all ticketed bookings for `ClientNumber` 12345 where `Traveller` contains "Doe".
 
 ```
-?query=Status^EQActive;Department^EQEngineering;Age^GT30
+GET https://fusion.globetrotter.com.au/api/v1/bookings?query=ClientNumber^EQ12345;IsTicketed^EQtrue;Traveller^CTDoe
 ```
 
 ## Special Notes
 
-- **Ordering of Clauses**: The order in which clauses are specified does not affect the outcome.
+- **Ordering of Clauses**: The order of clauses does not affect the outcome.
 
   ```
-  ?query=Age^GT30;Status^EQActive
+  GET https://fusion.globetrotter.com.au/api/v1/bookings?query=IsTicketed^EQtrue;ClientNumber^EQ12345
   ```
 
   is equivalent to:
 
   ```
-  ?query=Status^EQActive;Age^GT30
+  GET https://fusion.globetrotter.com.au/api/v1/bookings?query=ClientNumber^EQ12345;IsTicketed^EQtrue
   ```
 
-- **Whitespace Handling**: Leading and trailing whitespaces in values are trimmed during processing.
+- **Date and Time Handling**: For properties of type `DateTime`, only the date component is considered during comparisons.
 
-- **Value Parsing**: The engine attempts to parse values into appropriate data types (e.g., numeric, date) based on the operator used.
+- **Whitespace Handling**: Leading and trailing whitespaces in values are trimmed.
 
-- **Time Components in Dates**: When comparing dates, the time component is disregarded. For example, `2023-07-15T14:30:00` is treated as `2023-07-15`.
+- **Nested Properties**: Cannot query nested properties such as `Travellers.Name` or `LineItems.Product`.
 
 ## Tips for Effective Querying
 
-- **Ensure Correct Data Types**: When using operators that require numeric or date values, verify that the provided values are in the correct format.
+- **Ensure that the `?query` parameter is specified**: Unknown arguments are silently ignored, e.g.
 
-- **Use URL Encoding**: Always encode special characters to prevent parsing errors.
+<pre><code>GET https://fusion.globetrotter.com.au/api/v1/itineraries<span style="color:red; font-weight:bold;">?query=</span>TripStartLocal^GT2023-09-01</code></pre>
 
-- **Test Queries**: Before deploying queries in production environments, test them to ensure they return the expected results.
+is correct, whereas
 
-- **Handle Nulls Appropriately**: Use the `null` keyword to filter for properties that are null or not null.
+```
+GET https://fusion.globetrotter.com.au/api/v1/itineraries?TripStartLocal^GT2023-09-01
+```
 
-- **Combine Clauses for Specificity**: Use multiple clauses to narrow down results and retrieve only the most relevant data.
+lacks the `?query` parameter and will therefore just return all itineraries.
+
+- **Use Correct Property Names**: Refer to the DTO definitions to ensure property names are accurate.
+
+- **Format Dates Properly**: Use the `YYYY-MM-DD` format for dates.
+
+- **Specify Booleans Correctly**: Use `true`/`false` or `1`/`0` for boolean values.
+
+- **URL Encode Special Characters**: Encode spaces, commas, and other special characters in query values.
+
+- **Test Queries**: Validate queries in a test environment before deploying.
+
+## HTTP Response Codes
+
+Fusion will return the following HTTP response codes:
+
+### 200 [OK]
+
+Indicates a successful request where records were retrieved or no records matched the query.
+
+```json
+{
+    "result": []
+}
+```
+
+### 400 [Bad Request]
+
+Occurs when the query is malformed, such as using invalid property names or operators.
+
+### 401 [Unauthorized]
+
+Occurs when authentication fails due to missing or incorrect credentials.
+
+### 404 [Not Found]
+
+Occurs when an invalid endpoint or API version is specified.
+
+### 503 [Service Unavailable]
+
+Occurs when Fusion's cache is not ready. Retry after a few minutes.
+
+### 500 [Internal Server Error]
+
+Indicates an unexpected error occurred on the server.
 
 ## Troubleshooting
 
-If unexpected results are returned or errors occur:
+- **Verify Property Names**: Ensure they match those in the DTOs.
 
-- **Check Property Names**: Verify that property names are spelled correctly and exist in the data model.
+- **Check Operators**: Use supported operators and apply them to the correct data types.
 
-- **Validate Operators**: Ensure that the correct operator is used for the intended comparison.
+- **Validate Values**: Ensure values are in the correct format for the property data type.
 
-- **Inspect Values**: Confirm that values are correctly formatted and appropriate for the operator.
+- **Encode Special Characters**: Use URL encoding for values with special characters.
 
-- **Review URL Encoding**: Make sure all special characters are properly URL-encoded.
+<!-- Styled Footer Navigation for QueryEngine.md -->
+<div style="display: flex; justify-content: space-between; width:95%; padding: 10px; background-color: #f8f8f8; border: 1px solid #ddd; border-radius: 5px; margin: 20px auto 0 auto;">
+  <div style="text-align:left;"><a href="PSKAuthentication.md" style="text-decoration:none; color:#007acc;">&larr; Pre-Shared Key Authentication</a></div>
+  <div style="text-align:center;"><a href="index.md" style="text-decoration:none; color:#007acc;">Home</a></div>
+  <div style="text-align:right;"><a href="Pagination.md" style="text-decoration:none; color:#007acc;">Pagination &rarr;</a></div>
+</div>
