@@ -86,8 +86,7 @@ The following endpoints are available:
 
 [Fusion Swagger Documentation](Swagger/index.html)
 
-<div style="display: flex; justify-content: space-between; width:100%;">
-  <div style="text-align:left;"></div>
-  <div style="text-align:center;"><a href="index.html">Home</a></div>
-  <div style="text-align:right;"><a href="Setup.html">Getting ready to use Fusion &rarr;</a></div>
+<!-- Styled Footer Navigation for Setup.md -->
+<div style="display: flex; justify-content: space-between; width:95%; padding: 10px; background-color: #f8f8f8; border: 1px solid #ddd; border-radius: 5px; margin: 20px auto 0 auto;">
+  <div style="text-align:right;"><a href="Setup.html" style="text-decoration:none; color:#007acc;">Getting ready to use Fusion &rarr;</a></div>
 </div>
