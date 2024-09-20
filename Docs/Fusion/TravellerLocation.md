@@ -1,8 +1,8 @@
 # Traveller Location endpoint
 
-The `traveller location` endpoint is designed to help you determine the current locations of your travellers based on their planned itineraries. This information is useful for safety checks, especially during natural disasters or other incidents.
+The `traveller location` endpoint is designed to help you determine the possible locations of your travellers based on their planned itineraries.
 
-The traveller location endpoints provide location data for travel segments that have been booked directly in Globetrotter's GDS, or that have been added in to an existing GDS booking ('passives'). The traveller location can only return data that has been booked by Globetrotter.
+The traveller location endpoints provide location data for travel segments that have been booked directly in Globetrotter's GDS, or that have been added in to an existing GDS booking ('passives'). The traveller location can only return data that has been booked by Globetrotter. It does not track the current whereabouts of travellers in realtime.
 
 This endpoint can be queried for the current date and time, or historical and future dates and times can be supplied.
 
@@ -25,6 +25,8 @@ The traveller location is determined in the following method:
 > **⚠ Travel that has not been booked by Globetrotter or in a Globetrotter system (e.g. Serko or Concur) will not be returned.**
 
 > **⚠ Location is based on planned segments and does not account for real-time updates such as cancellations, delays, or unscheduled stops.**
+
+> **⚠ This endpoint does not track travellers in realtime.**
 
 > **⚠ It is possible for some travellers to be listed as being in two locations at the same time when they are on a segment. This is intentional and ensures that all potential locations are covered during the segment's duration.**
 
