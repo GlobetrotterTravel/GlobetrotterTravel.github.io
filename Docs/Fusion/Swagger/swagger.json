@@ -1,0 +1,666 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "Globetrotter Fusion",
+    "version": "1.0"
+  },
+  "paths": {
+    "/api/v1/Bookings": {
+      "get": {
+        "tags": [
+          "Bookings"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/BookingGetDtoV1"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/BookingGetDtoV1"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/BookingGetDtoV1"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/Invoices": {
+      "get": {
+        "tags": [
+          "Invoices"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/InvoiceGetDtoV1"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/InvoiceGetDtoV1"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/InvoiceGetDtoV1"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/Itineraries": {
+      "get": {
+        "tags": [
+          "Itineraries"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/ItineraryGetDtoV1"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/ItineraryGetDtoV1"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/ItineraryGetDtoV1"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/TravellerLocation": {
+      "get": {
+        "tags": [
+          "TravellerLocation"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/TravellerLocationGetDtoV1"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/TravellerLocationGetDtoV1"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/TravellerLocationGetDtoV1"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/UnusedTickets": {
+      "get": {
+        "tags": [
+          "UnusedTickets"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/UnusedTicketGetDtoV1"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/UnusedTicketGetDtoV1"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/UnusedTicketGetDtoV1"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "BookingGetDtoV1": {
+        "title": "Booking",
+        "type": "object",
+        "properties": {
+          "recordLocator": {
+            "type": "string",
+            "description": "The record locator (passenger name record/PNR) of the booking",
+            "nullable": true
+          },
+          "clientNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "bookingDate": {
+            "type": "string",
+            "format": "date",
+            "nullable": true
+          },
+          "modifiedDateTime": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "isTicketed": {
+            "type": "boolean"
+          },
+          "isInternational": {
+            "type": "boolean"
+          },
+          "traveller": {
+            "type": "string",
+            "nullable": true
+          },
+          "travellers": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/BookingTravellerGetDtoV1"
+            },
+            "nullable": true
+          },
+          "department": {
+            "type": "string",
+            "nullable": true
+          },
+          "employeeId": {
+            "type": "string",
+            "nullable": true
+          },
+          "costCentre": {
+            "type": "string",
+            "nullable": true
+          },
+          "purchaseOrder": {
+            "type": "string",
+            "nullable": true
+          },
+          "bookedBy": {
+            "type": "string",
+            "nullable": true
+          },
+          "authorisedBy": {
+            "type": "string",
+            "nullable": true
+          },
+          "customData1": {
+            "type": "string",
+            "nullable": true
+          },
+          "customData2": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "BookingTravellerGetDtoV1": {
+        "title": "Booking Traveller",
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "The name of the traveller",
+            "nullable": true
+          },
+          "department": {
+            "type": "string",
+            "description": "The traveller's home department (not necessarily the department that the travel was booked for)",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "InvoiceGetDtoV1": {
+        "title": "Invoice",
+        "type": "object",
+        "properties": {
+          "invoiceNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "clientNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "clientName": {
+            "type": "string",
+            "nullable": true
+          },
+          "department": {
+            "type": "string",
+            "nullable": true
+          },
+          "invoiceDate": {
+            "type": "string",
+            "format": "date",
+            "nullable": true
+          },
+          "netAmount": {
+            "type": "number",
+            "format": "double"
+          },
+          "gstAmount": {
+            "type": "number",
+            "format": "double"
+          },
+          "totalAmount": {
+            "type": "number",
+            "format": "double"
+          },
+          "balanceAmount": {
+            "type": "number",
+            "format": "double"
+          },
+          "recordLocator": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "ItineraryGetDtoV1": {
+        "title": "Itinerary",
+        "type": "object",
+        "properties": {
+          "recordLocator": {
+            "type": "string",
+            "nullable": true
+          },
+          "clientNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "originatingAgency": {
+            "type": "string",
+            "nullable": true
+          },
+          "bookingDate": {
+            "type": "string",
+            "format": "date",
+            "nullable": true
+          },
+          "modifiedDateTime": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "isTicketed": {
+            "type": "boolean"
+          },
+          "isInternational": {
+            "type": "boolean"
+          },
+          "travellers": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/BookingTravellerGetDtoV1"
+            },
+            "nullable": true
+          },
+          "department": {
+            "type": "string",
+            "nullable": true
+          },
+          "employeeId": {
+            "type": "string",
+            "nullable": true
+          },
+          "costCentre": {
+            "type": "string",
+            "nullable": true
+          },
+          "purchaseOrder": {
+            "type": "string",
+            "nullable": true
+          },
+          "bookedBy": {
+            "type": "string",
+            "nullable": true
+          },
+          "authorisedBy": {
+            "type": "string",
+            "nullable": true
+          },
+          "customData1": {
+            "type": "string",
+            "nullable": true
+          },
+          "customData2": {
+            "type": "string",
+            "nullable": true
+          },
+          "segmentCount": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "tripStartLocal": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "tripStartUtc": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "tripEndLocal": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "tripEndUtc": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "totalAirDistance": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "totalAirDuration": {
+            "type": "string",
+            "nullable": true
+          },
+          "totalAirDurationSeconds": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "segments": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ISegment"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "TravellerLocationGetDtoV1": {
+        "title": "Traveller Location",
+        "type": "object",
+        "properties": {
+          "clientNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "recordLocator": {
+            "type": "string",
+            "nullable": true
+          },
+          "traveller": {
+            "type": "string",
+            "description": "The name of the traveller",
+            "nullable": true
+          },
+          "travellers": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/BookingTravellerGetDtoV1"
+            },
+            "description": "A list of all travellers on the booking",
+            "nullable": true
+          },
+          "segmentNumber": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "segmentType": {
+            "type": "string",
+            "nullable": true
+          },
+          "segmentReference": {
+            "type": "string",
+            "nullable": true
+          },
+          "departureDate": {
+            "type": "string",
+            "format": "date",
+            "nullable": true
+          },
+          "departureTime": {
+            "type": "string",
+            "format": "time",
+            "nullable": true
+          },
+          "departureLocationCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "departureLatitude": {
+            "type": "string",
+            "nullable": true
+          },
+          "departureLongitude": {
+            "type": "string",
+            "nullable": true
+          },
+          "arrivalDate": {
+            "type": "string",
+            "format": "date",
+            "nullable": true
+          },
+          "arrivalTime": {
+            "type": "string",
+            "format": "time",
+            "nullable": true
+          },
+          "arrivalLocationCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "arrivalLatitude": {
+            "type": "string",
+            "nullable": true
+          },
+          "arrivalLongitude": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "UnusedTicketGetDtoV1": {
+        "title": "Unused Ticket",
+        "type": "object",
+        "properties": {
+          "ticketNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "clientNumber": {
+            "type": "string",
+            "nullable": true
+          },
+          "clientName": {
+            "type": "string",
+            "nullable": true
+          },
+          "issuedDate": {
+            "type": "string",
+            "format": "date",
+            "nullable": true
+          },
+          "expiryDate": {
+            "type": "string",
+            "format": "date",
+            "nullable": true
+          },
+          "insertedDate": {
+            "type": "string",
+            "format": "date",
+            "nullable": true
+          },
+          "totalAirFare": {
+            "type": "number",
+            "format": "double"
+          },
+          "currencyCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "fareBasisCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "recordLocator": {
+            "type": "string",
+            "nullable": true
+          },
+          "airlineCode": {
+            "type": "string",
+            "nullable": true
+          },
+          "seatClass": {
+            "type": "string",
+            "nullable": true
+          },
+          "isDomesticTicket": {
+            "type": "boolean"
+          },
+          "firstName": {
+            "type": "string",
+            "nullable": true
+          },
+          "lastName": {
+            "type": "string",
+            "nullable": true
+          },
+          "departureDate": {
+            "type": "string",
+            "format": "date",
+            "nullable": true
+          },
+          "departureTime": {
+            "type": "string",
+            "format": "time",
+            "nullable": true
+          },
+          "isRefundable": {
+            "type": "boolean"
+          },
+          "status": {
+            "type": "string",
+            "nullable": true
+          },
+          "openSegments": {
+            "type": "string",
+            "nullable": true
+          },
+          "department": {
+            "type": "string",
+            "nullable": true
+          },
+          "employeeId": {
+            "type": "string",
+            "nullable": true
+          },
+          "costCentre": {
+            "type": "string",
+            "nullable": true
+          },
+          "purchaseOrder": {
+            "type": "string",
+            "nullable": true
+          },
+          "bookedBy": {
+            "type": "string",
+            "nullable": true
+          },
+          "authorisedBy": {
+            "type": "string",
+            "nullable": true
+          },
+          "customData1": {
+            "type": "string",
+            "nullable": true
+          },
+          "customData2": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  }
+}
