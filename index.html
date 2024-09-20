@@ -2,79 +2,41 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Globetrotter Service Documentation</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            margin: 0;
-            padding: 0;
-        }
-        header {
-            background-color: #2c3e50;
-            color: white;
-            padding: 10px 20px;
-            text-align: center;
-        }
-        header h1 {
-            margin: 0;
-            font-size: 2.5em;
-        }
-        .container {
-            padding: 20px;
-        }
-        .system-card {
-            background-color: white;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-            margin: 20px 0;
-            padding: 20px;
-            transition: transform 0.2s, box-shadow 0.2s;
-        }
-        .system-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
-        }
-        .system-card h2 {
-            margin-top: 0;
-        }
-        .system-card p {
-            color: #555;
-        }
-        .system-card a {
-            text-decoration: none;
-            color: #2980b9;
-            font-weight: bold;
-            transition: color 0.2s;
-        }
-        .system-card a:hover {
-            color: #1abc9c;
-        }
-        footer {
-            background-color: #2c3e50;
-            color: white;
-            text-align: center;
-            padding: 10px 0;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-        }
-    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Link to external stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- Google Fonts for Georgia -->
+    <link href="https://fonts.googleapis.com/css2?family=Georgia&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
-        <h1>Globetrotter Service Documentation</h1>
-    </header>
-    <div class="container">
-        <div class="system-card">
-            <h2>Globetrotter Fusion</h2>
-            <p>The documentation site for Globetrotter Fusion. Here, you'll find comprehensive guides and documentation to help you start working with Globetrotter Fusion as quickly as possible.</p>
-            <p><a href="https://globetrottertravel.github.io/Docs/Fusion/" target="_blank">Go to Globetrotter Fusion Documentation</a></p>
+        <div class="navbar">
+            <div class="logo">
+                <h1>Globetrotter</h1>
+            </div>
+            <nav>
+                <ul>
+                </ul>
+            </nav>
         </div>
-    </div>
+        <div class="header-content">
+            <h2>Service Documentation</h2>
+            <p>Comprehensive guides and resources for Globetrotter services.</p>
+        </div>
+    </header>
+    <main>
+        <section class="card-section">
+            <div class="system-card">
+                <h3 id="fusion">Globetrotter Fusion</h3>
+                <p>Find comprehensive guides and documentation to help you start working with Globetrotter Fusion as quickly as possible.</p>
+                <a href="https://globetrottertravel.github.io/Docs/Fusion/" target="_blank" class="btn">Go to Fusion Documentation</a>
+            </div>
+            <!-- Additional cards can be added here -->
+        </section>
+    </main>
     <footer>
-        &copy; 2024 Globetrotter. All rights reserved.
+        <p>&copy; 2024 Globetrotter. All rights reserved.</p>
     </footer>
 </body>
 </html>
