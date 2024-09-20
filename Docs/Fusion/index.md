@@ -88,6 +88,6 @@ The following endpoints are available:
 
 <div style="display: flex; justify-content: space-between; width:100%;">
   <div style="text-align:left;"></div>
-  <div style="text-align:center;"><a href="index.md">Home</a></div>
-  <div style="text-align:right;"><a href="Setup.md">Getting ready to use Fusion &rarr;</a></div>
+  <div style="text-align:center;"><a href="index.html">Home</a></div>
+  <div style="text-align:right;"><a href="Setup.html">Getting ready to use Fusion &rarr;</a></div>
 </div>

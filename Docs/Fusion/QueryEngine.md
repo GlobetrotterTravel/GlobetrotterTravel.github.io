@@ -407,7 +407,7 @@ Indicates an unexpected error occurred on the server.
 
 <!-- Styled Footer Navigation for QueryEngine.md -->
 <div style="display: flex; justify-content: space-between; width:95%; padding: 10px; background-color: #f8f8f8; border: 1px solid #ddd; border-radius: 5px; margin: 20px auto 0 auto;">
-  <div style="text-align:left;"><a href="PSKAuthentication.md" style="text-decoration:none; color:#007acc;">&larr; Pre-Shared Key Authentication</a></div>
-  <div style="text-align:center;"><a href="index.md" style="text-decoration:none; color:#007acc;">Home</a></div>
-  <div style="text-align:right;"><a href="Pagination.md" style="text-decoration:none; color:#007acc;">Pagination &rarr;</a></div>
+  <div style="text-align:left;"><a href="PSKAuthentication.html" style="text-decoration:none; color:#007acc;">&larr; Pre-Shared Key Authentication</a></div>
+  <div style="text-align:center;"><a href="index.html" style="text-decoration:none; color:#007acc;">Home</a></div>
+  <div style="text-align:right;"><a href="Pagination.html" style="text-decoration:none; color:#007acc;">Pagination &rarr;</a></div>
 </div>
