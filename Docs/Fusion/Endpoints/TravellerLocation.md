@@ -10,7 +10,7 @@ This endpoint will return raw segment data that allows querying on departure dat
 
 Segments are returned in `departureDate` ascending order.
  
-## Warnings and considerations
+## Considerations
 
 > **⚠ Travel that has not been booked by Globetrotter or in a Globetrotter system (e.g. Serko or Concur) will not be returned.**
 
