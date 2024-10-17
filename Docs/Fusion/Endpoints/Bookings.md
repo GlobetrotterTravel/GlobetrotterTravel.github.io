@@ -9,7 +9,7 @@ Bookings are returned in `bookingDate` ascending order.
 ## Warnings and considerations
 
 > **🛈** Globetrotter's policy is to place each traveller on a separate PNR, even when more than one person is travelling together.
-> 
+
 > **🛈** Custom data is at the PNR/trip level, not at segment level.
 
 > **⚠ Travel that has not been booked by Globetrotter or in a Globetrotter system (e.g. Serko or Concur) will not be returned.**
