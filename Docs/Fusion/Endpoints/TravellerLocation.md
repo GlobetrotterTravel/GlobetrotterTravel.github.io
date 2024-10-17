@@ -18,7 +18,7 @@ Segments are returned in `departureDate` ascending order.
  
 ## Considerations
 
-> **🛈** Dates and times listed are in UTC
+> **🛈** Dates and times listed are in UTC.
 
 > **🛈** This endpoint will return commercial air travel, car rental and hotel stay segments only. No other segment types are returned.
 
