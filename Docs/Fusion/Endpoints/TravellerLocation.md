@@ -20,6 +20,10 @@ Segments are returned in `departureDate` ascending order.
 
 > **🛈** Dates and times listed are in UTC
 
+> **🛈** This endpoint will return commercial air travel, car rental and hotel stay segments only. No other segment types are returned.
+
+> **🛈** Globetrotter's policy is to place each traveller on a separate PNR, even when more than one person is travelling together.
+
 > **⚠ Travel that has not been booked by Globetrotter or in a Globetrotter system (e.g. Serko or Concur) will not be returned.**
 
 > **⚠ Location is based on planned segments and does not account for real-time updates such as cancellations, delays, or unscheduled stops.**
