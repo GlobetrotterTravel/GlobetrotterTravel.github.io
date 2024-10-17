@@ -6,11 +6,19 @@ The traveller location endpoints provide location data for travel segments that 
 
 This endpoint will return raw segment data that allows querying on departure dates/times, arrival dates/times, traveller, record locator and other fields.
 
+Segments will be returned if they have any part occurring within the 60-day window from 30 days ago to 30 days from now. This means:
+
+- Segments with a departure date up to 30 days in the future are included.
+- Segments with an arrival date up to 30 days in the past are included.
+- Segments that are currently in progress, started within the last 30 days, or will start within the next 30 days are included.
+
 ## Return order
 
 Segments are returned in `departureDate` ascending order.
  
 ## Considerations
+
+> **🛈** Dates and times listed are in UTC
 
 > **⚠ Travel that has not been booked by Globetrotter or in a Globetrotter system (e.g. Serko or Concur) will not be returned.**
 
@@ -21,8 +29,6 @@ Segments are returned in `departureDate` ascending order.
 > **⚠ Some segments may not have latitude and longitude data available.**
 
 > **⚠ This endpoint should not be relied upon as the sole data provider for on-trip traveller safety. Globetrotter recommends clients use ISOS.**
-
-> **⚠ Dates and times listed are in UTC**
 
 <!-- Styled Footer Navigation for endpoints -->
 <div style="display: flex; justify-content: space-between; width:95%; padding: 10px; background-color: #f8f8f8; border: 1px solid #ddd; border-radius: 5px; margin: 20px auto 0 auto;">
