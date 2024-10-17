@@ -6,7 +6,7 @@ The `itineraries` endpoint provides one or more machine readable itineraries inc
 
 Itineraries are returned in `bookingDate` ascending order.
 
-## Warnings and considerations
+## Considerations
 
 > **🛈** This endpoint will return commercial air travel, car rental and hotel stay segments only. No other segment types are returned.
 
