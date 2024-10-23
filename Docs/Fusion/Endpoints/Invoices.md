@@ -6,7 +6,7 @@ The `invoices` endpoint provides one or more machine readable invoices, includin
 
 Invoices are returned in `invoiceDate` ascending order.
 
-## Warnings and considerations
+## Considerations
  
 > **🛈** Invoices are available on this endpoint once finalised by Globetrotter.
 

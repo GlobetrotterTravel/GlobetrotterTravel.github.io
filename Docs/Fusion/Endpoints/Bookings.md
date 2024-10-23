@@ -6,7 +6,7 @@ The `bookings` endpoint contains the trip file data for a single passenger name 
 
 Bookings are returned in `bookingDate` ascending order.
 
-## Warnings and considerations
+## Considerations
 
 > **🛈** Globetrotter's policy is to place each traveller on a separate PNR, even when more than one person is travelling together.
 
