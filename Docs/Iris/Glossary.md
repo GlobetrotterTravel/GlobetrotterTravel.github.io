@@ -1,6 +1,6 @@
 # Glossary
 
-### Jump To: [C](#canCreate) [E](#entitlement) [F](#Field) [H](#Hybrid-List) [T](#tenantAdmin) [U](#User)
+### Jump To: [C](#cancreate) [E](#entitlement) [F](#field) [H](#hybrid-list) [T](#tenantadmin) [U](#user)
 
 ## canCreate
 
