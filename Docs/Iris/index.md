@@ -9,6 +9,7 @@ Iris serves *your data your way* to `subscriber` systems, giving you the confide
 The following sections detail how to administer the different parts of Iris.
 
 - [Getting Started](Getting%20Started.html)
+- [System Journal](System%20Journal.html)
 - [Properties](Properties.html)
 - [Users, Roles and Permissions](Users,%20Roles%20and%20Permissions.html)
 - [Entities](Entities.html)

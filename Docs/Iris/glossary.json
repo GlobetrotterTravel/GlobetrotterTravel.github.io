@@ -73,7 +73,7 @@
   },
   {
     "Term": "item",
-    "Definition": ""
+    "Definition": "A key/value pair that can be selected and recorded with transactional data."
   },
   {
     "Term": "items",
@@ -81,6 +81,10 @@
   },
   {
     "Term": "permissions",
+    "Definition": ""
+  },
+  {
+    "Term": "replace items: false",
     "Definition": ""
   },
   {

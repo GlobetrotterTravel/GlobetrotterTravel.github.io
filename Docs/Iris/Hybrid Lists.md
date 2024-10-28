@@ -1,5 +1,10 @@
 # Hybrid Lists
 
+A `hybrid list` is a structured collection designed to hold categorised `items` that relate to specific `entity` types. These lists are defined globally, assigned to one or more `entity` types, and shared among all `entities` of those types. Each `hybrid list` can contain multiple categories to which global `items` are added. These `items` are then selectively available to `entities` based on their configuration.
+
+Entities can customise these lists by replacing standard `items` with their own, giving rise to the term `hybrid lists`. This customisation allows entities to maintain a mix of standard and entity-specific `items` with distinct labels and values, thus enabling flexible configurations while enforcing a standardised set of `categories` across all applicable `entities`.
+
+
 A `hybrid list` is a table of key/value pairs from which `entity` transactional data can be selectively assigned based on specific policies. `Hybrid lists` allow conformity of `item` selection across multiple `entities`, while remaining flexible for individual `entity` requirements.
 
 The `items` in `hybrid lists` are shared across all `entities` that belong to the `entity` type to which the `hybrid list` is assigned. Depending on the inclusion policy, `entities` can extend or replace these `items` on an individual basis, ensuring that a globally shared set of `items` is available for selection without the added overhead of attempting to keep multiple `entities` in sync.
@@ -65,3 +70,18 @@ Each `entity` has an inclusion policy for each defined `hybrid list` `category`.
 
 The inclusion policy has no effect when there are no `entity`-specificed `items` for a particular category. The global `item` list is returned if the `hybrid list` is enabled for that `entity`. This policy also has no effect if the `entity's` `hybrid list` flag is set to `disabled`.
 
+## Best Practices
+
+The following tips and best practices can help maximise the utility of the `hybrid list` feature.
+
+### Keep Hybrid Lists Focused
+
+Ensure each `hybrid list` is focused on a single use case. The purpose of the list should be clear from its name and the `categories` it includes.
+
+### Items Should Be Mutually Exclusive and Collectively Exhaustive
+
+`Items` should be distinct, without overlapping purposes, and collectively cover most scenarios. This principle ensures no gaps or overlaps in the items.
+
+### Keep the List of Standard Items Small
+
+Standard `items` should cover most use cases for most `entities`. For entities with special requirements, add their items to the appropriate category and set the replacement behavior to `replace items: false`. This approach ensures entities have the most relevant `items` on their hybrid lists without unnecessary additions.
