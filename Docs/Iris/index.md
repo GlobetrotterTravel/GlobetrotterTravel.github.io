@@ -16,5 +16,6 @@ The following sections detail how to administer the different parts of Iris.
 - [Entitlements](Entitlements.html)
 - [Fields](Fields.html)
 - [Hybrid Lists](Hybrid%20Lists.html)
+- [Integration with Iris](Integration%20with%20Iris.html)
 
 There is also a [Glossary of Terms](Glossary.html) available.

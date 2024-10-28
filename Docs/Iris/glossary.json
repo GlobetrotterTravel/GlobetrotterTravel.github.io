@@ -49,7 +49,7 @@
   },
   {
     "Term": "Hybrid List",
-    "Definition": "A table of key/value pairs from which entity transactional data can be assigned."
+    "Definition": "A table of key/value pairs from which entity transactional data can be selectively assigned based on specific policies."
   },
   {
     "Term": "Hybrid Lists",
