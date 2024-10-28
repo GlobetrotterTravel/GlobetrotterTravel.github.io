@@ -4,6 +4,11 @@ An `entity` represents a primary, independently managed unit within the system, 
 
 `Entities` can be related to each other in parent-child relationship. For example a client `entity` could have a child entity of one or more people. `Entity` relationships are established at the tenant level, and then individual `entity` records are linked together according to these relationship rules.
 
+## In this section
+
+* [Default configuration](#default-configuration)
+* [Creating entity types](#creating-entity-types)
+* [Establishing relationships](#establishing-relationships)
 ## Default configuration
 
 Iris comes with two predefined `entity` types:
