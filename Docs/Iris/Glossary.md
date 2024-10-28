@@ -32,7 +32,7 @@ A structure for capturing information on transactional data associated with an e
 
 ## Hybrid List
 
-A table of key/value pairs from which entity transactional data can be assigned.
+A table of key/value pairs from which entity transactional data can be selectively assigned based on specific policies.
 
 ## tenantAdmin
 

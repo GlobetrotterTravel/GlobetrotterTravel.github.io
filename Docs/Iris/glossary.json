@@ -20,6 +20,18 @@
     "Definition": "A permission that specifies that the records for this section may be modified by the user. The permission `canRead` is also implied."
   },
   {
+    "Term": "categories",
+    "Definition": ""
+  },
+  {
+    "Term": "category",
+    "Definition": ""
+  },
+  {
+    "Term": "disabled",
+    "Definition": ""
+  },
+  {
     "Term": "Entities",
     "Definition": ""
   },
@@ -44,6 +56,10 @@
     "Definition": "A structure for capturing information on transactional data associated with an entity."
   },
   {
+    "Term": "field definitions",
+    "Definition": ""
+  },
+  {
     "Term": "Fields",
     "Definition": ""
   },
@@ -56,7 +72,19 @@
     "Definition": ""
   },
   {
+    "Term": "item",
+    "Definition": ""
+  },
+  {
+    "Term": "items",
+    "Definition": ""
+  },
+  {
     "Term": "permissions",
+    "Definition": ""
+  },
+  {
+    "Term": "result[n].key...",
     "Definition": ""
   },
   {
