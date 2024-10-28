@@ -20,8 +20,20 @@
     "Definition": "A permission that specifies that the records for this section may be modified by the user. The permission `canRead` is also implied."
   },
   {
+    "Term": "Entities",
+    "Definition": ""
+  },
+  {
     "Term": "entitlement",
     "Definition": "An `entitlement` establishes an `entity's` right to a particular service or benefit provided."
+  },
+  {
+    "Term": "entitlements",
+    "Definition": ""
+  },
+  {
+    "Term": "entity",
+    "Definition": "An `entity` represents a primary, independently managed unit within the system, such as a client, vendor, or partner, with which the organisation maintains a direct management relationship."
   },
   {
     "Term": "entity's",
@@ -29,7 +41,7 @@
   },
   {
     "Term": "Field",
-    "Definition": ""
+    "Definition": "A structure for capturing information on transactional data associated with an entity."
   },
   {
     "Term": "Fields",
@@ -37,7 +49,7 @@
   },
   {
     "Term": "Hybrid List",
-    "Definition": ""
+    "Definition": "A table of key/value pairs from which entity transactional data can be assigned."
   },
   {
     "Term": "Hybrid Lists",
@@ -65,7 +77,7 @@
   },
   {
     "Term": "User",
-    "Definition": ""
+    "Definition": "A person that is authorised to use Iris."
   },
   {
     "Term": "Users",
