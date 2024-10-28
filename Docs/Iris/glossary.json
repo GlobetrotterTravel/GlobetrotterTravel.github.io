@@ -20,6 +20,14 @@
     "Definition": "A permission that specifies that the records for this section may be modified by the user. The permission `canRead` is also implied."
   },
   {
+    "Term": "entitlement",
+    "Definition": "An `entitlement` establishes an `entity's` right to a particular service or benefit provided."
+  },
+  {
+    "Term": "entity's",
+    "Definition": ""
+  },
+  {
     "Term": "Field",
     "Definition": ""
   },
@@ -36,7 +44,19 @@
     "Definition": ""
   },
   {
+    "Term": "permissions",
+    "Definition": ""
+  },
+  {
     "Term": "section",
+    "Definition": ""
+  },
+  {
+    "Term": "subscriber",
+    "Definition": ""
+  },
+  {
+    "Term": "Subscribers",
     "Definition": ""
   },
   {

@@ -1,6 +1,6 @@
 # Glossary
 
-### Jump To: [C](#canCreate) [T](#tenantAdmin)
+### Jump To: [C](#canCreate) [E](#entitlement) [T](#tenantAdmin)
 
 ## canCreate
 
@@ -17,6 +17,10 @@ A permission that specifies that the records for this section may be read by the
 ## canWrite
 
 A permission that specifies that the records for this section may be modified by the user. The permission `canRead` is also implied.
+
+## entitlement
+
+An `entitlement` establishes an `entity's` right to a particular service or benefit provided.
 
 ## tenantAdmin
 
