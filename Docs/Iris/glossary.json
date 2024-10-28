@@ -1,0 +1,54 @@
+[
+  {
+    "Term": "admin",
+    "Definition": ""
+  },
+  {
+    "Term": "canCreate",
+    "Definition": "A permission that specifies that the records for this section may be created by the user."
+  },
+  {
+    "Term": "canDelete",
+    "Definition": "A permission that specifies that the records for this section may be deleted by the user. The permission `canRead` is also implied."
+  },
+  {
+    "Term": "canRead",
+    "Definition": "A permission that specifies that the records for this section may be read by the user."
+  },
+  {
+    "Term": "canWrite",
+    "Definition": "A permission that specifies that the records for this section may be modified by the user. The permission `canRead` is also implied."
+  },
+  {
+    "Term": "Field",
+    "Definition": ""
+  },
+  {
+    "Term": "Fields",
+    "Definition": ""
+  },
+  {
+    "Term": "Hybrid List",
+    "Definition": ""
+  },
+  {
+    "Term": "Hybrid Lists",
+    "Definition": ""
+  },
+  {
+    "Term": "section",
+    "Definition": ""
+  },
+  {
+    "Term": "tenantAdmin",
+    "Definition": "A built-in role that provides full control of an Iris instance."
+  },
+  {
+    "Term": "User",
+    "Definition": ""
+  },
+  {
+    "Term": "Users",
+    "Definition": ""
+  }
+]
