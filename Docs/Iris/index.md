@@ -20,3 +20,20 @@ The following sections detail how to administer the different parts of Iris.
 - [Integration with Iris](Integration%20with%20Iris.html)
 
 There is also a [Glossary of Terms](Glossary.html) available.
+
+## Overview and key concepts
+
+### Metadata-aware structures
+
+The following structures are metadata-aware, meaning that they can have facets assigned to them:
+
+* Entity
+* Field
+* Hybrid List
+* Entitlement
+
+The following structures are not metadata-aware:
+
+* Category
+* Item
+ 

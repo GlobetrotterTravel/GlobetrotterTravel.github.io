@@ -9,6 +9,14 @@ Flags can be set on `facet` types to determine the sensitivity and criticality l
 ## In this section
 
 * [Facet types](#facet-types)
+
+
+## How facets relate to entities
+
+For each defined `entity` type, one or more `facets` can be defined. These facets work only with the specified `entity` type, enforcing a structure onto the data associated with an `entity`.
+
+Each entity can then be loaded with the data specific to it, under the defined `facet` structure set up earlier. When an entity is returned, its associated facets and their values are also returned.
+
 ## Facet types
 
  `Facets` come in the following types:
@@ -18,7 +26,7 @@ Flags can be set on `facet` types to determine the sensitivity and criticality l
 * **Properties**: `Properties` hold a single arbitrary value.
 * **Tags**: `Tags` hold multiple values from a single shared choice list.
 
-As you can see from the list above, `Facets` can be considered in terms of whether they support multiple values, and whether they allow arbitrary values. The following table is illustrative:
+`Facets` can be considered in terms of whether they support multiple values, and whether they allow arbitrary values. The following table is illustrative:
 
 |               | Choice Values | Arbitrary Values |
 |---------------|---------------|------------------|
