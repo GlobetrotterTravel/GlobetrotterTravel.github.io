@@ -1,14 +1,31 @@
 # Facets
 
-Iris supports the addition of custom metadata on entities, which enables organisations to build a complete picture of their centralised configuration. This metadata is recorded under one of four types: `dimension`, `attribute`, `property`, and `tag`. Collectively, these custom metadata are called `facets`.
+Iris supports the addition of custom metadata on `extensible objects`. This metadata can record information in a way that matches the organisation's requirements, enabling a complete picture of the centralised configuration to be built. This metadata is recorded under one of four types: `dimension`, `attribute`, `property`, and `tag`. Collectively, these custom metadata objects are called `facets`.
 
-An unlimited number of `facets` of different types can be added to `entities`. These `facets` are returned when the `entity` is retrieved, so that each `entity` holds a complete record.
+An unlimited number of `facets` of different types can be created and assigned as a collection ("*`schema`*") to any extensible object class.
+
+When an instance of an extensible class object is created, the facet schema can record information about that object, enabling 
+
 
 Flags can be set on `facet` types to determine the sensitivity and criticality levels of the data they hold.
 
 ## In this section
 
 * [Facet types](#facet-types)
+
+## Supported classes
+
+The following object `classes` are extensible and therefore support facet assignment:
+
+* Entity
+* Field
+* Hybrid List
+* Entitlement
+
+# Facet schemas
+
+A collection of `facets` that are assigned to a particular `class` of object is called a *`schema`*. Creating an object of a `class` automatically makes available the entire `facet` schema that is assigned to that `class`. Although the schema is the same for all objects in a class, the actual values assigned to the object instances are different.
+
 
 
 ## How facets relate to entities

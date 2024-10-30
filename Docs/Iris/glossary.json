@@ -114,5 +114,10 @@
   {
     "Term": "Users",
     "Definition": ""
-  }
+  },
+{
+  "Term": "class",
+  "Definition": "A collection of definitions of a particular object type that share a common facet schema."
+}
+
 ]
