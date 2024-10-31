@@ -50,9 +50,9 @@ An `entitlement` establishes an `entity's` right to a particular service or bene
 
 An `entity` represents a primary, independently managed unit within the system, such as a client, vendor, or partner, with which the organisation maintains a direct management relationship.
 
-## entity type
+## entity definition
 
-A definition of a `entity` that is assigned one or more `facet`, `field`, `entitlement`, `asset` and/or `hybrid list` packages.
+A `definition` of a `entity` that is assigned one or more `facet`, `field`, `entitlement`, `asset` and/or `hybrid list` packages.
 
 ## facet
 

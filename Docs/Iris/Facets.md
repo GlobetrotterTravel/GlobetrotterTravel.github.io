@@ -1,32 +1,16 @@
 # Facets
 
-Iris supports the addition of custom metadata on `extensible objects`. This metadata can record information in a way that matches the organisation's requirements, enabling a complete picture of the centralised configuration to be built. This metadata is recorded under one of four types: `dimension`, `attribute`, `property`, and `tag`. Collectively, these custom metadata objects are called `facets`.
+Iris supports the addition of custom metadata on `components`. This metadata can record information in a way that matches the organisation's requirements, enabling a complete picture of the centralised configuration to be built. This metadata is recorded under one of four types: `dimension`, `attribute`, `property`, and `tag`. Collectively, these custom metadata objects are called `facets`.
 
-An unlimited number of `facets` of different types can be created and assigned as a collection ("*`package`*") to any extensible object class.
+An unlimited number of `facets` of different types can be created and assigned as a collection ("*`package`*") to any component.
 
-When an instance of an extensible class object is created, the facet package can record information about that object, enabling 
+When an `instance` of a `component` `definition` is created, further `instances` of all `facets` in the `facet package` are also created, which can record information about that `component's` `instance`, enabling a flexible data model to be built up while maintaining referential integrity and centralised management.
 
-
-Flags can be set on `facet` types to determine the sensitivity and criticality levels of the data they hold.
-
-## In this section
-
-* [Facet types](#facet-types)
-
-## Supported classes
-
-The following object `types` are extensible and therefore support `facet package` assignment:
-
-* Entity
-* Field
-* Hybrid List
-* Entitlement
+`Facets` support flags that assist with PII management and compliance such as determining the sensitivity and criticality levels of the data they hold.
 
 # Facet packages
 
-A collection of `facets` that are assigned to a particular `class` of object is called a *`package`*. Creating an object of a `class` automatically makes available the entire `facet` package that is assigned to that `class`. Although the package is the same for all objects in a class, the actual values assigned to the object instances are different.
-
-
+A collection of `facets` that are assigned to a particular `component definition` is called a *`facet package`*. Creating an `instance` of a `component` `definition` automatically creates `instances` of all `facets` in the `definition's` `facet package`. Although all `instances` for a particular `definition` use the same `facet package` (as it is assigned to the `definition`), the actual values assigned to each `facet instance` are different.
 
 ## How facets relate to entities
 

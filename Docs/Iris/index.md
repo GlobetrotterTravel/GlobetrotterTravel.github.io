@@ -41,106 +41,19 @@ The following are Iris components:
 * Entitlement
 * Asset
 
-Administrators configure `component` `classes`, which represent the layout that is needed when new instances of these `components` are created.
+Within each component, administrators create <span title="The top-level segmentation for component definitions.">`classes`<span> and within `classes`, `definitions`. `Classes` serve to logically group different `component` `definitions` for management purposes, while `definitions` allow administrators to create a library of very specific component configurations that can be related to one another in a structured manner. It is these `definitions` that form the backbone of Iris' flexible structure.
 
-Classes 
+### Instantiating entities
 
-Components are configured according to the organisation's configuration requirements. When a new 
+Instantiating an `entity` simply means creating a new record of that `entity's` particular `definition`. Because administrators create organisation-specific `definitions` for the above `components`, `components` can't be used directly. Instead, new `instances` of the `definitions` are created to hold the information needed.
 
+Because `entity` is the primary component that Iris manages, it's the only component that can be directly instantiated, and this occurs when Iris receives a request for a new `entity` record along with an entity `definition` to use.
 
-## Overall structure
+When an `entity's` `definition` is instantiated, the `instance` automatically gets further `instances` of the `definition's`:
 
-Iris uses a heirarchical model to manage objects.
+* **facet package**
+* **field package**, including any facet schemas attached to the field's type
+* **hybrid list package**, including any facet schemas attached to the hybrid list's type
+* **entitlements package**, including any facet schemas attached to the entitlement's type
+* **assets package**, including any facet schemas attached to the asset's type
 
-### Group
-
-Objects that belong to a group must not share any features with each other. 
-
-### Class
-
-Objects that belong to a class must:
-
-
-
-
-Templates
-
-Object templates can be instantiated. When a template is instantiated, the instance gets a copy of it's class':
-
-* **facet schema**
-* **field schema**, including any facet schemas attached to the field's class
-* **hybrid lists**, including any facet schemas attached to the hybrid list's class
-* **entitlements**, including any facet schemas attached to the entitlement's class
-* **assets**, including any facet schemas attached to the asset's class
-
-
-
-### Object Classes
-
-Object are divided into classes, with each class representing a collection of things that are managed by Iris.
-
-
-These objects have a number of common features:
-
-* **Administrator-defined typing**: Each object can have one or more types, to which facet schemas may be assigned.
-
-
-
-
-### Object types
-
-The term *object* refers in general to any logical business data structure managed by Iris. Objects generally have a name or label to identify them, and belong to an `object type`.
-
-### Extensible and non-extensible objects 
-
-Objects may be `extensible` or `non-extensible`. An `extensible object` is one that that supports the creation of:
-
-* Classes, and therefore,
-* Facet schemas that are assigned to those classes.
-
-`Extensible objects` may be thought of as the primary "things" that are managed by Iris.
-
-`Non-extensible object` do not allow facet schema assignment. They may be thought of as things that exist to support `extensible objects`.
-
-These object types are `extensible objects`:
-
-* Entity
-* Field
-* Hybrid List
-* Entitlement
-* Asset
-
-These object types `non-extensible objects` is below:
-
-* Category
-* Item
-* Facet
-
-# Object classes 
-
-Administrators can create `classes` for `Extensible object` `types`, to manage `facet schemas` as a group. Grouping 
-
-# Facets 
-
-`Instances` of `extensible objects` will make the `facet schema` available for object-specific values to be recorded within the `facet schema`.
-
-
-
-
-
-
-
-
-The following `objects` are `extensible`, meaning that `classes` created in them can have `facet schemas` assigned to them:
-
-* Entity
-* Field
-* Hybrid List
-* Entitlement
-
-
-The following structures are non-extensible, meaning that no facet data may be recorded against them.
-
-* Category
-* Item
- 
