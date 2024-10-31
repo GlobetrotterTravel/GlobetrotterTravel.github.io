@@ -1,6 +1,22 @@
 [
   {
     "Term": "admin",
+    "Definition": "The default administrator user name and password for a newly stood-up instance of Iris."
+  },
+  {
+    "Term": "asset",
+    "Definition": "A component that can be assigned to an entity from a shared pool."
+  },
+  {
+    "Term": "assets",
+    "Definition": ""
+  },
+  {
+    "Term": "attribute",
+    "Definition": "A free text field that records multiple independent string entries."
+  },
+  {
+    "Term": "Attributes",
     "Definition": ""
   },
   {
@@ -28,6 +44,30 @@
     "Definition": ""
   },
   {
+    "Term": "class",
+    "Definition": "The top-level segmentation for component definitions."
+  },
+  {
+    "Term": "classes",
+    "Definition": ""
+  },
+  {
+    "Term": "component",
+    "Definition": "The core objects that Iris manages. Components relate to each other in specific ways to build a coherent centralised view of an orgainisation's service configuration."
+  },
+  {
+    "Term": "components",
+    "Definition": ""
+  },
+  {
+    "Term": "dimension",
+    "Definition": "A globally shared list of choices from which a single selection can be made."
+  },
+  {
+    "Term": "Dimensions",
+    "Definition": ""
+  },
+  {
     "Term": "disabled",
     "Definition": ""
   },
@@ -48,15 +88,79 @@
     "Definition": "An `entity` represents a primary, independently managed unit within the system, such as a client, vendor, or partner, with which the organisation maintains a direct management relationship."
   },
   {
+    "Term": "entity instance",
+    "Definition": ""
+  },
+  {
+    "Term": "entity type",
+    "Definition": "A definition of a `entity` that is assigned one or more `facet`, `field`, `entitlement`, `asset` and/or `hybrid list` packages."
+  },
+  {
     "Term": "entity's",
     "Definition": ""
   },
   {
-    "Term": "Field",
-    "Definition": "A structure for capturing information on transactional data associated with an entity."
+    "Term": "extensible",
+    "Definition": ""
+  },
+  {
+    "Term": "extensible components",
+    "Definition": ""
+  },
+  {
+    "Term": "extensible object",
+    "Definition": ""
+  },
+  {
+    "Term": "extensible objects",
+    "Definition": ""
+  },
+  {
+    "Term": "facet",
+    "Definition": "A `dimension`, `attribute`, `property` or `tag`."
+  },
+  {
+    "Term": "facet package",
+    "Definition": "A collection of `facets` that can be assigned to one or more `entity types` to further configure `entity instances` that use that `entity type`."
+  },
+  {
+    "Term": "facet packages",
+    "Definition": ""
+  },
+  {
+    "Term": "facet schema",
+    "Definition": ""
+  },
+  {
+    "Term": "facet schemas",
+    "Definition": ""
+  },
+  {
+    "Term": "facets",
+    "Definition": ""
+  },
+  {
+    "Term": "field",
+    "Definition": "A `component` that configures `subscriber` systems for capturing information on transactional data associated with an `entity`."
   },
   {
     "Term": "field definitions",
+    "Definition": ""
+  },
+  {
+    "Term": "field package",
+    "Definition": "A collection of fields that are assigned to a specific `entity` type. The `field package` that appears in instances of that `entity type` can be further configured to suit the particular `entity instance`."
+  },
+  {
+    "Term": "field packages",
+    "Definition": ""
+  },
+  {
+    "Term": "field schemas",
+    "Definition": ""
+  },
+  {
+    "Term": "field types",
     "Definition": ""
   },
   {
@@ -64,11 +168,19 @@
     "Definition": ""
   },
   {
-    "Term": "Hybrid List",
-    "Definition": "A table of key/value pairs from which entity transactional data can be selectively assigned based on specific policies."
+    "Term": "hybrid list",
+    "Definition": "A table of key/value pairs from which `entity` transactional data can be selectively assigned based on `entity`-specific policies."
   },
   {
     "Term": "Hybrid Lists",
+    "Definition": ""
+  },
+  {
+    "Term": "inclusion policy",
+    "Definition": ""
+  },
+  {
+    "Term": "Instances",
     "Definition": ""
   },
   {
@@ -80,7 +192,39 @@
     "Definition": ""
   },
   {
+    "Term": "non-extensible",
+    "Definition": ""
+  },
+  {
+    "Term": "Non-extensible object",
+    "Definition": ""
+  },
+  {
+    "Term": "non-extensible objects",
+    "Definition": ""
+  },
+  {
+    "Term": "object type",
+    "Definition": ""
+  },
+  {
+    "Term": "objects",
+    "Definition": ""
+  },
+  {
+    "Term": "package",
+    "Definition": "1. **(non-facet)** A defined grouping of `fields`, `entitlements`, `assets`, or `hybrid lists` intended for assignment to a specified `entity type`. \n2. **(facet)** A defined grouping of facets intended for assignment to `entity`, `field`, `entitlement`, `asset`, or `hybrid list` types."
+  },
+  {
     "Term": "permissions",
+    "Definition": ""
+  },
+  {
+    "Term": "Properties",
+    "Definition": ""
+  },
+  {
+    "Term": "property",
     "Definition": ""
   },
   {
@@ -97,15 +241,27 @@
   },
   {
     "Term": "subscriber",
-    "Definition": ""
+    "Definition": "A system that integrates with Iris via the REST API."
   },
   {
     "Term": "Subscribers",
     "Definition": ""
   },
   {
+    "Term": "tag",
+    "Definition": ""
+  },
+  {
+    "Term": "Tags",
+    "Definition": ""
+  },
+  {
     "Term": "tenantAdmin",
     "Definition": "A built-in role that provides full control of an Iris instance."
+  },
+  {
+    "Term": "types",
+    "Definition": ""
   },
   {
     "Term": "User",
@@ -114,10 +270,5 @@
   {
     "Term": "Users",
     "Definition": ""
-  },
-{
-  "Term": "class",
-  "Definition": "A collection of definitions of a particular object type that share a common facet schema."
-}
-
+  }
 ]

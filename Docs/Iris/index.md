@@ -2,6 +2,8 @@
 
 Globetrotter Iris is a scalable, flexible and reliable solution to managing service configuration data for organisations of any size. Iris is an API-first platform that is designed to fit into your workflows and deliver the benefits of centralised control and audit of complex information.
 
+Iris manages objects called `components`, which when combined in a structured manner, represent the service configuration for all of your clients and partners. The principle `component` is `entity`, to which all other `components` plug into.
+
 Iris serves *your data your way* to `subscriber` systems, giving you the confidence that all parts of your infrastructure are seeing the same source of truth. `Subscribers` can access a little or a lot, based on a strong security model and granular `permissions`. Integrate with both internal systems as well as partners and customers, taking advantage of industry REST API standards.
 
 ## In this section
@@ -20,6 +22,7 @@ The following sections detail how to administer the different parts of Iris.
 - [Entities](Entities.html)
 - [Facets](Facets.html)
 - [Entitlements](Entitlements.html)
+- [Assets](Assets.htm)
 - [Fields](Fields.html)
 - [Hybrid Lists](Hybrid%20Lists.html)
 - [Integration with Iris](Integration%20with%20Iris.html)
@@ -27,6 +30,62 @@ The following sections detail how to administer the different parts of Iris.
 There is also a [Glossary of Terms](Glossary.html) available.
 
 ## Overview and key concepts
+
+## Components
+
+The following are Iris components:
+
+* Entity
+* Field
+* Hybrid List
+* Entitlement
+* Asset
+
+Administrators configure `component` `classes`, which represent the layout that is needed when new instances of these `components` are created.
+
+Classes 
+
+Components are configured according to the organisation's configuration requirements. When a new 
+
+
+## Overall structure
+
+Iris uses a heirarchical model to manage objects.
+
+### Group
+
+Objects that belong to a group must not share any features with each other. 
+
+### Class
+
+Objects that belong to a class must:
+
+
+
+
+Templates
+
+Object templates can be instantiated. When a template is instantiated, the instance gets a copy of it's class':
+
+* **facet schema**
+* **field schema**, including any facet schemas attached to the field's class
+* **hybrid lists**, including any facet schemas attached to the hybrid list's class
+* **entitlements**, including any facet schemas attached to the entitlement's class
+* **assets**, including any facet schemas attached to the asset's class
+
+
+
+### Object Classes
+
+Object are divided into classes, with each class representing a collection of things that are managed by Iris.
+
+
+These objects have a number of common features:
+
+* **Administrator-defined typing**: Each object can have one or more types, to which facet schemas may be assigned.
+
+
+
 
 ### Object types
 
@@ -43,14 +102,15 @@ Objects may be `extensible` or `non-extensible`. An `extensible object` is one t
 
 `Non-extensible object` do not allow facet schema assignment. They may be thought of as things that exist to support `extensible objects`.
 
-The complete list of `extensible object` `types` is below:
+These object types are `extensible objects`:
 
 * Entity
 * Field
 * Hybrid List
 * Entitlement
+* Asset
 
-The complete list of `non-extensible objects` is below:
+These object types `non-extensible objects` is below:
 
 * Category
 * Item

@@ -9,14 +9,17 @@ An `entity` represents a primary, independently managed unit within the system, 
 * [Default configuration](#default-configuration)
 * [Creating entity types](#creating-entity-types)
 * [Establishing relationships](#establishing-relationships)
-## Default configuration
+
+## Entity types
+
+Administrators can define `entity` types, which segment `entities` logically. These types define the rules around how entities may relate to each other and what types of information they can hold.
 
 Iris comes with two predefined `entity` types:
 
 * Client
 * Person
 
-These `entity` types can be renamed or removed. In the default configuration, a User is a child of Client, allowing records of those types to be linked together.
+These `entity` types can be renamed or removed. In the default configuration, a Person is a child of Client, allowing records of those types to be linked together.
 
 ## Creating entity types
 

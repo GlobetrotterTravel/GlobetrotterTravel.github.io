@@ -2,9 +2,9 @@
 
 Iris supports the addition of custom metadata on `extensible objects`. This metadata can record information in a way that matches the organisation's requirements, enabling a complete picture of the centralised configuration to be built. This metadata is recorded under one of four types: `dimension`, `attribute`, `property`, and `tag`. Collectively, these custom metadata objects are called `facets`.
 
-An unlimited number of `facets` of different types can be created and assigned as a collection ("*`schema`*") to any extensible object class.
+An unlimited number of `facets` of different types can be created and assigned as a collection ("*`package`*") to any extensible object class.
 
-When an instance of an extensible class object is created, the facet schema can record information about that object, enabling 
+When an instance of an extensible class object is created, the facet package can record information about that object, enabling 
 
 
 Flags can be set on `facet` types to determine the sensitivity and criticality levels of the data they hold.
@@ -15,16 +15,16 @@ Flags can be set on `facet` types to determine the sensitivity and criticality l
 
 ## Supported classes
 
-The following object `classes` are extensible and therefore support facet assignment:
+The following object `types` are extensible and therefore support `facet package` assignment:
 
 * Entity
 * Field
 * Hybrid List
 * Entitlement
 
-# Facet schemas
+# Facet packages
 
-A collection of `facets` that are assigned to a particular `class` of object is called a *`schema`*. Creating an object of a `class` automatically makes available the entire `facet` schema that is assigned to that `class`. Although the schema is the same for all objects in a class, the actual values assigned to the object instances are different.
+A collection of `facets` that are assigned to a particular `class` of object is called a *`package`*. Creating an object of a `class` automatically makes available the entire `facet` package that is assigned to that `class`. Although the package is the same for all objects in a class, the actual values assigned to the object instances are different.
 
 
 
