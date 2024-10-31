@@ -1,6 +1,10 @@
 # Glossary
 
-### Jump To: [A](#asset) [C](#cancreate) [D](#dimension) [E](#entitlement) [F](#facet) [H](#hybrid-list) [I](#item) [P](#package) [S](#subscriber) [T](#tenantadmin) [U](#user)
+### Jump To: [A](#admin) [C](#cancreate) [D](#dimension) [E](#entitlement) [F](#facet) [H](#hybrid-list) [I](#inclusion-policy) [P](#package) [S](#subscriber) [T](#tag) [U](#user)
+
+## admin
+
+The default administrator user name and password for a newly stood-up instance of Iris.
 
 ## asset
 
@@ -70,6 +74,10 @@ A collection of fields that are assigned to a specific `entity` type. The `field
 
 A table of key/value pairs from which `entity` transactional data can be selectively assigned based on `entity`-specific policies.
 
+## inclusion policy
+
+A policy set on an `entity instance` that describes whether and how items on the `entity's` local `hybrid list` are selected instead of items on the globally shared `hybrid list`.
+
 ## item
 
 A key/value pair that can be selected and recorded with transactional data.
@@ -79,15 +87,28 @@ A key/value pair that can be selected and recorded with transactional data.
 1. **(non-facet)** A defined grouping of `fields`, `entitlements`, `assets`, or `hybrid lists` intended for assignment to a specified `entity type`. 
 2. **(facet)** A defined grouping of facets intended for assignment to `entity`, `field`, `entitlement`, `asset`, or `hybrid list` types.
 
+## permissions
+
+A set of flags that determine the degree to which a user may access a record.
+
+## property
+
+1. (system property): A key/value pair set on the tenant that modifies Iris' behaviour.
+2. (related to facets): A free-text field that allows a single arbitrary value to be recorded.
+
 ## subscriber
 
 A system that integrates with Iris via the REST API.
+
+## tag
+
+A globally shared list of values from which multiple selections may be made.
 
 ## tenantAdmin
 
 A built-in role that provides full control of an Iris instance.
 
-## User
+## user
 
 A person that is authorised to use Iris.
 

@@ -7,12 +7,14 @@
   {
     "Term": "asset",
     "Definition": "A component that can be assigned to an entity from a shared pool.",
-    "Aliases": ["assets"]
+    "Aliases": [
+      "assets"
+    ]
   },
   {
     "Term": "attribute",
     "Definition": "A free text field that records multiple independent string entries.",
-    "Aliases": []
+    "Aliases": ["attributes"]
   },
   {
     "Term": "canCreate",
@@ -35,19 +37,47 @@
     "Aliases": []
   },
   {
+    "Term": "categories",
+    "Definition": "",
+    "Aliases": []
+  },
+  {
+    "Term": "category",
+    "Definition": "",
+    "Aliases": []
+  },
+  {
     "Term": "class",
     "Definition": "The top-level segmentation for component definitions.",
-    "Aliases": ["classes"]
+    "Aliases": [
+      "classes"
+    ]
   },
-
   {
     "Term": "component",
     "Definition": "The core objects that Iris manages. Components relate to each other in specific ways to build a coherent centralised view of an orgainisation's service configuration.",
-    "Aliases": ["components"]
+    "Aliases": [
+      "components"
+    ]
   },
   {
     "Term": "dimension",
     "Definition": "A globally shared list of choices from which a single selection can be made.",
+    "Aliases": []
+  },
+  {
+    "Term": "dimensions",
+    "Definition": "",
+    "Aliases": []
+  },
+  {
+    "Term": "disabled",
+    "Definition": "",
+    "Aliases": []
+  },
+  {
+    "Term": "entities",
+    "Definition": "",
     "Aliases": []
   },
   {
@@ -56,8 +86,26 @@
     "Aliases": []
   },
   {
+    "Term": "entitlements",
+    "Definition": "",
+    "Aliases": []
+  },
+  {
     "Term": "entity",
     "Definition": "An `entity` represents a primary, independently managed unit within the system, such as a client, vendor, or partner, with which the organisation maintains a direct management relationship.",
+    "Aliases": [
+      "entity's",
+      "entities"
+    ]
+  },
+  {
+    "Term": "entity instance",
+    "Definition": "",
+    "Aliases": []
+  },
+  {
+    "Term": "entity instances",
+    "Definition": "",
     "Aliases": []
   },
   {
@@ -66,19 +114,60 @@
     "Aliases": []
   },
   {
+    "Term": "entity types",
+    "Definition": "",
+    "Aliases": []
+  },
+  {
+    "Term": "extensible",
+    "Definition": "",
+    "Aliases": []
+  },
+  {
+    "Term": "extensible components",
+    "Definition": "",
+    "Aliases": []
+  },
+  {
+    "Term": "extensible object",
+    "Definition": "",
+    "Aliases": []
+  },
+  {
+    "Term": "extensible objects",
+    "Definition": "",
+    "Aliases": []
+  },
+  {
     "Term": "facet",
     "Definition": "A `dimension`, `attribute`, `property` or `tag`.",
-    "Aliases": []
+    "Aliases": [
+      "facets"
+    ]
   },
   {
     "Term": "facet package",
     "Definition": "A collection of `facets` that can be assigned to one or more `entity types` to further configure `entity instances` that use that `entity type`.",
+    "Aliases": [
+      "facet packages"
+    ]
+  },
+  {
+    "Term": "facet schema",
+    "Definition": "",
+    "Aliases": []
+  },
+  {
+    "Term": "facet schemas",
+    "Definition": "",
     "Aliases": []
   },
   {
     "Term": "field",
     "Definition": "A `component` that configures `subscriber` systems for capturing information on transactional data associated with an `entity`.",
-    "Aliases": []
+    "Aliases": [
+      "fields"
+    ]
   },
   {
     "Term": "field definitions",
@@ -88,17 +177,21 @@
   {
     "Term": "field package",
     "Definition": "A collection of fields that are assigned to a specific `entity` type. The `field package` that appears in instances of that `entity type` can be further configured to suit the particular `entity instance`.",
+    "Aliases": [
+      "field packages"
+    ]
+  },
+  {
+    "Term": "field types",
+    "Definition": "",
     "Aliases": []
   },
   {
     "Term": "hybrid list",
     "Definition": "A table of key/value pairs from which `entity` transactional data can be selectively assigned based on `entity`-specific policies.",
-    "Aliases": []
-  },
-  {
-    "Term": "Hybrid Lists",
-    "Definition": "",
-    "Aliases": []
+    "Aliases": [
+      "hybrid lists"
+    ]
   },
   {
     "Term": "inclusion policy",
@@ -106,8 +199,40 @@
     "Aliases": []
   },
   {
+    "Term": "instances",
+    "Definition": "",
+    "Aliases": []
+  },
+  {
     "Term": "item",
     "Definition": "A key/value pair that can be selected and recorded with transactional data.",
+    "Aliases": [
+      "items"
+    ]
+  },
+  {
+    "Term": "non-extensible",
+    "Definition": "",
+    "Aliases": []
+  },
+  {
+    "Term": "non-extensible object",
+    "Definition": "",
+    "Aliases": []
+  },
+  {
+    "Term": "non-extensible objects",
+    "Definition": "",
+    "Aliases": []
+  },
+  {
+    "Term": "object type",
+    "Definition": "",
+    "Aliases": []
+  },
+  {
+    "Term": "objects",
+    "Definition": "",
     "Aliases": []
   },
   {
@@ -121,7 +246,7 @@
     "Aliases": []
   },
   {
-    "Term": "Properties",
+    "Term": "properties",
     "Definition": "",
     "Aliases": []
   },
@@ -131,19 +256,32 @@
     "Aliases": []
   },
   {
-    "Term": "subscriber",
-    "Definition": "A system that integrates with Iris via the REST API.",
-    "Aliases": ["subscriber system"]
-  },
-  {
-    "Term": "Subscribers",
+    "Term": "section",
     "Definition": "",
     "Aliases": []
   },
   {
+    "Term": "subscriber",
+    "Definition": "A system that integrates with Iris via the REST API.",
+    "Aliases": [
+      "subscriber system",
+      "subscribers"
+    ]
+  },
+  {
+    "Term": "suppression list",
+    "Definition": null,
+    "Aliases": [
+      "result[n].key...",
+      "replace items: false"
+    ]
+  },
+  {
     "Term": "tag",
-    "Definition": "A globall shared list of values from which multiple selections may be made.",
-    "Aliases": ["tags"]
+    "Definition": "A globally shared list of values from which multiple selections may be made.",
+    "Aliases": [
+      "tags"
+    ]
   },
   {
     "Term": "tenantAdmin",
@@ -151,7 +289,14 @@
     "Aliases": []
   },
   {
-    "Term": "User",
+    "Term": "type",
+    "Definition": "",
+    "Aliases": [
+      "types"
+    ]
+  },
+  {
+    "Term": "user",
     "Definition": "A person that is authorised to use Iris.",
     "Aliases": []
   }
