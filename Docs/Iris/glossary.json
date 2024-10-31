@@ -14,7 +14,9 @@
   {
     "Term": "attribute",
     "Definition": "A free text field that records multiple independent string entries.",
-    "Aliases": ["attributes"]
+    "Aliases": [
+      "attributes"
+    ]
   },
   {
     "Term": "canCreate",
@@ -37,14 +39,11 @@
     "Aliases": []
   },
   {
-    "Term": "categories",
-    "Definition": "",
-    "Aliases": []
-  },
-  {
     "Term": "category",
     "Definition": "",
-    "Aliases": []
+    "Aliases": [
+      "categories"
+    ]
   },
   {
     "Term": "class",
@@ -57,38 +56,36 @@
     "Term": "component",
     "Definition": "The core objects that Iris manages. Components relate to each other in specific ways to build a coherent centralised view of an orgainisation's service configuration.",
     "Aliases": [
-      "components"
+      "components",
+      "component's"
+    ]
+  },
+  {
+    "Term": "component definition",
+    "Definition": "",
+    "Aliases": []
+  },
+  {
+    "Term": "definition",
+    "Definition": "",
+    "Aliases": [
+      "definition's",
+      "definitions"
     ]
   },
   {
     "Term": "dimension",
     "Definition": "A globally shared list of choices from which a single selection can be made.",
-    "Aliases": []
-  },
-  {
-    "Term": "dimensions",
-    "Definition": "",
-    "Aliases": []
-  },
-  {
-    "Term": "disabled",
-    "Definition": "",
-    "Aliases": []
-  },
-  {
-    "Term": "entities",
-    "Definition": "",
-    "Aliases": []
+    "Aliases": [
+      "dimensions"
+    ]
   },
   {
     "Term": "entitlement",
     "Definition": "An `entitlement` establishes an `entity's` right to a particular service or benefit provided.",
-    "Aliases": []
-  },
-  {
-    "Term": "entitlements",
-    "Definition": "",
-    "Aliases": []
+    "Aliases": [
+      "entitlements"
+    ]
   },
   {
     "Term": "entity",
@@ -99,27 +96,21 @@
     ]
   },
   {
-    "Term": "entity instance",
-    "Definition": "",
-    "Aliases": []
+    "Term": "entity definition",
+    "Definition": "A `definition` of a `entity` that is assigned one or more `facet`, `field`, `entitlement`, `asset` and/or `hybrid list` packages.",
+    "Aliases": [
+      "entity types"
+    ]
   },
   {
-    "Term": "entity instances",
+    "Term": "entity instance",
     "Definition": "",
-    "Aliases": []
+    "Aliases": [
+      "entity instances"
+    ]
   },
   {
     "Term": "entity type",
-    "Definition": "A definition of a `entity` that is assigned one or more `facet`, `field`, `entitlement`, `asset` and/or `hybrid list` packages.",
-    "Aliases": []
-  },
-  {
-    "Term": "entity types",
-    "Definition": "",
-    "Aliases": []
-  },
-  {
-    "Term": "extensible",
     "Definition": "",
     "Aliases": []
   },
@@ -129,21 +120,16 @@
     "Aliases": []
   },
   {
-    "Term": "extensible object",
-    "Definition": "",
-    "Aliases": []
-  },
-  {
-    "Term": "extensible objects",
-    "Definition": "",
-    "Aliases": []
-  },
-  {
     "Term": "facet",
     "Definition": "A `dimension`, `attribute`, `property` or `tag`.",
     "Aliases": [
       "facets"
     ]
+  },
+  {
+    "Term": "facet instance",
+    "Definition": "",
+    "Aliases": []
   },
   {
     "Term": "facet package",
@@ -199,6 +185,11 @@
     "Aliases": []
   },
   {
+    "Term": "instance",
+    "Definition": "",
+    "Aliases": []
+  },
+  {
     "Term": "instances",
     "Definition": "",
     "Aliases": []
@@ -209,21 +200,6 @@
     "Aliases": [
       "items"
     ]
-  },
-  {
-    "Term": "non-extensible",
-    "Definition": "",
-    "Aliases": []
-  },
-  {
-    "Term": "non-extensible object",
-    "Definition": "",
-    "Aliases": []
-  },
-  {
-    "Term": "non-extensible objects",
-    "Definition": "",
-    "Aliases": []
   },
   {
     "Term": "object type",
@@ -246,14 +222,11 @@
     "Aliases": []
   },
   {
-    "Term": "properties",
-    "Definition": "",
-    "Aliases": []
-  },
-  {
     "Term": "property",
     "Definition": "1. (system property): A key/value pair set on the tenant that modifies Iris' behaviour.\n2. (related to facets): A free-text field that allows a single arbitrary value to be recorded.",
-    "Aliases": []
+    "Aliases": [
+      "properties"
+    ]
   },
   {
     "Term": "section",
@@ -266,14 +239,6 @@
     "Aliases": [
       "subscriber system",
       "subscribers"
-    ]
-  },
-  {
-    "Term": "suppression list",
-    "Definition": null,
-    "Aliases": [
-      "result[n].key...",
-      "replace items: false"
     ]
   },
   {
@@ -292,12 +257,22 @@
     "Term": "type",
     "Definition": "",
     "Aliases": [
-      "types"
+      "types",
+      "type's"
     ]
   },
   {
     "Term": "user",
     "Definition": "A person that is authorised to use Iris.",
     "Aliases": []
+  },
+  {
+    "Term": "zzzsuppression list",
+    "Definition": null,
+    "Aliases": [
+      "result[n].key...",
+      "replace items: false",
+      "disabled"
+    ]
   }
 ]
