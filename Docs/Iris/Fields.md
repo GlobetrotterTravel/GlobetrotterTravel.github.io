@@ -2,9 +2,9 @@
 
 A `field` is a component used to store values associated with transactional data for specified `entity` types. Once defined, `fields` are bundled into `field packages` and assigned to an `entity` type. Individual entities can be configured to use or ignore these fields, allowing precise control over the types of data that each `entity` can record.
 
-`Fields` do not store data on the `entity` itself; rather, the `entity`-specific field configuration is returned to `subscriber` systems, enabling them to create forms that reflect that configuration. This allows `subscribers` to capture `entity`-specific values for `fields` during transactions, while organizations maintain a centralized `field` structure.
+`Fields` do not store data on the `entity` itself (*refer: `facets`*); rather, the `entity`-specific field configuration is returned to `subscriber` systems, enabling them to create forms that reflect that configuration. This allows `subscribers` to capture `entity`-specific values for `fields` during transactions, while organizations maintain a centralized `field` structure.
 
-`Fields` are `extensible components`, meaning that they can be assigned `facet packages`. These `facets` are then made available on the entitiescan then be populated on an `entity`-specific basis. When an `entity` is retrieved, the `facet` values for the `entity's` `fields` are also returned, which allows administrators to define specific `field` behaviour in `subscriber` systems.
+As comoponents, `Fields` can be assigned `facet packages`. `Instances` of the `facets` in the `field's` `facet package` are then made available on the `entities` which are assigned the `fields` and can then be populated on an `entity`-specific basis. When an `entity` is retrieved, the `facet` values for the `entity's` `fields` are also returned, which allows administrators to define specific `field` behaviour in `subscriber` systems.
 
 ## In this section
 
@@ -87,7 +87,7 @@ In the Reference configuration,
 1. Set the Label Facet to "Name". This is the label that is intended to be shown on a user interface
 1. Set the Value Facet to "Email address". This is the value that is intended to be dropped into the transactional data.
 
-| i The Label and Value can be the same facet.
+| 🛈 The Label and Value can be the same facet.
 
 Retrieve the client entity. In the Fields array, The Authoriser field will be populated with a list of active records from the Client Entity's Authoriser child.
 

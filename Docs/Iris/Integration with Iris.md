@@ -6,6 +6,19 @@ This section deals with set up, maintenance and best practises when connecting `
 
 * [REST payload return](#rest-payload-return)
 * [Display order](#display-order)
+
+## Authentication
+
+Iris authenticates via a username and password. Upon successful `authentication`, Iris returns a `JSON Web Token (JWT)`.
+
+## Authorisation
+
+Iris uses `role-based access control (RBAC)` for `authorisation`.
+
+### Roles
+
+`Roles` are assigned to `users`
+
 ## REST payload return
 
 Iris returns all responses in JSON format.

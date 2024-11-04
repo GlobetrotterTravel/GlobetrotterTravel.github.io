@@ -2,7 +2,7 @@
 
 A `hybrid list` is a structured collection designed to hold categorised `items` that relate to specific `entity` types. These lists are defined globally, assigned to one or more `entity` types, and shared among all `entities` of those types. Each `hybrid list` can contain multiple categories to which global `items` are added. These `items` are then selectively available to `entities` based on their configuration.
 
-Entities can customise these lists by replacing standard `items` with their own, giving rise to the term `hybrid lists`. This customisation allows entities to maintain a mix of standard and entity-specific `items` with distinct labels and values, thus enabling flexible configurations while enforcing a standardised set of `categories` across all applicable `entities`.
+`Entity instances` can customise these lists by replacing standard `items` with their own, giving rise to the term `hybrid lists`. This customisation allows entities to maintain a mix of standard and entity-specific `items` with distinct labels and values, thus enabling flexible configurations while enforcing a standardised set of `categories` across all applicable `entities`.
 
 
 A `hybrid list` is a table of key/value pairs from which `entity` transactional data can be selectively assigned based on specific policies. `Hybrid lists` allow conformity of `item` selection across multiple `entities`, while remaining flexible for individual `entity` requirements.
