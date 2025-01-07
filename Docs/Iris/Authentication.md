@@ -7,6 +7,18 @@ Iris supports two authentication schemes:
 
 The username and password scheme is used for normal user accounts, as used by people accessing Iris. SSL certificate authentication is designed for client systems to integrate with Iris.
 
+## In this section
+
+* [Username and password](#username-and-password)
+    * [Web access](#web-access)
+    * [API access](#api-access)
+        * [Intial authentication](#intial-authentication)
+        * [JWT for subsequent requests](#jwt-for-subsequent-requests)
+* [SSL certificate](#ssl-certificate)
+    * [Web access](#web-access)
+    * [API access](#api-access)
+
+
 ## Username and password
 
 ### Web access
