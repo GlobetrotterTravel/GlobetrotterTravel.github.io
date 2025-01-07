@@ -61,11 +61,11 @@ Static items are kept in a list directly in Iris and returned with the entity's 
 
 ### Reference sources
 
-A field can be set to display its list of items from the existing records of any entity type that is a child of the entity type the field is placed on.
+A field can be configured to display its list of items from the existing records of any `set`.
 
-To set up a reference source, open the field and specify:
+To configure a `set` as a reference source, open the field and specify:
 
-* **Entity type**: The entity type that holds the records this field should display
+* **Set name**: The set that holds the records this field should display
 * **Label facet**: The facet to derive each item's name from
 * **Value facet**: The facet to derive each item's value from
 
@@ -73,8 +73,12 @@ To set up a reference source, open the field and specify:
 
 For example, to set up a field called "Authoriser", carry out the following steps:
 
-Create a new entity type under the "Person" class and call it "Authoriser".
-Add a facet package to Authoriser entity type that records at least two values e.g. "Name" and "Email address". We will use these to populate the items.
+Create a new Person entity class
+Create a new Employee entity definition
+Add a facet package to Employee definition that records at least two values e.g. "Name" and "Email address". We will use these to populate the items.
+Create a new dimension on Employee called "Authoriser", and provide Yes/No items.
+Create a new `set` under the Employee definition and call it "Authoriser".
+Set the criteria on the Authoriser set to "Authoriser = Yes". Test the set to ensure it brings back the correct records.
 Add a new field component in the appropriate Class, and call it "Authoriser".
 
 In the field's configuration:
@@ -82,7 +86,7 @@ In the field's configuration:
 1. Set the "Item source" to "Reference".
 
 In the Reference configuration,
-1. set the "Entity type" to "Authoriser"
+1. set the `Set` to "Authoriser"
 1. Iris finds the facets that are assigned to the entity type
 1. Set the Label Facet to "Name". This is the label that is intended to be shown on a user interface
 1. Set the Value Facet to "Email address". This is the value that is intended to be dropped into the transactional data.

@@ -7,27 +7,47 @@
   {
     "Term": "asset",
     "Definition": "A component that represents finite, assignable objects such as equipment, licenses, or digital resources. Assets are assigned to entities from a limited pool of instances, allowing each asset instance to be uniquely linked to a single entity at a time.",
-    "Aliases": ["assets"]
+    "Aliases": [
+      "assets"
+    ]
   },
   {
     "Term": "asset definition",
     "Definition": "A structural template for an asset, specifying the properties and facets associated with the asset type. Asset definitions are used to create asset instances that can be assigned to entities.",
-    "Aliases": ["asset definitions"]
+    "Aliases": [
+      "asset definitions"
+    ]
   },
   {
     "Term": "asset instance",
     "Definition": "An individual, finite item created from an asset definition, such as a piece of equipment or license. Asset instances are unique and can be assigned to a single entity at a time.",
-    "Aliases": ["asset instances"]
+    "Aliases": [
+      "asset instances"
+    ]
   },
   {
     "Term": "asset package",
     "Definition": "A set of assets associated with an entity type, representing the assignable resources or items available for entity instances.",
-    "Aliases": ["asset packages"]
+    "Aliases": [
+      "asset packages"
+    ]
   },
   {
     "Term": "attribute",
     "Definition": "A type of facet that records multiple independent string values. Attributes allow for arbitrary text entries associated with a component.",
-    "Aliases": ["attributes"]
+    "Aliases": [
+      "attributes"
+    ]
+  },
+  {
+    "Term": "authentication",
+    "Definition": "The process of verifying the identity ownership (e.g. user or service).",
+    "Aliases": []
+  },
+  {
+    "Term": "authorisation",
+    "Definition": "The process of determining what actions an identity can perform on a resource.",
+    "Aliases": []
   },
   {
     "Term": "canCreate",
@@ -52,17 +72,24 @@
   {
     "Term": "category",
     "Definition": "A logical grouping within a hybrid list that holds multiple items. Categories help separate and organize items within a hybrid list for easier selection and assignment.",
-    "Aliases": ["categories"]
+    "Aliases": [
+      "categories"
+    ]
   },
   {
     "Term": "class",
     "Definition": "A top-level grouping used to logically organize component definitions, such as entities, fields, or assets, for easier management and configuration.",
-    "Aliases": ["classes"]
+    "Aliases": [
+      "classes"
+    ]
   },
   {
     "Term": "component",
     "Definition": "A core object that Iris manages, such as entities, fields, assets, or hybrid lists. Components relate to each other in structured ways to build a centralized view of an organization's configuration.",
-    "Aliases": ["components", "component's"]
+    "Aliases": [
+      "components",
+      "component's"
+    ]
   },
   {
     "Term": "component definition",
@@ -70,114 +97,190 @@
     "Aliases": []
   },
   {
+    "Term": "component packages",
+    "Definition": "A collection of component definitions that can be assigned to an entity.",
+    "Aliases": []
+  },
+  {
+    "Term": "critical facet",
+    "Definition": "A facet that plays an important role in a business service.",
+    "Aliases": ["critical facets", "critical"]
+  },
+  {
+    "Term": "data classification",
+    "Definition": "",
+    "Aliases": []
+  },
+  {
     "Term": "definition",
     "Definition": "A structural template for creating component instances, specifying the data fields, facet packages, and relationships that instances of the component will inherit.",
-    "Aliases": ["definition's", "definitions"]
+    "Aliases": [
+      "definition's",
+      "definitions"
+    ]
   },
   {
     "Term": "dimension",
     "Definition": "A type of facet that provides a globally shared list of choices, allowing only a single selection from this list. Each entity can be assigned only one value per dimension.",
-    "Aliases": ["dimensions"]
+    "Aliases": [
+      "dimensions"
+    ]
   },
   {
     "Term": "entitlement",
     "Definition": "A component that establishes an entity's right to a particular service or benefit. Entitlements can be granted temporarily or permanently and are managed through entitlement definitions.",
-    "Aliases": ["entitlements"]
+    "Aliases": [
+      "entitlements"
+    ]
   },
   {
     "Term": "entitlement definition",
     "Definition": "A template that specifies the conditions and privileges associated with an entitlement, such as access rights or service benefits. Entitlement definitions are used to create specific entitlements for entities.",
-    "Aliases": ["entitlement definitions"]
+    "Aliases": [
+      "entitlement definitions"
+    ]
   },
   {
     "Term": "entitlement instance",
     "Definition": "An individual entitlement record created from an entitlement definition. Each entitlement instance grants a specific privilege or service access to an entity.",
-    "Aliases": ["entitlement instances"]
+    "Aliases": [
+      "entitlement instances"
+    ]
   },
   {
     "Term": "entitlement package",
     "Definition": "A collection of entitlements assigned to an entity definition. The entitlement package outlines the available privileges or services that can be granted to entity instances.",
-    "Aliases": ["entitlement packages"]
+    "Aliases": [
+      "entitlement packages"
+    ]
   },
   {
     "Term": "entity",
     "Definition": "A primary, independently managed unit within the system, such as a client, vendor, or partner. Entities serve as the main organizational units, around which other components are structured.",
-    "Aliases": ["entity's", "entities"]
+    "Aliases": [
+      "entity's",
+      "entities"
+    ]
   },
   {
     "Term": "entity definition",
     "Definition": "A template that defines the structure and allowed relationships for an entity. An entity definition includes facet and field packages, along with any entitlements or assets that can be assigned.",
-    "Aliases": ["entity types"]
+    "Aliases": [
+      "entity types"
+    ]
+  },
+  {
+    "Term": "entity definitions",
+    "Definition": "",
+    "Aliases": []
   },
   {
     "Term": "entity instance",
     "Definition": "An individual record of an entity, created based on a specific entity definition. Instances hold actual data and are unique to each tenant.",
-    "Aliases": ["entity instances"]
+    "Aliases": [
+      "entity instances"
+    ]
   },
   {
     "Term": "entity package",
     "Definition": "A collection of facets, fields, entitlements, and other components assigned to an entity definition to shape the entity's configuration and behavior.",
-    "Aliases": ["entity packages"]
+    "Aliases": [
+      "entity packages"
+    ]
   },
   {
     "Term": "facet",
     "Definition": "A customizable metadata field assigned to components to store additional information. Facets are organized into packages and can be of different types, including dimension, attribute, property, and tag.",
-    "Aliases": ["facets"]
+    "Aliases": [
+      "facets"
+    ]
   },
   {
     "Term": "facet definition",
     "Definition": "A template describing the type and structure of a facet, such as dimension, attribute, property, or tag. Facet definitions are used to establish the type of metadata that components can hold.",
-    "Aliases": ["facet definitions"]
+    "Aliases": [
+      "facet definitions", "facet definition's"
+    ]
   },
   {
     "Term": "facet instance",
     "Definition": "An individual metadata record created based on a facet definition. Facet instances hold specific data values for individual component instances, providing additional information such as tags, properties, or classifications.",
-    "Aliases": ["facet instances"]
+    "Aliases": [
+      "facet instances"
+    ]
   },
   {
     "Term": "facet package",
     "Definition": "A collection of facets assigned to a component definition to define the additional data fields available for instances of that component. Facet packages enforce a structured layout for recording metadata.",
-    "Aliases": ["facet packages"]
+    "Aliases": [
+      "facet packages"
+    ]
   },
   {
     "Term": "field",
-    "Definition": "A component used to define specific data fields associated with transactional data for entities. Fields can be grouped into field packages and assigned to entity definitions to standardize data capture.",
-    "Aliases": ["fields"]
+    "Definition": "A component used to define specific data fields associated with transactional data for entities. Fields can be grouped into field packages and assigned to entity definitions to standardise data capture.",
+    "Aliases": [
+      "fields"
+    ]
   },
   {
     "Term": "field definition",
     "Definition": "A template that describes the configuration and data type of a field, such as text, number, or date. Field definitions are used to standardize data capture across entities.",
-    "Aliases": ["field definitions"]
+    "Aliases": [
+      "field definitions"
+    ]
   },
   {
     "Term": "field instance",
     "Definition": "An individual data field created based on a field definition. Field instances are attached to entity instances and hold specific data values for those entities.",
-    "Aliases": ["field instances"]
+    "Aliases": [
+      "field instances"
+    ]
   },
   {
     "Term": "field package",
     "Definition": "A collection of field definitions assigned to an entity definition, allowing specific fields to be recorded for instances of that entity. Each field in a package can be configured based on organizational needs.",
-    "Aliases": ["field packages"]
+    "Aliases": [
+      "field packages"
+    ]
+  },
+  {
+    "Term": "field types",
+    "Definition": "",
+    "Aliases": []
+  },
+  {
+    "Term": "field's",
+    "Definition": "",
+    "Aliases": []
   },
   {
     "Term": "hybrid list",
     "Definition": "A structured list of categorized items that can contain both global and entity-specific items from which transactional data can be selectively chosen based on entity-specific policies.",
-    "Aliases": ["hybrid lists"]
+    "Aliases": [
+      "hybrid lists"
+    ]
   },
   {
     "Term": "hybrid list definition",
     "Definition": "A template that outlines the categories and structure of a hybrid list. The hybrid list definition serves as the basis for creating hybrid list instances associated with specific entities.",
-    "Aliases": ["hybrid list definitions"]
+    "Aliases": [
+      "hybrid list definitions"
+    ]
   },
   {
     "Term": "hybrid list instance",
     "Definition": "A specific, populated hybrid list created based on a hybrid list definition. Hybrid list instances contain categorized items that can be customized for each entity.",
-    "Aliases": ["hybrid list instances"]
+    "Aliases": [
+      "hybrid list instances"
+    ]
   },
   {
     "Term": "hybrid list package",
     "Definition": "A set of hybrid lists associated with an entity type, used to standardize the items and categories available for data entry on those entities.",
-    "Aliases": ["hybrid list packages"]
+    "Aliases": [
+      "hybrid list packages"
+    ]
   },
   {
     "Term": "inclusion policy",
@@ -187,17 +290,26 @@
   {
     "Term": "instance",
     "Definition": "An individual record created based on a component definition. Instances are populated with unique data values while inheriting the structure from their respective definitions.",
-    "Aliases": ["instances"]
+    "Aliases": [
+      "instances"
+    ]
   },
   {
     "Term": "item",
     "Definition": "A name/value pair within a hybrid list category, field or facet, representing a selectable option. Items can be global or entity-specific.",
-    "Aliases": ["items"]
+    "Aliases": [
+      "items"
+    ]
+  },
+  {
+    "Term": "json web token (JWT)",
+    "Definition": "An open standard defined in RFC 7519 that enables secure communication between two parties. It is compact, URL-safe, and self-contained, making it ideal for transmitting authentication and authorization data between services.",
+    "Aliases": []
   },
   {
     "Term": "package",
     "Definition": "1. **(non-facet)** A defined grouping of fields, entitlements, assets, or hybrid lists intended for assignment to a specified entity type.\n2. **(facet)** A defined grouping of facets intended for assignment to component definitions such as entities, fields, entitlements, assets, or hybrid lists.",
-    "Aliases": []
+    "Aliases": ["packages"]
   },
   {
     "Term": "permissions",
@@ -207,17 +319,44 @@
   {
     "Term": "property",
     "Definition": "1. **(system property)** A name/value pair that configures Iris' behavior at the tenant level.\n2. **(facet property)** A single arbitrary value that can be recorded against a component to capture additional data.",
-    "Aliases": ["properties"]
+    "Aliases": [
+      "properties"
+    ]
+  },
+  {
+    "Term": "role-based access control (RBAC)",
+    "Definition": "An access control model that assigns permissions to roles rather than directly to users, providing a flexible and efficient way to manage access rights in systems.",
+    "Aliases": []
+  },
+  {
+    "Term": "roles",
+    "Definition": "A collection of permissions in access control systems that defines what actions users can perform, providing an efficient way to manage and assign access rights to users.",
+    "Aliases": []
+  },
+  {
+    "Term": "section",
+    "Definition": "",
+    "Aliases": []
+  },
+  {
+    "Term": "set",
+    "Definition": "A named, dynamically generated collection of records belonging to a specific definition that is selected whenever it is accessed according to a predefined criteria.",
+    "Aliases": ["sets"]
   },
   {
     "Term": "subscriber",
     "Definition": "A system that integrates with Iris via the REST API to consume and interact with data, such as retrieving entity configurations.",
-    "Aliases": ["subscriber system", "subscribers"]
+    "Aliases": [
+      "subscriber system",
+      "subscribers"
+    ]
   },
   {
     "Term": "tag",
     "Definition": "A type of facet that allows multiple selections from a globally shared choice list.",
-    "Aliases": ["tags"]
+    "Aliases": [
+      "tags"
+    ]
   },
   {
     "Term": "tenantAdmin",
@@ -227,16 +366,23 @@
   {
     "Term": "type",
     "Definition": "A classification within a component definition, such as field types (e.g., Text, Number, Dropdown) or facet types (e.g., Dimension, Attribute, Property, Tag). Types define the behavior and structure of a component's data fields.",
-    "Aliases": ["types", "type's"]
+    "Aliases": [
+      "types",
+      "type's"
+    ]
   },
   {
     "Term": "user",
     "Definition": "An authorized individual who has access to Iris, based on specific roles and permissions.",
-    "Aliases": []
+    "Aliases": ["users"]
   },
   {
     "Term": "zzzsuppression list",
     "Definition": null,
-    "Aliases": ["result[n].key...", "replace items: false", "disabled"]
+    "Aliases": [
+      "result[n].key...",
+      "replace items: false",
+      "disabled"
+    ]
   }
 ]

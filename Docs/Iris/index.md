@@ -44,9 +44,31 @@ Iris has several design philosophies that are reflected in its behaviour. These 
 
 These principles reflect a system built for adaptability, security, and ease of use, supporting a structured yet customisable approach to service configuration management.
 
+## REST API platform
+
+Iris is built around a REST API architecture, that serves `subscribers` with data in response to their requests.
+
+The base URL for accessing Iris via REST API is:
+
+```url
+/tenant/{tenantId}/api/vx
+```
+
+Where **vx** represents an integer version number, such as **v1**.
+
+Iris expects the tenant id to be passed on the URL path in every request.
+
+There is also another namespace, **dapi** which is used for dynamic endpoints. Its base URL is in a simlilar format:
+
+```url
+/tenant/{tenantId}/dapi
+```
+
+The **dapi** namespace makes it clear that the `subscriber` is accessing a dynamically generated endpoint. See the section on [dynamic endpoints](Dynamic%20Endpoints.md) for more information.
+
 ## Components
 
-The following are Iris components:
+These are the Iris components:
 
 * Entity
 * Field

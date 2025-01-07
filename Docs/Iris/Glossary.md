@@ -1,6 +1,6 @@
 # Glossary
 
-### Jump To: [A](#admin) [C](#cancreate) [D](#definition) [E](#entitlement) [F](#facet) [H](#hybrid-list) [I](#inclusion-policy) [P](#package) [S](#subscriber) [T](#tag) [U](#user)
+### Jump To: [A](#admin) [C](#cancreate) [D](#definition) [E](#entitlement) [F](#facet) [H](#hybrid-list) [I](#inclusion-policy) [J](#json-web-token-jwt) [P](#package) [R](#role-based-access-control-rbac) [S](#subscriber) [T](#tag) [U](#user)
 
 ## admin
 
@@ -25,6 +25,14 @@ A set of assets associated with an entity type, representing the assignable reso
 ## attribute
 
 A type of facet that records multiple independent string values. Attributes allow for arbitrary text entries associated with a component.
+
+## authentication
+
+The process of verifying the identity ownership (e.g. user or service).
+
+## authorisation
+
+The process of determining what actions an identity can perform on a resource.
 
 ## canCreate
 
@@ -57,6 +65,10 @@ A core object that Iris manages, such as entities, fields, assets, or hybrid lis
 ## component definition
 
 A template that describes the structure, behavior, and metadata of a component, such as an entity or asset. Definitions provide a blueprint for creating instances.
+
+## critical facet
+
+A facet that plays an important role in a business service.
 
 ## definition
 
@@ -158,6 +170,10 @@ An individual record created based on a component definition. Instances are popu
 
 A name/value pair within a hybrid list category, field or facet, representing a selectable option. Items can be global or entity-specific.
 
+## json web token (jwt)
+
+An open standard defined in RFC 7519 that enables secure communication between two parties. It is compact, URL-safe, and self-contained, making it ideal for transmitting authentication and authorization data between services.
+
 ## package
 
 1. **(non-facet)** A defined grouping of fields, entitlements, assets, or hybrid lists intended for assignment to a specified entity type.
@@ -171,6 +187,14 @@ A set of flags that determine a user's level of access to records within a secti
 
 1. **(system property)** A name/value pair that configures Iris' behavior at the tenant level.
 2. **(facet property)** A single arbitrary value that can be recorded against a component to capture additional data.
+
+## role-based access control (rbac)
+
+An access control model that assigns permissions to roles rather than directly to users, providing a flexible and efficient way to manage access rights in systems.
+
+## roles
+
+A collection of permissions in access control systems that defines what actions users can perform, providing an efficient way to manage and assign access rights to users.
 
 ## subscriber
 
