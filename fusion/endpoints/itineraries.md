@@ -6,7 +6,6 @@ nav_order: 40
 permalink: /fusion/endpoints/itineraries/
 ---
 
-# Invoices endpoint
 # Itineraries endpoint
 
 The `itineraries` endpoint provides one or more machine readable itineraries including PNR information and subsequent segments.

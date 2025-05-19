@@ -1,3 +1,11 @@
+---
+layout: default
+title: Unused Tickets
+parent: Endpoints
+nav_order: 40
+permalink: /endpoints/unused-tickets/
+---
+
 # Unused Tickets endpoint
 
 The `unusedtickets` endpoint provides the unused tickets (aka "tickets in credit") for the current client. 
