@@ -1,5 +1,5 @@
 ---
-title: Globetrotter Documentation
+title: Welcome
 layout: home
 nav_order: 0
 permalink: /
@@ -10,7 +10,7 @@ Welcome to the documentation site for Globetrotter's systems and services. Below
 
 You can contact us:
 
-{: .important-title }
+{: .note }
 
 > PERTH
 >
@@ -20,7 +20,7 @@ You can contact us:
 >
 > +61 894420100
 
-{: .important-title }
+{: .important }
 > MELBOURNE
 >
 > Level 8, 395 Collins Street
