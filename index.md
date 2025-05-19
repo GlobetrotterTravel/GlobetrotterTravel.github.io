@@ -1,7 +1,7 @@
 ---
 title: Globetrotter Documentation
 layout: home
-nav_order: 10
+nav_order: 0
 permalink: /
 has_children: false
 ---

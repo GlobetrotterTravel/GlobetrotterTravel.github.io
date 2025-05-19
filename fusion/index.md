@@ -1,7 +1,6 @@
 ---
 layout: default
 title: Globetrotter Fusion
-nav_order: 20
 has_children: true
 permalink: /fusion/
 ---
