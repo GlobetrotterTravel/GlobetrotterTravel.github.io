@@ -3,7 +3,7 @@ layout: default
 title: Unused Tickets
 parent: Endpoints
 nav_order: 40
-permalink: /endpoints/unused-tickets/
+permalink: /fusion/endpoints/unused-tickets/
 ---
 
 # Unused Tickets endpoint
