@@ -2,10 +2,11 @@
 layout: default
 title: Globetrotter Iris
 has_children: true
+has_toc: false
 permalink: /iris/
 ---
 
-# Welcome to Globetrotter Iris
+# Globetrotter Iris
 {: .no_toc}
 
 Globetrotter Iris is a scalable, flexible and reliable solution to managing service configuration data for organisations of any size. Iris is an API-first platform that is designed to fit into your workflows and deliver the benefits of centralised control and audit of complex information.

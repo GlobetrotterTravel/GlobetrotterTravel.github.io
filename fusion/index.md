@@ -5,7 +5,7 @@ has_children: true
 permalink: /fusion/
 ---
 
-# Welcome to Globetrotter Fusion
+# Globetrotter Fusion
 {: .no_toc}
 
 Globetrotter Fusion is Globetrotter's client-facing REST API platform.
