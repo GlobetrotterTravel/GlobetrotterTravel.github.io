@@ -25,7 +25,7 @@ and
 - The travel time was within the client's nominated time period either side of the fare taken.
 
 ## Table of contents
-{: .no_toc .text-delta }
+{: .no_toc}
 
 1. TOC
 {:toc}

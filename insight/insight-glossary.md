@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Insight Glossary
+parent: Globetrotter Insight
 nav_order: 1000
 has_children: false
 permalink: /insight/insight-glossary/

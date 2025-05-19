@@ -14,7 +14,7 @@ Globetrotter Iris is a scalable, flexible and reliable solution to managing serv
 This knowledge base contains the complete documentation for Globetrotter Iris. You can see the system overview or follow [how-to articles](/iris/howto/) for specific actions.
 
 ## Table of contents
-{: .no_toc .text-delta }
+{: .no_toc}
 
 1. TOC
 {:toc}

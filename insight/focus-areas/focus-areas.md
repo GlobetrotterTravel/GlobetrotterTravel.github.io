@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Focus Areas
+parent: Globetrotter Insight
 nav_order: 10
 has_children: true
 permalink: /insight/focus-areas/
