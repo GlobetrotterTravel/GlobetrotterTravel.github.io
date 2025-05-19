@@ -3,7 +3,7 @@ layout: default
 title: Traveller Location
 parent: Endpoints
 nav_order: 50
-permalink: /endpoints/traveller-location/
+permalink: /fusion/endpoints/traveller-location/
 ---
 
 # Traveller Location endpoint
