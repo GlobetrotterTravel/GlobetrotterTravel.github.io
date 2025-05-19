@@ -10,8 +10,8 @@ permalink: /iris/howto/create-a-facet-definition/
 
 To create a new facet definition, first decide:
 
-Does the data need to hold multiple values?
-Does the data need to allow free text values?
+1. Does the data need to hold multiple values?
+2. Does the data need to allow free text values?
 
 The answers to these questions determine what type of facet to create. For further guidance see: Facets
 
