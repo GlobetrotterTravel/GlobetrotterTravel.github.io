@@ -1,6 +1,6 @@
 ---
 layout: default
-title: External Tool
+title: Swagger
 parent: Fusion
 nav_order: 60
 permalink: /fusion/swagger/

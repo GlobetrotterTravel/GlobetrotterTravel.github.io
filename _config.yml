@@ -4,6 +4,8 @@ theme: just-the-docs
 
 footer_content: "Copyright &copy; Globetrotter. All rights reserved."
 
+enable_next_prev: true
+
 url: https://globetrottertravel.github.io
 
 aux_links:
