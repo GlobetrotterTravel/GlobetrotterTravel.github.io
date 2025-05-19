@@ -1,7 +1,6 @@
 ---
 layout: default
 title: Globetrotter Iris
-parent: Globetrotter Documentation
 nav_order: 20
 has_children: true
 permalink: /iris/

@@ -10,5 +10,11 @@ enable_copy_code_button: true
 
 nav_enabled: true
 
+collections:
+  docs:
+    permalink: "/:collection/:path/"
+    output: true
+
+
 back_to_top: true
 back_to_top_text: "Back to top"

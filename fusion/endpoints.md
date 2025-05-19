@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Endpoints
-parent: Fusion
+parent: Globetrotter Fusion
 nav_order: 20
 has_children: true
 permalink: /fusion/endpoints/

@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Pagination
-parent: Fusion
+parent: Globetrotter Fusion
 nav_order: 50
 permalink: /fusion/pagination/
 ---

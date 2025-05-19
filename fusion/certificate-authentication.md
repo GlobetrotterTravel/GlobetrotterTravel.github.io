@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Certificate authentication
-parent: Fusion
+parent: Globetrotter Fusion
 nav_order: 20
 permalink: /fusion/certificate-authentication/
 ---

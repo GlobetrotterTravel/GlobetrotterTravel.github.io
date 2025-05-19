@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Pre-shared key authentication
-parent: Fusion
+parent: Globetrotter Fusion
 nav_order: 30
 permalink: /fusion/pre-shared-key-authentication/
 ---

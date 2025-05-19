@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Delete a person
-parent: Iris
+parent: How-to guides
 nav_order: 10
 permalink: /iris/howto/delete-a-person/
 ---

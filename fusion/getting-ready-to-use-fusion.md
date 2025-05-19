@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Getting ready to use Fusion
-parent: Fusion
+parent: Globetrotter Fusion
 nav_order: 10
 permalink: /fusion/getting-ready-to-use-fusion/
 ---

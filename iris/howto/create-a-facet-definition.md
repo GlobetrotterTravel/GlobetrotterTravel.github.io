@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Create a facet definition
-parent: Iris
+parent: How-to guides
 nav_order: 10
 permalink: /iris/howto/create-a-facet-definition/
 ---
