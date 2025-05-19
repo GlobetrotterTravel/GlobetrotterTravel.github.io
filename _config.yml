@@ -1,8 +1,10 @@
-title: Just the Docs Template
-description: A starter template for a Jeykll site using the Just the Docs theme!
+title: Globetrotter Documentation
+description: Documentation for Globetrotter's systems and services
 theme: just-the-docs
 
-url: https://just-the-docs.github.io
+footer_content: "Copyright &copy; Globetrotter. All rights reserved."
+
+url: https://globetrottertravel.github.io
 
 aux_links:
-  Template Repository: https://github.com/just-the-docs/just-the-docs-template
+  Globetrotter Insight: https://insight.globetrotter.com.au/

@@ -1,0 +1,918 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "Globetrotter Fusion",
+    "version": "1.0"
+  },
+  "paths": {
+    "/api/v1/Bookings": {
+      "get": {
+        "tags": [
+          "Bookings"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/BookingGetDtoV1"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/BookingGetDtoV1"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/BookingGetDtoV1"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/Invoices": {
+      "get": {
+        "tags": [
+          "Invoices"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/InvoiceGetDtoV1"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/InvoiceGetDtoV1"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/InvoiceGetDtoV1"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/Itineraries": {
+      "get": {
+        "tags": [
+          "Itineraries"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/ItineraryGetDtoV1"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/ItineraryGetDtoV1"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/ItineraryGetDtoV1"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/TravellerLocation": {
+      "get": {
+        "tags": [
+          "TravellerLocation"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/TravellerLocationGetDtoV1"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/TravellerLocationGetDtoV1"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/TravellerLocationGetDtoV1"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/v1/UnusedTickets": {
+      "get": {
+        "tags": [
+          "UnusedTickets"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/UnusedTicketGetDtoV1"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/UnusedTicketGetDtoV1"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/UnusedTicketGetDtoV1"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "BookingGetDtoV1": {
+        "title": "Booking",
+        "type": "object",
+        "properties": {
+          "recordLocator": {
+            "type": "string",
+            "description": "The record locator (passenger name record/PNR) of the booking.",
+            "nullable": true
+          },
+          "originatingAgency": {
+            "type": "string",
+            "description": "The name of the agency that made the booking.",
+            "nullable": true
+          },
+          "clientNumber": {
+            "type": "string",
+            "description": "The unique client number associated with the booking.",
+            "nullable": true
+          },
+          "bookingDate": {
+            "type": "string",
+            "description": "The date when the booking was made.",
+            "format": "date",
+            "nullable": true
+          },
+          "modifiedDateTime": {
+            "type": "string",
+            "description": "The date and time when the booking was last modified.",
+            "format": "date-time",
+            "nullable": true
+          },
+          "isTicketed": {
+            "type": "boolean",
+            "description": "Indicates whether the booking has been ticketed."
+          },
+          "isInternational": {
+            "type": "boolean",
+            "description": "Indicates whether the booking is for international travel."
+          },
+          "traveller": {
+            "type": "string",
+            "description": "The primary traveler's name associated with the booking.",
+            "nullable": true
+          },
+          "travellers": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/BookingTravellerGetDtoV1"
+            },
+            "description": "The list of travelers associated with the booking.",
+            "nullable": true
+          },
+          "department": {
+            "type": "string",
+            "description": "The department for which the booking was made.",
+            "nullable": true
+          },
+          "employeeId": {
+            "type": "string",
+            "description": "The employee ID associated with the booking.",
+            "nullable": true
+          },
+          "costCentre": {
+            "type": "string",
+            "description": "The cost centre to which the booking expenses are allocated.",
+            "nullable": true
+          },
+          "purchaseOrder": {
+            "type": "string",
+            "description": "The purchase order number associated with the booking.",
+            "nullable": true
+          },
+          "bookedBy": {
+            "type": "string",
+            "description": "The name of the person who made the booking.",
+            "nullable": true
+          },
+          "authorisedBy": {
+            "type": "string",
+            "description": "The name of the person who authorized the booking.",
+            "nullable": true
+          },
+          "customData1": {
+            "type": "string",
+            "description": "Custom data field for additional booking information.",
+            "nullable": true
+          },
+          "customData2": {
+            "type": "string",
+            "description": "Additional custom data field for booking information.",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "Represents the data transfer object for retrieving booking information."
+      },
+      "BookingTravellerGetDtoV1": {
+        "title": "Booking Traveller",
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "The name of the traveler.",
+            "nullable": true
+          },
+          "department": {
+            "type": "string",
+            "description": "The traveler's home department (not necessarily the department that the travel was booked for).",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "Represents the data transfer object for traveler information within a booking."
+      },
+      "InvoiceGetDtoV1": {
+        "title": "Invoice",
+        "type": "object",
+        "properties": {
+          "invoiceNumber": {
+            "type": "string",
+            "description": "The invoice number.",
+            "nullable": true
+          },
+          "clientNumber": {
+            "type": "string",
+            "description": "The client number associated with the invoice.",
+            "nullable": true
+          },
+          "clientName": {
+            "type": "string",
+            "description": "The name of the client associated with the invoice.",
+            "nullable": true
+          },
+          "department": {
+            "type": "string",
+            "description": "The department associated with the invoice.",
+            "nullable": true
+          },
+          "invoiceDate": {
+            "type": "string",
+            "description": "The date of the invoice.",
+            "format": "date",
+            "nullable": true
+          },
+          "netAmount": {
+            "type": "number",
+            "description": "The net amount of the invoice (excluding GST).",
+            "format": "double"
+          },
+          "gstAmount": {
+            "type": "number",
+            "description": "The GST amount for the invoice.",
+            "format": "double"
+          },
+          "totalAmount": {
+            "type": "number",
+            "description": "The total amount of the invoice (including GST).",
+            "format": "double"
+          },
+          "balanceAmount": {
+            "type": "number",
+            "description": "The outstanding balance amount of the invoice.",
+            "format": "double"
+          },
+          "recordLocator": {
+            "type": "string",
+            "description": "The record locator (PNR) associated with the invoice.",
+            "nullable": true
+          },
+          "lineItems": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/InvoiceLineItemGetDtoV1"
+            },
+            "description": "The list of line items included in the invoice.",
+            "nullable": true
+          },
+          "payments": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/InvoicePaymentGetDtoV1"
+            },
+            "description": "The list of payments applied to the invoice.",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "Represents the data transfer object for retrieving invoice information."
+      },
+      "InvoiceLineItemGetDtoV1": {
+        "type": "object",
+        "properties": {
+          "travellerName": {
+            "type": "string",
+            "description": "The name of the traveller associated with the line item.",
+            "nullable": true
+          },
+          "employeeId": {
+            "type": "string",
+            "description": "The employee ID associated with the traveller.",
+            "nullable": true
+          },
+          "product": {
+            "type": "string",
+            "description": "The type of product or service.",
+            "nullable": true
+          },
+          "vendorName": {
+            "type": "string",
+            "description": "The name of the vendor providing the product or service.",
+            "nullable": true
+          },
+          "ticketOrConfirmationNumber": {
+            "type": "string",
+            "description": "The ticket or confirmation number for the product or service.",
+            "nullable": true
+          },
+          "originalTicketNumber": {
+            "type": "string",
+            "description": "The original ticket number, if applicable.",
+            "nullable": true
+          },
+          "travelDate": {
+            "type": "string",
+            "description": "The date of travel or service commencement.",
+            "format": "date",
+            "nullable": true
+          },
+          "returnDate": {
+            "type": "string",
+            "description": "The return date or service end date.",
+            "format": "date",
+            "nullable": true
+          },
+          "netAmount": {
+            "type": "number",
+            "description": "The net amount for this line item (excluding GST).",
+            "format": "double"
+          },
+          "gstAmount": {
+            "type": "number",
+            "description": "The GST amount for this line item.",
+            "format": "double"
+          },
+          "totalAmount": {
+            "type": "number",
+            "description": "The total amount for this line item (including GST).",
+            "format": "double"
+          },
+          "costCentre": {
+            "type": "string",
+            "description": "The cost centre associated with the line item.",
+            "nullable": true
+          },
+          "purchaseOrder": {
+            "type": "string",
+            "description": "The purchase order number associated with the line item.",
+            "nullable": true
+          },
+          "bookedBy": {
+            "type": "string",
+            "description": "The name of the person who booked the travel or service.",
+            "nullable": true
+          },
+          "authorisedBy": {
+            "type": "string",
+            "description": "The name of the person who authorized the travel or service.",
+            "nullable": true
+          },
+          "customData1": {
+            "type": "string",
+            "description": "Client-specified custom code field 1.",
+            "nullable": true
+          },
+          "customData2": {
+            "type": "string",
+            "description": "Client-specified custom code field 2.",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "Represents a line item in an invoice."
+      },
+      "InvoicePaymentGetDtoV1": {
+        "type": "object",
+        "properties": {
+          "merchant": {
+            "type": "string",
+            "description": "The merchant processing the payment.",
+            "nullable": true
+          },
+          "receivedDate": {
+            "type": "string",
+            "description": "The date when the payment was received.",
+            "format": "date",
+            "nullable": true
+          },
+          "formOfPayment": {
+            "type": "string",
+            "description": "The form of payment used (e.g., Credit Card, Direct Deposit).",
+            "nullable": true
+          },
+          "cardNumber": {
+            "type": "string",
+            "description": "The card number used for the payment, if applicable.",
+            "nullable": true
+          },
+          "cardHolder": {
+            "type": "string",
+            "description": "The cardholder's name.",
+            "nullable": true
+          },
+          "amount": {
+            "type": "number",
+            "description": "The amount of the payment.",
+            "format": "double"
+          }
+        },
+        "additionalProperties": false,
+        "description": "Represents a payment applied to an invoice."
+      },
+      "ItineraryGetDtoV1": {
+        "title": "Itinerary",
+        "type": "object",
+        "properties": {
+          "recordLocator": {
+            "type": "string",
+            "description": "The record locator (passenger name record/PNR) of the itinerary.",
+            "nullable": true
+          },
+          "clientNumber": {
+            "type": "string",
+            "description": "The unique client number associated with the itinerary.",
+            "nullable": true
+          },
+          "originatingAgency": {
+            "type": "string",
+            "description": "The agency that originally booked the itinerary.",
+            "nullable": true
+          },
+          "bookingDate": {
+            "type": "string",
+            "description": "The date when the itinerary was booked.",
+            "format": "date",
+            "nullable": true
+          },
+          "modifiedDateTime": {
+            "type": "string",
+            "description": "The date and time when the itinerary was last modified.",
+            "format": "date-time",
+            "nullable": true
+          },
+          "isTicketed": {
+            "type": "boolean",
+            "description": "Indicates whether the itinerary has been ticketed."
+          },
+          "isInternational": {
+            "type": "boolean",
+            "description": "Indicates whether the itinerary includes international travel."
+          },
+          "travellers": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/BookingTravellerGetDtoV1"
+            },
+            "description": "The list of travelers associated with the itinerary.",
+            "nullable": true
+          },
+          "department": {
+            "type": "string",
+            "description": "The department against which this booking is charged.",
+            "nullable": true
+          },
+          "employeeId": {
+            "type": "string",
+            "description": "The employee ID associated with the itinerary.",
+            "nullable": true
+          },
+          "costCentre": {
+            "type": "string",
+            "description": "The cost centre against which this booking is charged.",
+            "nullable": true
+          },
+          "purchaseOrder": {
+            "type": "string",
+            "description": "The purchase order number for the booking.",
+            "nullable": true
+          },
+          "bookedBy": {
+            "type": "string",
+            "description": "The name of the person who booked this travel.",
+            "nullable": true
+          },
+          "authorisedBy": {
+            "type": "string",
+            "description": "The name of the person who authorized this travel.",
+            "nullable": true
+          },
+          "customData1": {
+            "type": "string",
+            "description": "Client-specified custom code field 1.",
+            "nullable": true
+          },
+          "customData2": {
+            "type": "string",
+            "description": "Client-specified custom code field 2.",
+            "nullable": true
+          },
+          "segmentCount": {
+            "type": "integer",
+            "description": "The total number of segments in the itinerary.",
+            "format": "int32"
+          },
+          "tripStartLocal": {
+            "type": "string",
+            "description": "The local date and time when the trip starts.",
+            "format": "date-time",
+            "nullable": true
+          },
+          "tripStartUtc": {
+            "type": "string",
+            "description": "The UTC date and time when the trip starts.",
+            "format": "date-time",
+            "nullable": true
+          },
+          "tripEndLocal": {
+            "type": "string",
+            "description": "The local date and time when the trip ends.",
+            "format": "date-time",
+            "nullable": true
+          },
+          "tripEndUtc": {
+            "type": "string",
+            "description": "The UTC date and time when the trip ends.",
+            "format": "date-time",
+            "nullable": true
+          },
+          "totalAirDistance": {
+            "type": "integer",
+            "description": "The total air distance covered in the itinerary.",
+            "format": "int32"
+          },
+          "totalAirDuration": {
+            "type": "string",
+            "description": "The total duration of air travel in the itinerary.",
+            "nullable": true
+          },
+          "totalAirDurationSeconds": {
+            "type": "integer",
+            "description": "The total duration of air travel in seconds.",
+            "format": "int32"
+          },
+          "segments": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/ISegment"
+            },
+            "description": "The list of segments included in the itinerary.",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "Represents the data transfer object for retrieving itinerary information."
+      },
+      "TravellerLocationGetDtoV1": {
+        "title": "Traveller Location",
+        "type": "object",
+        "properties": {
+          "clientNumber": {
+            "type": "string",
+            "description": "The client number associated with the traveler.",
+            "nullable": true
+          },
+          "recordLocator": {
+            "type": "string",
+            "description": "The record locator (PNR) of the booking.",
+            "nullable": true
+          },
+          "traveller": {
+            "type": "string",
+            "description": "The name of the traveler.",
+            "nullable": true
+          },
+          "travellers": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/BookingTravellerGetDtoV1"
+            },
+            "description": "A list of all travelers on the booking.",
+            "nullable": true
+          },
+          "segmentNumber": {
+            "type": "integer",
+            "description": "The segment number within the booking.",
+            "format": "int32"
+          },
+          "segmentType": {
+            "type": "string",
+            "description": "The type of segment (e.g., Air, Hotel, Car).",
+            "nullable": true
+          },
+          "segmentReference": {
+            "type": "string",
+            "description": "A reference identifier for the segment.",
+            "nullable": true
+          },
+          "departureDate": {
+            "type": "string",
+            "description": "The departure date.",
+            "format": "date",
+            "nullable": true
+          },
+          "departureTime": {
+            "type": "string",
+            "description": "The departure time.",
+            "format": "time",
+            "nullable": true
+          },
+          "departureLocationCode": {
+            "type": "string",
+            "description": "The location code of the departure point.",
+            "nullable": true
+          },
+          "departureLatitude": {
+            "type": "string",
+            "description": "The latitude of the departure location.",
+            "nullable": true
+          },
+          "departureLongitude": {
+            "type": "string",
+            "description": "The longitude of the departure location.",
+            "nullable": true
+          },
+          "arrivalDate": {
+            "type": "string",
+            "description": "The arrival date.",
+            "format": "date",
+            "nullable": true
+          },
+          "arrivalTime": {
+            "type": "string",
+            "description": "The arrival time.",
+            "format": "time",
+            "nullable": true
+          },
+          "arrivalLocationCode": {
+            "type": "string",
+            "description": "The location code of the arrival point.",
+            "nullable": true
+          },
+          "arrivalLatitude": {
+            "type": "string",
+            "description": "The latitude of the arrival location.",
+            "nullable": true
+          },
+          "arrivalLongitude": {
+            "type": "string",
+            "description": "The longitude of the arrival location.",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "Represents the data transfer object for retrieving traveler location information."
+      },
+      "UnusedTicketGetDtoV1": {
+        "title": "Unused Ticket",
+        "type": "object",
+        "properties": {
+          "ticketNumber": {
+            "type": "string",
+            "description": "The ticket number.",
+            "nullable": true
+          },
+          "clientNumber": {
+            "type": "string",
+            "description": "The client number associated with the ticket.",
+            "nullable": true
+          },
+          "clientName": {
+            "type": "string",
+            "description": "The name of the client.",
+            "nullable": true
+          },
+          "issuedDate": {
+            "type": "string",
+            "description": "The date the ticket was issued.",
+            "format": "date",
+            "nullable": true
+          },
+          "expiryDate": {
+            "type": "string",
+            "description": "The date the ticket expires.",
+            "format": "date",
+            "nullable": true
+          },
+          "insertedDate": {
+            "type": "string",
+            "description": "The date the ticket was inserted into the system.",
+            "format": "date",
+            "nullable": true
+          },
+          "totalAirFare": {
+            "type": "number",
+            "description": "The total airfare amount.",
+            "format": "double"
+          },
+          "currencyCode": {
+            "type": "string",
+            "description": "The currency code of the airfare amount.",
+            "nullable": true
+          },
+          "fareBasisCode": {
+            "type": "string",
+            "description": "The fare basis code of the ticket.",
+            "nullable": true
+          },
+          "recordLocator": {
+            "type": "string",
+            "description": "The record locator (PNR) associated with the ticket.",
+            "nullable": true
+          },
+          "airlineCode": {
+            "type": "string",
+            "description": "The airline code of the ticket.",
+            "nullable": true
+          },
+          "seatClass": {
+            "type": "string",
+            "description": "The seat class of the ticket.",
+            "nullable": true
+          },
+          "isDomesticTicket": {
+            "type": "boolean",
+            "description": "Indicates whether the ticket is for a domestic flight."
+          },
+          "firstName": {
+            "type": "string",
+            "description": "The first name of the traveler.",
+            "nullable": true
+          },
+          "lastName": {
+            "type": "string",
+            "description": "The last name of the traveler.",
+            "nullable": true
+          },
+          "departureDate": {
+            "type": "string",
+            "description": "The departure date.",
+            "format": "date",
+            "nullable": true
+          },
+          "departureTime": {
+            "type": "string",
+            "description": "The departure time.",
+            "format": "time",
+            "nullable": true
+          },
+          "isRefundable": {
+            "type": "boolean",
+            "description": "Indicates whether the ticket is refundable."
+          },
+          "status": {
+            "type": "string",
+            "description": "The status of the ticket.",
+            "nullable": true
+          },
+          "openSegments": {
+            "type": "string",
+            "description": "Information about any open segments on the ticket.",
+            "nullable": true
+          },
+          "department": {
+            "type": "string",
+            "description": "The department associated with the ticket.",
+            "nullable": true
+          },
+          "employeeId": {
+            "type": "string",
+            "description": "The employee ID associated with the ticket.",
+            "nullable": true
+          },
+          "costCentre": {
+            "type": "string",
+            "description": "The cost centre associated with the ticket.",
+            "nullable": true
+          },
+          "purchaseOrder": {
+            "type": "string",
+            "description": "The purchase order number associated with the ticket.",
+            "nullable": true
+          },
+          "bookedBy": {
+            "type": "string",
+            "description": "The name of the person who booked the ticket.",
+            "nullable": true
+          },
+          "authorisedBy": {
+            "type": "string",
+            "description": "The name of the person who authorized the ticket.",
+            "nullable": true
+          },
+          "customData1": {
+            "type": "string",
+            "description": "Client-specified custom code field 1.",
+            "nullable": true
+          },
+          "customData2": {
+            "type": "string",
+            "description": "Client-specified custom code field 2.",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false,
+        "description": "Represents the data transfer object for unused tickets held in credit."
+      }
+    }
+  }
+}
