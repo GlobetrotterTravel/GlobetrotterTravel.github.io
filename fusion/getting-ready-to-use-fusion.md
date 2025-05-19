@@ -1,11 +1,10 @@
 ---
 layout: default
-title: Setup and accessing endpoints
+title: Getting ready to use Fusion
 parent: Fusion
 nav_order: 10
+permalink: /getting-ready-to-use-fusion/
 ---
-
-# Setup and accessing endpoints
 
 Fusion listens on `https://fusion.globetrotter.com.au` port `443` and the API is accessed through `/api/<version>/<endpoint>`
 

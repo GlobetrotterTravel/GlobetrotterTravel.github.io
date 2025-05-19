@@ -1,11 +1,10 @@
 ---
 layout: default
 parent: Fusion
+title: The query engine
 nav_order: 40
 permalink: /fusion/the-query-engine/
 ---
-
-# The query engine
 
 The query engine interprets a query string provided to an endpoint and returns documents matching that search query. All endpoints support query engine searches.
 
