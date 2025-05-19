@@ -5,3 +5,10 @@ theme: just-the-docs
 footer_content: "Copyright &copy; Globetrotter. All rights reserved."
 
 url: https://globetrottertravel.github.io
+
+enable_copy_code_button: true
+
+nav_enabled: true
+
+back_to_top: true
+back_to_top_text: "Back to top"

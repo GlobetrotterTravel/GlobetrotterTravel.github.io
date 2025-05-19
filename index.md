@@ -9,19 +9,30 @@ Welcome to the documentation site for Globetrotter's systems and services. Below
 
 You can contact us:
 
-**PERTH**
-108 Stirling Highway
-Nedlands WA 6009
+{: .important-title }
 
-+61 894420100
+> PERTH
+>
+> 108 Stirling Highway
+>
+> Nedlands WA 6009
+>
+> +61 894420100
 
-**MELBOURNE**
-Level 8, 395 Collins Street
-Melbourne VIC 3000
+{: .important-title }
+> MELBOURNE
+>
+> Level 8, 395 Collins Street
+> 
+> Melbourne VIC 3000
+>
+> +61 390790700
 
-+61 390790700
+<a href="https://globetrotter.com.au/">Globetrotter Corporate Travel</a>
 
-<a href="https://globetrotter.com.au/">Globetrotter</a>
+<a href="https://globetrotterlife.com.au/">Globetrotter Lifestyle</a>
+
+<a href="https://theincentivelab.com/">The Incentive Lab</a>
 
 <div class="navigation-grid">
   <a href="/fusion/" class="nav-card">
