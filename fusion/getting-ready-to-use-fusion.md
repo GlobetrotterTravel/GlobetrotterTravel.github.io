@@ -146,9 +146,3 @@ These standard fields capture information that most clients want to record again
 
 `customData1` and `customData2` are provided as unspecified-purpose fields for client convenience.
 
-<!-- Styled Footer Navigation for Setup.md -->
-<div style="display: flex; justify-content: space-between; width:95%; padding: 10px; background-color: #f8f8f8; border: 1px solid #ddd; border-radius: 5px; margin: 20px auto 0 auto;">
-  <div style="text-align:left;"><a href="index.html" style="text-decoration:none; color:#007acc;">Home</a></div>
-  <div style="text-align:center;"><a href="index.html" style="text-decoration:none; color:#007acc;">Home</a></div>
-  <div style="text-align:right;"><a href="CertificateAuthentication.html" style="text-decoration:none; color:#007acc;">Certificate Authentication &rarr;</a></div>
-</div>
