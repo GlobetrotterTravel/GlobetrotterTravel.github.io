@@ -3,7 +3,7 @@ layout: default
 title: Certificate authentication
 parent: Fusion
 nav_order: 20
-permalink: /fusion/certificate-authentication
+permalink: /fusion/certificate-authentication/
 ---
 
 # Certificate authentication

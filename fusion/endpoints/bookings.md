@@ -3,7 +3,7 @@ layout: default
 title: Bookings
 parent: Endpoints
 nav_order: 10
-permalink: /fusion/endpoints/bookings
+permalink: /fusion/endpoints/bookings/
 ---
 
 # Bookings endpoint

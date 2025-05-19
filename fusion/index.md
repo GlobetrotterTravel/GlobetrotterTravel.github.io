@@ -83,8 +83,13 @@ The following endpoints are available:
 ## Jump to
 
 [Getting ready to use Fusion](/fusion/getting-ready-to-use-fusion/)
+
 [Certificate Authentication](/fusion/certificate-authentication/)
+
 [Pre-Shared Key Authentication](/fusion/pre-shared-key-authentication/)
+
 [The query engine](/fusion/the-query-engine/)
+
 [Pagination](/fusion/pagination/)
+
 [Fusion Swagger Documentation](/fusion/swagger/)

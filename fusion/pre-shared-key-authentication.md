@@ -3,7 +3,7 @@ layout: default
 title: Pre-shared key authentication
 parent: Fusion
 nav_order: 30
-permalink: /fusion/pre-shared-key-authentication
+permalink: /fusion/pre-shared-key-authentication/
 ---
 
 # Pre-shared key authentication
