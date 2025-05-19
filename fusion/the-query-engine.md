@@ -2,6 +2,7 @@
 layout: default
 parent: Fusion
 title: The query engine
+title_display: true
 nav_order: 40
 permalink: /fusion/the-query-engine/
 ---
