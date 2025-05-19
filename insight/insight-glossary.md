@@ -9,7 +9,8 @@ permalink: /insight/insight-glossary/
 
 # Insight Glossary
 
-{: .warning } This is pre-release information and is subject to change. No action should be taken on the information in this article. No warranty as to the reliability or accuracy of the information presented in this article is offered.
+{: .warning } 
+> This is pre-release information and is subject to change. No action should be taken on the information in this article. No warranty as to the reliability or accuracy of the information presented in this article is offered.
 
 ## calculation 
 The process or formula that transforms one or more `measures` into a metric. `Calculations` may involve arithmetic operations, statistical methods, or more complex algorithms. They provide the operational logic behind metrics.  

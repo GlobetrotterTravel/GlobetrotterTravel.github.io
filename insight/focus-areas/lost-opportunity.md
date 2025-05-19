@@ -10,7 +10,8 @@ permalink: /insight/focus-areas/lost-opportunity/
 # Lost opportunity
 {: .no_toc}
 
-{: .warning } This is pre-release information and is subject to change. No action should be taken on the information in this article. No warranty as to the reliability or accuracy of the information presented in this article is offered.
+{: .warning }
+> This is pre-release information and is subject to change. No action should be taken on the information in this article. No warranty as to the reliability or accuracy of the information presented in this article is offered.
 
 Highlights potential savings missed by not consistently purchasing the lowest fare. This `focus area` draws attention to cost inefficiencies in fare selection and helps identify areas where improved practices could yield significant financial benefits.
 
