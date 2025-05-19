@@ -19,8 +19,8 @@ A well-formed URI looks like this
 https://fusion.globetrotter.com.au/api/v1/invoices?query=totalAmount^GT1000;department^EQOperations;recordLocator^CTRX0
 ````
 
-## Table of Contents
-{: .no_toc .text-delta }
+## Table of contents
+{: .no_toc }
 
 1. TOC
 {:toc}
