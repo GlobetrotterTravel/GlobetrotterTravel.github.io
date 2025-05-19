@@ -3,7 +3,7 @@ layout: default
 title: The query engine
 parent: Fusion
 nav_order: 40
-permalink: /fusion/the-query-engine
+permalink: /fusion/the-query-engine/
 ---
 
 # The query engine
