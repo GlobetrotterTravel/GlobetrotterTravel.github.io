@@ -7,8 +7,15 @@ permalink: /fusion/pre-shared-key-authentication/
 ---
 
 # Pre-shared key authentication
+{: .no_toc}
 
 Fusion supports pre-shared key (PSK) authentication as a straightforward method to access your data securely. In this method, a unique GUID (Globally Unique Identifier) is generated and shared with you. This GUID acts as your pre-shared key and must be included in the header of every request to Fusion.
+
+## Table of contents
+{: .no_toc}
+
+1. TOC
+{:toc}
 
 ## Overview
 

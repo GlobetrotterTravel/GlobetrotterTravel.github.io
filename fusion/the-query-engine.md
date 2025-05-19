@@ -7,13 +7,22 @@ nav_order: 40
 permalink: /fusion/the-query-engine/
 ---
 
+# The query engine
+{: .no_toc}
+
 The query engine interprets a query string provided to an endpoint and returns documents matching that search query. All endpoints support query engine searches.
+
+## Table of contents
+{: .no_toc}
+
+1. TOC
+{:toc}
 
 ## Overview
 
 Queries are appended to API endpoints using the `?query` parameter in the URL. The query string consists of one or more clauses that define the filtering criteria. Each clause specifies a property, an operator, and a value.
 
-## Query Format
+## Query format
 
 The general format of a query clause is:
 
@@ -31,7 +40,7 @@ Property1^Operator1Value1;Property2^Operator2Value2;...
 - **Operator**: The operation to perform for filtering.
 - **Value**: The value to compare against the property.
 
-## Supported Operators
+## Supported operators
 
 The following operators are supported for constructing queries:
 
@@ -71,7 +80,7 @@ GET https://fusion.globetrotter.com.au/api/v1/itineraries?TripStartLocal^GT2023-
 
 lacks the `?query` parameter and will therefore just return all itineraries.
 
-## Value Specifications
+## Value specifications
 
 - **Strings**: Should be provided as-is. For special characters or spaces, URL encoding may be required.
 
@@ -103,7 +112,7 @@ lacks the `?query` parameter and will therefore just return all itineraries.
   GET https://fusion.globetrotter.com.au/api/v1/bookings?query=IsInternational^EQtrue
   ```
 
-## Operator Descriptions with Examples
+## Operator descriptions with examples
 
 ### Equal To (`^EQ`)
 
@@ -195,7 +204,7 @@ Matches records where the property contains the specified substring (case-insens
 GET https://fusion.globetrotter.com.au/api/v1/bookings?query=Traveller^CTSmith
 ```
 
-## Combining Multiple Clauses
+## Combining multiple clauses
 
 Multiple clauses can be combined to create complex queries. Clauses are evaluated using an implicit logical AND.
 
@@ -211,13 +220,13 @@ GET https://fusion.globetrotter.com.au/api/v1/bookings?query=IsInternational^EQt
 GET https://fusion.globetrotter.com.au/api/v1/invoices?query=ClientNumber^EQ12345;TotalAmount^GT1000
 ```
 
-## Case Sensitivity
+## Case sensitivity
 
 - **Property Names**: Case-insensitive.
 - **String Values**: Compared in a case-insensitive manner for all operators.
 - **`^CT` Operator**: Performs a case-insensitive substring search.
 
-## Handling Special Characters
+## Handling special characters
 
 When values contain special characters (e.g., spaces, commas, semicolons), URL encoding must be used.
 
@@ -232,7 +241,7 @@ When values contain special characters (e.g., spaces, commas, semicolons), URL e
 GET https://fusion.globetrotter.com.au/api/v1/bookings?query=AuthorisedBy^EQJohn%20Doe
 ```
 
-## Error Handling
+## Error handling
 
 Invalid queries will result in error messages indicating the issue. Common errors include:
 
@@ -268,7 +277,7 @@ Invalid queries will result in error messages indicating the issue. Common error
 
 ## Examples
 
-### Example 1: Filtering Bookings by Client Number
+### Example 1: filtering bookings by client number
 
 Retrieve all bookings for `ClientNumber` 12345.
 
@@ -276,7 +285,7 @@ Retrieve all bookings for `ClientNumber` 12345.
 GET https://fusion.globetrotter.com.au/api/v1/bookings?query=ClientNumber^EQ12345
 ```
 
-### Example 2: Filtering Invoices by Date Range
+### Example 2: filtering invoices by date range
 
 Retrieve all invoices dated between January 1, 2023, and June 30, 2023.
 
@@ -284,7 +293,7 @@ Retrieve all invoices dated between January 1, 2023, and June 30, 2023.
 GET https://fusion.globetrotter.com.au/api/v1/invoices?query=InvoiceDate^GE2023-01-01;InvoiceDate^LE2023-06-30
 ```
 
-### Example 3: Filtering Itineraries by Departments
+### Example 3: filtering itineraries by departments
 
 Retrieve all itineraries associated with the `Sales` or `Marketing` departments.
 
@@ -292,7 +301,7 @@ Retrieve all itineraries associated with the `Sales` or `Marketing` departments.
 GET https://fusion.globetrotter.com.au/api/v1/itineraries?query=Department^INSales,Marketing
 ```
 
-### Example 4: Filtering Bookings by International Status
+### Example 4: filtering bookings by international flag
 
 Retrieve all domestic (non-international) bookings.
 
@@ -300,7 +309,7 @@ Retrieve all domestic (non-international) bookings.
 GET https://fusion.globetrotter.com.au/api/v1/bookings?query=IsInternational^EQfalse
 ```
 
-### Example 5: Filtering Invoices by Outstanding Balance
+### Example 5: filtering invoices by outstanding balance
 
 Retrieve all invoices with an outstanding `BalanceAmount` greater than zero.
 
@@ -308,7 +317,7 @@ Retrieve all invoices with an outstanding `BalanceAmount` greater than zero.
 GET https://fusion.globetrotter.com.au/api/v1/invoices?query=BalanceAmount^GT0
 ```
 
-### Example 6: Filtering Itineraries by Travel Dates
+### Example 6: filtering itineraries by travel dates
 
 Retrieve all itineraries with a `TripStartLocal` date after September 1, 2023.
 
@@ -316,7 +325,7 @@ Retrieve all itineraries with a `TripStartLocal` date after September 1, 2023.
 GET https://fusion.globetrotter.com.au/api/v1/itineraries?query=TripStartLocal^GT2023-09-01
 ```
 
-### Example 7: Combining Multiple Conditions
+### Example 7: combining multiple conditions
 
 Retrieve all ticketed bookings for `ClientNumber` 12345 where `Traveller` contains "Doe".
 
@@ -324,9 +333,9 @@ Retrieve all ticketed bookings for `ClientNumber` 12345 where `Traveller` contai
 GET https://fusion.globetrotter.com.au/api/v1/bookings?query=ClientNumber^EQ12345;IsTicketed^EQtrue;Traveller^CTDoe
 ```
 
-## Special Notes
+## Special notes
 
-- **Ordering of Clauses**: The order of clauses does not affect the outcome.
+- **Ordering of clauses**: The order of clauses does not affect the outcome.
 
   ```
   GET https://fusion.globetrotter.com.au/api/v1/bookings?query=IsTicketed^EQtrue;ClientNumber^EQ12345
@@ -338,13 +347,13 @@ GET https://fusion.globetrotter.com.au/api/v1/bookings?query=ClientNumber^EQ1234
   GET https://fusion.globetrotter.com.au/api/v1/bookings?query=ClientNumber^EQ12345;IsTicketed^EQtrue
   ```
 
-- **Date and Time Handling**: For properties of type `DateTime`, only the date component is considered during comparisons.
+- **Date and time handling**: For properties of type `DateTime`, only the date component is considered during comparisons.
 
-- **Whitespace Handling**: Leading and trailing whitespaces in values are trimmed.
+- **Whitespace handling**: Leading and trailing whitespaces in values are trimmed.
 
-- **Nested Properties**: Cannot query nested properties such as `Travellers.Name` or `LineItems.Product`.
+- **Nested properties**: Cannot query nested properties such as `Travellers.Name` or `LineItems.Product`.
 
-## Tips for Effective Querying
+## Tips for effective querying
 
 - **Ensure that the `?query` parameter is specified**: Unknown arguments are silently ignored, e.g.
 
@@ -358,17 +367,17 @@ GET https://fusion.globetrotter.com.au/api/v1/itineraries?TripStartLocal^GT2023-
 
 lacks the `?query` parameter and will therefore just return all itineraries.
 
-- **Use Correct Property Names**: Refer to the DTO definitions to ensure property names are accurate.
+- **Use correct property names**: Refer to the DTO definitions to ensure property names are accurate.
 
-- **Format Dates Properly**: Use the `YYYY-MM-DD` format for dates.
+- **Format dates correctly**: Use the `YYYY-MM-DD` format for dates.
 
-- **Specify Booleans Correctly**: Use `true`/`false` or `1`/`0` for boolean values.
+- **Specify booleans correctly**: Use `true`/`false` or `1`/`0` for boolean values.
 
-- **URL Encode Special Characters**: Encode spaces, commas, and other special characters in query values.
+- **URL-encode special characters**: Encode spaces, commas, and other special characters in query values.
 
-- **Test Queries**: Validate queries in a test environment before deploying.
+- **Test queries**: Validate queries in a test environment before deploying.
 
-## HTTP Response Codes
+## HTTP response codes
 
 Fusion will return the following HTTP response codes:
 
@@ -404,10 +413,10 @@ Indicates an unexpected error occurred on the server.
 
 ## Troubleshooting
 
-- **Verify Property Names**: Ensure they match those in the DTOs.
+- **Verify property names**: Ensure they match those in the DTOs.
 
-- **Check Operators**: Use supported operators and apply them to the correct data types.
+- **Check operators**: Use supported operators and apply them to the correct data types.
 
-- **Validate Values**: Ensure values are in the correct format for the property data type.
+- **Validate values**: Ensure values are in the correct format for the property data type.
 
-- **Encode Special Characters**: Use URL encoding for values with special characters.
+- **Encode special characters**: Use URL encoding for values with special characters.

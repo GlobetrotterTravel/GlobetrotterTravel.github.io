@@ -7,6 +7,7 @@ permalink: /fusion/
 ---
 
 # Welcome to Globetrotter Fusion
+{: .no_toc}
 
 Globetrotter Fusion is Globetrotter's client-facing REST API platform.
 
@@ -32,6 +33,12 @@ Globetrotter Fusion is:
 The API is intended for use by technical system integrators who wish to connect their organisation's analytics, CRM, HR or operations platforms to Globetrotter. If you would prefer to see predefined charts and reports, you can access Globetrotter Insight instead. Contact your Client Relationship Manager (CRM) to get an account for Globetrotter Insight.
 
 Globetrotter Fusion is copyright (c) 2020-2024 Globetrotter. All rights reserved.
+
+## Table of contents
+{: .no_toc}
+
+1. TOC
+{:toc}
 
 ## Document version
 

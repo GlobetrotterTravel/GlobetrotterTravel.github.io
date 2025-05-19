@@ -7,6 +7,7 @@ permalink: /fusion/certificate-authentication/
 ---
 
 # Certificate authentication
+{: .no_toc}
 
 Fusion's preferred authentication method is certificate-based authentication. Certificate-based authentication verifies a client by validating its digital certificate, which contains a unique fingerprint. This fingerprint is derived from the certificate's data using a cryptographic hash function, ensuring its uniqueness and integrity. The process protects client data through four important aspects of certificate security:
 
@@ -19,6 +20,12 @@ Fusion's preferred authentication method is certificate-based authentication. Ce
 - **Constructing a certificate with the same fingerprint**: It is virtually impossible to construct a different certificate that results in the same fingerprint as a given certificate. This property is known as pre-image resistance and is a crucial feature of cryptographic hash functions.
 
 These security measures make certificate-based authentication a robust and secure way to protect client data from unauthorized access.
+
+## Table of contents
+{: .no_toc}
+
+1. TOC
+{:toc}
 
 ## Certificate setup
 
