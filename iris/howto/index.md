@@ -4,6 +4,7 @@ title: How-to guides
 parent: Fusion
 nav_order: 10
 permalink: /iris/howto/
+has_children: true
 ---
 
 # How-to guides

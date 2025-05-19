@@ -3,6 +3,7 @@ title: Globetrotter Documentation
 layout: home
 nav_order: 10
 permalink: /
+has_children: true
 ---
 
 Welcome to the documentation site for Globetrotter's systems and services. Below you will find links to each knowledge base. You can also use the navigation bar at the left to browse articles, and search for articles using the site search bar at the top.
