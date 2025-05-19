@@ -4,6 +4,7 @@ title: Focus Areas
 parent: Globetrotter Insight
 nav_order: 10
 has_children: true
+has_toc: false
 permalink: /insight/focus-areas/
 ---
 

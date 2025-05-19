@@ -17,3 +17,12 @@ callouts:
   warning:
     title: Warning
     color: red
+    opacity: 0.2
+  note:
+    title: Note
+    color: blue
+    opacity: 0.2
+  important:
+    title: Important
+    color: yellow
+    opacity: 0.2
