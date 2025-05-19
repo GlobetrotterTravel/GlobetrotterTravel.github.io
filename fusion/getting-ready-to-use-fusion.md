@@ -7,6 +7,7 @@ permalink: /fusion/getting-ready-to-use-fusion/
 ---
 
 # Getting ready to use Fusion
+{: .no_toc }
 
 Fusion listens on `https://fusion.globetrotter.com.au` port `443` and the API is accessed through `/api/<version>/<endpoint>`
 
@@ -18,6 +19,10 @@ A well-formed URI looks like this
 https://fusion.globetrotter.com.au/api/v1/invoices?query=totalAmount^GT1000;department^EQOperations;recordLocator^CTRX0
 ````
 
+## Table of Contents
+{: .no_toc .text-delta }
+
+1. TOC
 {:toc}
 
 ## Transport Layer Security
