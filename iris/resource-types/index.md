@@ -2,7 +2,8 @@
 layout: default
 title: Resource Types
 parent: Globetrotter Iris
-has_children: false
+nav_order: 20
+has_children: true
 has_toc: false
 permalink: /iris/resource-types/
 ---

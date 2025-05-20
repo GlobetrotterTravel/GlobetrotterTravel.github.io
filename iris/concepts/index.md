@@ -2,7 +2,8 @@
 layout: default
 title: Concepts
 parent: Globetrotter Iris
-has_children: false
+nav_order: 10
+has_children: true
 has_toc: false
 permalink: /iris/concepts/
 ---

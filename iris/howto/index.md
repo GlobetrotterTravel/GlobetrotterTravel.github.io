@@ -2,7 +2,7 @@
 layout: default
 title: How-to guides
 parent: Globetrotter Iris
-nav_order: 10
+nav_order: 100
 permalink: /iris/howto/
 has_children: true
 has_toc: false
