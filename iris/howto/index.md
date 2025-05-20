@@ -20,6 +20,7 @@ This section contains articles on how to perform specific actions within Iris.
 
 ## People management
 
+[Create a person](/iris/howto/create-a-person/)
 [Delete a person](/iris/howto/delete-a-person/)
 
 ## Facet definitions and instances
