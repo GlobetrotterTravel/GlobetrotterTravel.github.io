@@ -7,15 +7,15 @@ permalink: /fusion/pagination/
 ---
 
 # Pagination
-{: .no_toc}
+{: .no_toc }
 
 Fusion supports pagination to manage the retrieval of large datasets efficiently. By default, Fusion returns a limited number of records per request. The `fetch` and `offset` parameters allow you to control the number of records retrieved and navigate through the dataset.
 
 ## Table of contents
-{: .no_toc}
+{: .no_toc }
 
 1. TOC
-{:toc}
+{:toc }
 
 ## Default Behavior
 

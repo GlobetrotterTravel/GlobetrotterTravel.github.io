@@ -6,7 +6,7 @@ permalink: /fusion/
 ---
 
 # Globetrotter Fusion
-{: .no_toc}
+{: .no_toc }
 
 Globetrotter Fusion is Globetrotter's client-facing REST API platform.
 
@@ -34,10 +34,10 @@ The API is intended for use by technical system integrators who wish to connect 
 Globetrotter Fusion is copyright (c) 2020-2024 Globetrotter. All rights reserved.
 
 ## Table of contents
-{: .no_toc}
+{: .no_toc }
 
 1. TOC
-{:toc}
+{:toc }
 
 ## Document version
 

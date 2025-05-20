@@ -9,15 +9,15 @@ has_toc: false
 ---
 
 # How-to guides
-{: .no_toc}
+{: .no_toc }
 
 This section contains articles on how to perform specific actions within Iris.
 
 ## Table of contents
-{: .no_toc}
+{: .no_toc }
 
 1. TOC
-{:toc}
+{:toc }
 
 ## People management
 

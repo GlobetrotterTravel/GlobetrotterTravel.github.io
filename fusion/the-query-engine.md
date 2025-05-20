@@ -7,15 +7,15 @@ permalink: /fusion/the-query-engine/
 ---
 
 # The query engine
-{: .no_toc}
+{: .no_toc }
 
 The query engine interprets a query string provided to an endpoint and returns documents matching that search query. All endpoints support query engine searches.
 
 ## Table of contents
-{: .no_toc}
+{: .no_toc }
 
 1. TOC
-{:toc}
+{:toc }
 
 ## Overview
 
