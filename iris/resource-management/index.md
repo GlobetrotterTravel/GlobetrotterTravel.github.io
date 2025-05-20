@@ -12,5 +12,5 @@ permalink: /iris/resource-management/
 
 These articles demonstrate how to effectively manage Iris resources.
 
-* [Facets](/resource-management/facets/)
-* [Sets](/resource-management/sets/)
+* [Facets](/iris/resource-management/facets/)
+* [Sets](/iris/resource-management/sets/)

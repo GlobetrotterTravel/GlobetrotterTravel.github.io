@@ -12,7 +12,7 @@ permalink: /iris/resource-types/
 
 Iris provides management of the following resource types:
 
-* [Organizations](/resource-types/organizations/)
-* [Persons](/resource-types/persons/)
-* [Fields](/resource-types/fields/)
-* [Hybrid Lists](/resource-types/hybrid-lists/)
+* [Organizations](/iris/resource-types/organizations/)
+* [Persons](/iris/resource-types/persons/)
+* [Fields](/iris/resource-types/fields/)
+* [Hybrid Lists](/iris/resource-types/hybrid-lists/)

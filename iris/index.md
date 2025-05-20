@@ -23,17 +23,17 @@ This knowledge base contains the complete documentation for Globetrotter Iris. Y
 
 These articles explain the different resources that Iris manages.
 
-* [Organizations](/resource-types/organizations/)
-* [Persons](/resource-types/persons/)
-* [Fields](/resource-types/fields/)
-* [Hybrid Lists](/resource-types/hybrid-lists/)
+* [Organizations](/iris/resource-types/organizations/)
+* [Persons](/iris/resource-types/persons/)
+* [Fields](/iris/resource-types/fields/)
+* [Hybrid Lists](/iris/resource-types/hybrid-lists/)
 
 ## Resource management
 
 These articles demonstrate how to effectively manage Iris resources.
 
-* [Facets](/resource-management/facets/)
-* [Sets](/resource-management/sets/)
+* [Facets](/iris/resource-management/facets/)
+* [Sets](/iris/resource-management/sets/)
 
 ## Concepts
 
