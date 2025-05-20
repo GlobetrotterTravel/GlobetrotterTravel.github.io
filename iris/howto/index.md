@@ -19,13 +19,19 @@ This section contains articles on how to perform specific actions within Iris.
 1. TOC
 {:toc }
 
-## People management
+## People
 
 * [Create a person](/iris/howto/create-a-person/)
 * [Delete a person](/iris/howto/delete-a-person/)
 
-## Facet definitions and instances
-
-### Facet definitions
+## Facets
 
 * [Create a facet definition](/iris/howto/create-a-facet-definition/)
+
+## Fields
+
+* [Delete a field definition](/iris/howto/delete-a-field-definition/)
+
+## Sets
+
+* [Create a set definition](/iris/howto/create-a-set-definition/)
