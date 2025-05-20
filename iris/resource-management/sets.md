@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Sets
+parent: Resource Management
 has_children: false
 has_toc: false
 permalink: /iris/resource-management/sets/

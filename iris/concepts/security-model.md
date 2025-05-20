@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Security Model
+parent: Concepts
 has_children: false
 has_toc: false
 permalink: /iris/concepts/security-model/

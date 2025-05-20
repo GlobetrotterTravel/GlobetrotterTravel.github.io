@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Entitlements
+parent: Resource Types
 has_children: false
 has_toc: false
 permalink: /iris/resource-types/entitlements/

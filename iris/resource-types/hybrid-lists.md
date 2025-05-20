@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Hybrid Lists
+parent: Resource Types
 has_children: false
 has_toc: false
 permalink: /iris/resource-types/hybrid-lists/

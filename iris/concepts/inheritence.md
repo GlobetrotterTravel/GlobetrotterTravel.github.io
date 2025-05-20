@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Inheritence
+parent: Concepts
 has_children: false
 has_toc: false
 permalink: /iris/concepts/inheritence/

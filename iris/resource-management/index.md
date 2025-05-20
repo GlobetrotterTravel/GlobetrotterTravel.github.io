@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Resource Management
+parent: Globetrotter Iris
 has_children: false
 has_toc: false
 permalink: /iris/resource-management/
