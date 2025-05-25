@@ -5,19 +5,21 @@ parent: How-to guides
 permalink: /iris/howto/toggle-field-instance-allow-free-text/
 ---
 
-# Find the field instance
+# Toggle Allowing Free Text for a Field Instance
 {: .no_toc }
-
-There are two ways to find a field instance:
-
-* From the `Field Instance` list
-* From an `Organization Detail` page.
 
 ## Table of contents
 {: .no_toc }
 
 1. TOC
 {:toc }
+
+## Find the field instance
+
+There are two ways to find a field instance:
+
+* From the `Field Instance` list
+* From an `Organization Detail` page.
 
 ## Find a field instance from the Field Instance list
 

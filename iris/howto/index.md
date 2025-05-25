@@ -31,7 +31,7 @@ This section contains articles on how to perform specific actions within Iris.
 ## Fields
 
 * [Delete a field definition](/iris/howto/delete-a-field-definition/)
-* [Toggle a field instance to allow free text](/iris/howto/toggle-field-instance-allow-free-text/)
+* [Toggle allowing free text for a field instance](/iris/howto/toggle-field-instance-allow-free-text/)
 
 ## Sets
 
