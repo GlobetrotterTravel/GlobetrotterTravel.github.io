@@ -5,7 +5,7 @@ parent: How-to guides
 permalink: /iris/howto/toggle-field-instance-allow-free-text/
 ---
 
-# Toggle Allowing Free Text for a Field Instance
+# Toggle allowing free text for a field instance
 {: .no_toc }
 
 ## Table of contents
