@@ -1,13 +1,13 @@
 ---
 layout: default
-title: Delete a organization
+title: Delete an organization
 parent: How-to guides
 permalink: /iris/howto/delete-an-organization/
 ---
 
-# Delete a organization
+# Delete an organization
 
-To delete a organization, follow these steps.
+To delete an organization, follow these steps.
 
 ## Find the organization
 
