@@ -19,6 +19,10 @@ This section contains articles on how to perform specific actions within Iris.
 1. TOC
 {:toc }
 
+## Organizations
+
+* [Delete an organization](/iris/howto/delete-an-organization/)
+
 ## People
 
 * [Create a person](/iris/howto/create-a-person/)
