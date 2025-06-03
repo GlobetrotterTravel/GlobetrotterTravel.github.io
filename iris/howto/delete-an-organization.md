@@ -6,8 +6,8 @@ permalink: /iris/howto/delete-an-organization/
 ---
 
 # Delete an organization
-
-To delete an organization, follow these steps.
+{: .warning }
+> Deleting an organization deletes everything associated with that organization, including people, facets, fields, hybrid lists and their items. It is not reversible.
 
 ## Find the organization
 
