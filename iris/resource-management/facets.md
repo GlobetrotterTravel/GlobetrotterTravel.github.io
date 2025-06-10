@@ -66,4 +66,8 @@ When a `facet` is defined, the following default properties are set:
 * Target item type: Organization
 * Data sensitivity: Internal
 * Criticality: Not critical
+* Allow free text: false
+* Allow multiple values: false
+
+In a nutshell, the default facet type is a `property`.
 
