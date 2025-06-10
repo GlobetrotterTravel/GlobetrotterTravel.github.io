@@ -16,6 +16,8 @@ When an entitlement instance is created for an organization, a start and an end 
 
 Only one entitlement instance can be assigned to each organisation per entitlement definition.
 
+The maximum validity of an assigned entitlement is 10 years.
+
 ## Table of contents
 {: .no_toc }
 

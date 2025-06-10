@@ -56,3 +56,14 @@ An example of a `property` could be the a client user's "Job Title". Each user `
 For example, in the "Client user roles" `tag`, each client user `entity` can be associated with multiple roles from a set list. Iris users can select all applicable roles for a client user, allowing the user to be categorised in multiple ways.
 
 `Tags` are optimal when there is a need to categorize `entities` or `fields` under multiple predefined labels. The ability to select multiple values from a list, as seen in the client user roles example, makes `tags` a versatile tool for detailed and flexible categorization.
+
+## Creating facet definitions
+
+A `facet` definition can be created that targets either an organization or a person. Creating multiple different types of `facets` for `organizations` and `people` allows a logical and flexible data model for these resources to be built up.
+
+When a `facet` is defined, the following default properties are set:
+
+* Target item type: Organization
+* Data sensitivity: Internal
+* Criticality: Not critical
+
