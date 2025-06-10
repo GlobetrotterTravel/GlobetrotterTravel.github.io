@@ -24,8 +24,18 @@ To build a logical representation of organization structure, each `Person` can h
 
 A manager `person` can be assigned to a `person` when the manager meets the following criteria:
 
-The manager is active
-The manager belongs to the same tenant as the person
-The manager belongs to the same organization as the person.
+* The manager is active
+* The manager belongs to the same tenant as the person
+* The manager belongs to the same organization as the person.
 
-If a manager is assigned to a `person` and is then deleted, the `person's` manager is set to `null`.
+If a manager is assigned to a `person` and is then deleted, the `person's` manager is removed.
+
+## Moving a person to another organization
+
+A person may move to another organization, provided:
+
+* The destination organization exists
+* The destination organization is active
+* The destination organization is in the same tenant as the current organization.
+
+When a person moves organizations, any manager set on that person is removed.
