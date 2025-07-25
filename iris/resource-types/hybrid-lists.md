@@ -24,6 +24,8 @@ A global hybrid list is created at the tenant level and is identified by a uniqu
 
 Within a given list every category name must be unique, and within a given category every item name must be unique. Those names do not have to be unique outside that scope: two different hybrid lists can share the same category name, and two categories can each contain an item that happens to have the same name.
 
+When an item is added, a name must be specified. If a value is not specified, the value is set to match the item's name. If a description is not specified, the description will remain empty.
+
 ## Organization-specific hybrid lists
 
 Each organization automatically inherits a copy of each global hybrid list. The organisation may add new items to any of the predefined categories, giving each item its own name, value and description. An organisation cannot create additional categories, remove existing ones or modify the globally defined items themselves; it can only supplement what is already there. Item names introduced by the organisation must be unique within the category from the organisation's viewpoint. If the organisation uses a name that already exists for a global item in that category, the organisation's item overlays the global one and is the version that is returned.
@@ -47,3 +49,5 @@ When a client system requests a hybrid list for an organisation, the service app
 | No | Any | Global items only |
 | Yes | "Replace" | Organization items only (hides all global items in this category) |
 | Yes | "Extend" | Organization items first, followed by non-overridden global items |
+
+
