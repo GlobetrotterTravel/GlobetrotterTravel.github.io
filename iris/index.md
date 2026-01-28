@@ -22,6 +22,6 @@ This is the Tenant Administrator's Guide and it contains the complete documentat
 
 ## In this guide
 
-- [Home](/iris/home/): Configure the Iris homepage
+- [Home](/iris/homepage/): Configure the Iris homepage
 - [Facets](/iris/facets/): Manage flexible data capture with facet definitions
 - [Sets](/iris/sets/): Create dynamic filters for organizations and people
