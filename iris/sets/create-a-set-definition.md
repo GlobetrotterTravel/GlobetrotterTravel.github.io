@@ -34,7 +34,7 @@ Populate details.
 
 > 🛈 Sets can apply to either organization or person, but not both.
 
-## Filters tab
+### Filters tab
 
 Click `+ Add Filter`. The `Add Filter` dialog appears.
 
