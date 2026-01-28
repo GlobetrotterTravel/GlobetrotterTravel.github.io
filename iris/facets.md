@@ -1,16 +1,17 @@
 ---
 layout: default
 title: Facets
-parent: Resource Management
-has_children: false
+parent: Globetrotter Iris
+nav_order: 20
+has_children: true
 has_toc: false
-permalink: /iris/resource-management/facets/
+permalink: /iris/facets/
 ---
 
 # Facets
 {: .no_toc }
 
-`Facets` provide a powerful framework for managing data for `organizations`, `persons`, `field instances` and `entitlements`.. There are four facet types: `Dimensions`, `Attributes`, `Properties` and `Tags`. Each facet type stores a different type of information, according to whether they a) have a defined list of allowed values to select from, or they are free-text, and b) whether or not they allow multiple values to be entered. `Facets` are managed by Iris administrators.
+The `Facet` system provides a powerful framework for managing data for `organizations`, `people`, `service accounts`, `fields`, `hybrid lists` and `entitlements`. There are four facet types: `Dimensions`, `Attributes`, `Properties` and `Tags`. Each facet type stores a different type of information, according to whether they a) have a defined list of allowed values to select from, or they are free-text, and b) whether or not they allow multiple values to be entered.
 
 | `Facet` Type | Select From List | Allows Multiple Values | Example |
 |------------|------------------------|------------------------|---------|
@@ -18,6 +19,8 @@ permalink: /iris/resource-management/facets/
 | Attributes | No | Yes | Client's domain names |
 | Properties | No | No | Job title |
 | Tags | Yes | Yes | Client user roles |
+
+A `facet` definition can be created that targets either an organization or a person. Creating multiple different types of `facets` for resources allows a logical and flexible data model for these resources to be built up.
 
 ## Table of contents
 {: .no_toc }
@@ -57,17 +60,6 @@ For example, in the "Client user roles" `tag`, each client user `entity` can be 
 
 `Tags` are optimal when there is a need to categorize `entities` or `fields` under multiple predefined labels. The ability to select multiple values from a list, as seen in the client user roles example, makes `tags` a versatile tool for detailed and flexible categorization.
 
-## Creating facet definitions
+## In this section
 
-A `facet` definition can be created that targets either an organization or a person. Creating multiple different types of `facets` for `organizations` and `people` allows a logical and flexible data model for these resources to be built up.
-
-When a `facet` is defined, the following default properties are set:
-
-* Target item type: Organization
-* Data sensitivity: Internal
-* Criticality: Not critical
-* Allow free text: false
-* Allow multiple values: false
-
-In a nutshell, the default facet type is a `property`.
-
+- [Create a facet definition](/iris/facets/create-a-facet-definition/): How to create a new facet definition
