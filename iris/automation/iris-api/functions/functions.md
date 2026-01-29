@@ -139,6 +139,32 @@ Functions for persistent file storage using Azure Blob Storage. Requires tenant 
 - [BlobStorageExists](blobstorage/BlobStorageExists.md) - Check if file exists
 - [GetBlobStorageSasUrl](blobstorage/GetBlobStorageSasUrl.md) - Generate time-limited download URL
 
+### External Blob Storage
+Functions for working with external Azure Blob Storage accounts (not the tenant's configured storage):
+- [DownloadBlobFiles](externalblob/DownloadBlobFiles.md) - Download files from external blob storage
+- [MoveBlob](externalblob/MoveBlob.md) - Move blobs within a container
+
+### File Handles
+Functions for working with downloaded file handles:
+- [ReadFileContent](files/ReadFileContent.md) - Read text content of a downloaded file
+- [GetFileHandle](files/GetFileHandle.md) - Get file handle metadata
+
+### PDF Processing
+Functions for extracting data from PDF documents:
+- [ReadCustomDataFromPdf](pdf/ReadCustomDataFromPdf.md) - Extract key-value pairs from PDFs using label mappings
+
+### SQL Database
+Functions for querying external SQL Server databases:
+- [SqlConnect](sql/SqlConnect.md) - Establish a database connection
+- [SqlQuery](sql/SqlQuery.md) - Execute SELECT queries
+- [SqlExecute](sql/SqlExecute.md) - Execute INSERT/UPDATE/DELETE commands
+- [SqlClose](sql/SqlClose.md) - Close a database connection
+
+### SharePoint Integration
+Functions for uploading files and creating folders in SharePoint Online:
+- [UploadFileToSharePoint](sharepoint/UploadFileToSharePoint.md) - Upload files to SharePoint with metadata
+- [CreateSharePointFolder](sharepoint/CreateSharePointFolder.md) - Create folders in SharePoint
+
 ### Context
 Functions for accessing current execution context:
 - [GetCurrentUser](context/GetCurrentUser.md) - Get authenticated user info
