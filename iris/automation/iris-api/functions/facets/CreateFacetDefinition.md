@@ -140,7 +140,7 @@ var ssnFacetId = CreateFacetDefinition(
 
 ## Related Functions
 
-- [GetFacetDefinitionByName](GetFacetDefinitionByName.md) - Retrieve facet definition by name
-- [GetAllFacetDefinitions](GetAllFacetDefinitions.md) - Get all facet definitions
-- [SetOrganizationFacetInstance](SetOrganizationFacetInstance.md) - Set facet values on organization
-- [SetPersonFacetInstance](SetPersonFacetInstance.md) - Set facet values on person
+- [GetFacetDefinitionByName](GetFacetDefinitionByName) - Retrieve facet definition by name
+- [GetAllFacetDefinitions](GetAllFacetDefinitions) - Get all facet definitions
+- [SetOrganizationFacetInstance](SetOrganizationFacetInstance) - Set facet values on organization
+- [SetPersonFacetInstance](SetPersonFacetInstance) - Set facet values on person

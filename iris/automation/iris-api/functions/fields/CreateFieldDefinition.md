@@ -132,5 +132,5 @@ end
 
 ## Related Functions
 
-- [GetAllFieldDefinitions](GetAllFieldDefinitions.md) - Get all field definitions
-- [SetOrganizationFieldInstance](SetOrganizationFieldInstance.md) - Set field values on organization
+- [GetAllFieldDefinitions](GetAllFieldDefinitions) - Get all field definitions
+- [SetOrganizationFieldInstance](SetOrganizationFieldInstance) - Set field values on organization

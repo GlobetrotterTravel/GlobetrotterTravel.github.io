@@ -145,8 +145,8 @@ Data._payload = { content: content, size: Length(content) }
 
 ## Related Functions
 
-- [DownloadBlobFiles](../externalblob/DownloadBlobFiles.md) - Download files from external blob storage
-- [GetFileHandle](GetFileHandle.md) - Get file handle metadata
-- [ReadCsv](../data/ReadCsv.md) - Parse CSV content
-- [ReadJson](../data/ReadJson.md) - Parse JSON content
-- [ReadExcel](../data/ReadExcel.md) - Parse Excel files
+- [DownloadBlobFiles](../externalblob/DownloadBlobFiles) - Download files from external blob storage
+- [GetFileHandle](GetFileHandle) - Get file handle metadata
+- [ReadCsv](../data/ReadCsv) - Parse CSV content
+- [ReadJson](../data/ReadJson) - Parse JSON content
+- [ReadExcel](../data/ReadExcel) - Parse Excel files

@@ -4,7 +4,7 @@ This is the Globetrotter Iris documentation site, built with Jekyll and the Just
 
 ## Skills
 
-- **[Iris Docs Front Matter](.claude/skills/iris-docs-frontmatter.md)**: Patterns for adding front matter and formatting to documentation files in the `/iris/` directory. Use this when creating or aligning new documentation files.
+- **[Iris Docs Front Matter](.claude/skills/iris-docs-frontmatter)**: Patterns for adding front matter and formatting to documentation files in the `/iris/` directory. Use this when creating or aligning new documentation files.
 
 ## Project Structure
 

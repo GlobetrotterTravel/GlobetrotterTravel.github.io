@@ -243,7 +243,7 @@ SetSecret("SP_CERTIFICATE_BASE64", certBase64, "SharePoint app certificate")
 
 ## Related Functions
 
-- [CreateSharePointFolder](CreateSharePointFolder.md) - Create folders in SharePoint
-- [DownloadBlobFiles](../externalblob/DownloadBlobFiles.md) - Download source files
-- [MoveBlob](../externalblob/MoveBlob.md) - Move processed files
-- [GetSecret](../secrets/GetSecret.md) - Retrieve configuration secrets
+- [CreateSharePointFolder](CreateSharePointFolder) - Create folders in SharePoint
+- [DownloadBlobFiles](../externalblob/DownloadBlobFiles) - Download source files
+- [MoveBlob](../externalblob/MoveBlob) - Move processed files
+- [GetSecret](../secrets/GetSecret) - Retrieve configuration secrets

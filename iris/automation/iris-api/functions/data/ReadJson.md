@@ -144,6 +144,6 @@ Always check for null before accessing properties.
 
 ## Related Functions
 
-- [ReadCsv](ReadCsv.md) - Read CSV files
-- [ReadExcel](ReadExcel.md) - Read Excel (.xlsx) files
-- [ReadXml](ReadXml.md) - Read XML files
+- [ReadCsv](ReadCsv) - Read CSV files
+- [ReadExcel](ReadExcel) - Read Excel (.xlsx) files
+- [ReadXml](ReadXml) - Read XML files

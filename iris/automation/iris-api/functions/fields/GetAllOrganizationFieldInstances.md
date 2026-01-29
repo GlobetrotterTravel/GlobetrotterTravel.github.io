@@ -132,6 +132,6 @@ end
 
 ## See Also
 
-- [GetOrganizationFieldInstanceByName](GetOrganizationFieldInstanceByName.md) - Get single field by name
-- [SetOrganizationFieldInstance](SetOrganizationFieldInstance.md) - Set field items
-- [GetAllFieldDefinitions](GetAllFieldDefinitions.md) - Get all field definitions
+- [GetOrganizationFieldInstanceByName](GetOrganizationFieldInstanceByName) - Get single field by name
+- [SetOrganizationFieldInstance](SetOrganizationFieldInstance) - Set field items
+- [GetAllFieldDefinitions](GetAllFieldDefinitions) - Get all field definitions

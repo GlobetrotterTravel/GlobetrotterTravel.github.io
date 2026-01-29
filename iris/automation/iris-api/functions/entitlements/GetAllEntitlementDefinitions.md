@@ -103,8 +103,8 @@ end
 
 ## See Also
 
-- [GetEntitlementDefinitionByName](GetEntitlementDefinitionByName.md) - Get single definition by name
-- [CreateEntitlementDefinition](CreateEntitlementDefinition.md) - Create new definition
-- [AddEntitlementInstance](AddEntitlementInstance.md) - Grant entitlement to organization
-- [GetAllEntitlementInstances](GetAllEntitlementInstances.md) - Get all instances across all organizations
-- [GetAllOrganizationEntitlementInstances](GetAllOrganizationEntitlementInstances.md) - Get instances for a single organization
+- [GetEntitlementDefinitionByName](GetEntitlementDefinitionByName) - Get single definition by name
+- [CreateEntitlementDefinition](CreateEntitlementDefinition) - Create new definition
+- [AddEntitlementInstance](AddEntitlementInstance) - Grant entitlement to organization
+- [GetAllEntitlementInstances](GetAllEntitlementInstances) - Get all instances across all organizations
+- [GetAllOrganizationEntitlementInstances](GetAllOrganizationEntitlementInstances) - Get instances for a single organization

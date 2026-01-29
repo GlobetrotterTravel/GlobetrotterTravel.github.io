@@ -148,6 +148,6 @@ end
 
 ## See Also
 
-- [GetAllOrganizationFieldInstances](GetAllOrganizationFieldInstances.md) - Get all field instances
-- [SetOrganizationFieldInstance](SetOrganizationFieldInstance.md) - Set field items
-- [GetAllFieldDefinitions](GetAllFieldDefinitions.md) - Get all field definitions
+- [GetAllOrganizationFieldInstances](GetAllOrganizationFieldInstances) - Get all field instances
+- [SetOrganizationFieldInstance](SetOrganizationFieldInstance) - Set field items
+- [GetAllFieldDefinitions](GetAllFieldDefinitions) - Get all field definitions

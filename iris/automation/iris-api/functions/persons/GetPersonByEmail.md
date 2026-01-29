@@ -28,7 +28,7 @@ GetPersonByEmail(emailAddress)
 
 Searches for a person in the current tenant by their email address. The search is case-insensitive, so "JOHN@EXAMPLE.COM" will match "john@example.com".
 
-If multiple persons exist with the same email address (duplicates), this function returns only the first match. To find all persons with a given email, use [GetAllPersonsByEmail](GetAllPersonsByEmail.md) instead.
+If multiple persons exist with the same email address (duplicates), this function returns only the first match. To find all persons with a given email, use [GetAllPersonsByEmail](GetAllPersonsByEmail) instead.
 
 ## Person Object Properties
 
@@ -152,8 +152,8 @@ Data._statusCode = 200
 
 ## Related Functions
 
-- [GetAllPersonsByEmail](GetAllPersonsByEmail.md) - Get all persons with matching email (find duplicates)
-- [GetPersonById](GetPersonById.md) - Get person by ID
-- [GetAllPersons](GetAllPersons.md) - Get all persons in tenant
-- [AddPersonToOrganization](AddPersonToOrganization.md) - Add person to organization
-- [CreatePerson](CreatePerson.md) - Create a new person
+- [GetAllPersonsByEmail](GetAllPersonsByEmail) - Get all persons with matching email (find duplicates)
+- [GetPersonById](GetPersonById) - Get person by ID
+- [GetAllPersons](GetAllPersons) - Get all persons in tenant
+- [AddPersonToOrganization](AddPersonToOrganization) - Add person to organization
+- [CreatePerson](CreatePerson) - Create a new person

@@ -247,7 +247,7 @@ Common errors:
 
 ## Related Functions
 
-- [DownloadBlobFiles](../externalblob/DownloadBlobFiles.md) - Download files from external blob storage
-- [MoveBlob](../externalblob/MoveBlob.md) - Move processed PDFs
-- [GetSecret](../secrets/GetSecret.md) - Retrieve connection strings
-- [Notepad](../notepads/CreateNotepad.md) - Store extracted data
+- [DownloadBlobFiles](../externalblob/DownloadBlobFiles) - Download files from external blob storage
+- [MoveBlob](../externalblob/MoveBlob) - Move processed PDFs
+- [GetSecret](../secrets/GetSecret) - Retrieve connection strings
+- [Notepad](../notepads/CreateNotepad) - Store extracted data

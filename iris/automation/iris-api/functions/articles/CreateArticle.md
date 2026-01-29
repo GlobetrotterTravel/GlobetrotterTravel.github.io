@@ -102,5 +102,5 @@ CreateArticle(
 
 ## Related Functions
 
-- [BroadcastNotification](../notifications/BroadcastNotification.md) - For real-time alerts
-- [SendNotification](../notifications/SendNotification.md) - For user-specific alerts
+- [BroadcastNotification](../notifications/BroadcastNotification) - For real-time alerts
+- [SendNotification](../notifications/SendNotification) - For user-specific alerts

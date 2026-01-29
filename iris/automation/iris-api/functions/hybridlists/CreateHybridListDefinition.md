@@ -103,7 +103,7 @@ CreateHybridListDefinitionItem(deptListId, businessId, "Marketing", "marketing",
 
 ## Related Functions
 
-- [CreateHybridListDefinitionCategory](CreateHybridListDefinitionCategory.md) - Add categories
-- [CreateHybridListDefinitionItem](CreateHybridListDefinitionItem.md) - Add items
-- [GetAllHybridListDefinitions](GetAllHybridListDefinitions.md) - Get all definitions
-- [SetOrganizationHybridListInstance](SetOrganizationHybridListInstance.md) - Set values on organization
+- [CreateHybridListDefinitionCategory](CreateHybridListDefinitionCategory) - Add categories
+- [CreateHybridListDefinitionItem](CreateHybridListDefinitionItem) - Add items
+- [GetAllHybridListDefinitions](GetAllHybridListDefinitions) - Get all definitions
+- [SetOrganizationHybridListInstance](SetOrganizationHybridListInstance) - Set values on organization

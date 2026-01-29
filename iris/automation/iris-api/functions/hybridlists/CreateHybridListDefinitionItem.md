@@ -117,7 +117,7 @@ end
 
 ## Related Functions
 
-- [CreateHybridListDefinition](CreateHybridListDefinition.md) - Create the parent definition
-- [CreateHybridListDefinitionCategory](CreateHybridListDefinitionCategory.md) - Create categories
-- [GetAllHybridListDefinitions](GetAllHybridListDefinitions.md) - Get all definitions with items
-- [SetOrganizationHybridListInstance](SetOrganizationHybridListInstance.md) - Use items on organizations
+- [CreateHybridListDefinition](CreateHybridListDefinition) - Create the parent definition
+- [CreateHybridListDefinitionCategory](CreateHybridListDefinitionCategory) - Create categories
+- [GetAllHybridListDefinitions](GetAllHybridListDefinitions) - Get all definitions with items
+- [SetOrganizationHybridListInstance](SetOrganizationHybridListInstance) - Use items on organizations

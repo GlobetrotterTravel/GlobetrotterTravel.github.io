@@ -99,6 +99,6 @@ end
 
 ## See Also
 
-- [ActivateEntitlementDefinition](ActivateEntitlementDefinition.md) - Reactivate a definition
-- [DeleteEntitlementDefinition](DeleteEntitlementDefinition.md) - Permanently delete
-- [GetEntitlementDefinitionByName](GetEntitlementDefinitionByName.md) - Find definition by name
+- [ActivateEntitlementDefinition](ActivateEntitlementDefinition) - Reactivate a definition
+- [DeleteEntitlementDefinition](DeleteEntitlementDefinition) - Permanently delete
+- [GetEntitlementDefinitionByName](GetEntitlementDefinitionByName) - Find definition by name

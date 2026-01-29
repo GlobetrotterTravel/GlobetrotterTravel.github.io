@@ -97,8 +97,8 @@ end
 
 ## Related Functions
 
-- [GetAllPersons](GetAllPersons.md) - Get all persons in the tenant
-- [CreatePerson](CreatePerson.md) - Create a new person
-- [UpdatePerson](UpdatePerson.md) - Update an existing person
-- [DeletePerson](DeletePerson.md) - Delete a person
-- [GetPersonRoles](../roles/GetPersonRoles.md) - Get roles assigned to a person
+- [GetAllPersons](GetAllPersons) - Get all persons in the tenant
+- [CreatePerson](CreatePerson) - Create a new person
+- [UpdatePerson](UpdatePerson) - Update an existing person
+- [DeletePerson](DeletePerson) - Delete a person
+- [GetPersonRoles](../roles/GetPersonRoles) - Get roles assigned to a person

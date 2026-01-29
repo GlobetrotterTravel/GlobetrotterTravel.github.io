@@ -272,9 +272,9 @@ end
 
 ## See Also
 
-- [GetAllOrganizationEntitlementInstances](GetAllOrganizationEntitlementInstances.md) - Get instances for a single organization
-- [GetOrganizationEntitlementInstanceByName](GetOrganizationEntitlementInstanceByName.md) - Find single instance by name
-- [GetAllEntitlementDefinitions](GetAllEntitlementDefinitions.md) - Get all entitlement definitions
-- [AddEntitlementInstance](AddEntitlementInstance.md) - Grant new entitlement
-- [RemoveEntitlementInstance](RemoveEntitlementInstance.md) - Revoke entitlement
-- [RenewEntitlementInstance](RenewEntitlementInstance.md) - Extend entitlement expiry
+- [GetAllOrganizationEntitlementInstances](GetAllOrganizationEntitlementInstances) - Get instances for a single organization
+- [GetOrganizationEntitlementInstanceByName](GetOrganizationEntitlementInstanceByName) - Find single instance by name
+- [GetAllEntitlementDefinitions](GetAllEntitlementDefinitions) - Get all entitlement definitions
+- [AddEntitlementInstance](AddEntitlementInstance) - Grant new entitlement
+- [RemoveEntitlementInstance](RemoveEntitlementInstance) - Revoke entitlement
+- [RenewEntitlementInstance](RenewEntitlementInstance) - Extend entitlement expiry

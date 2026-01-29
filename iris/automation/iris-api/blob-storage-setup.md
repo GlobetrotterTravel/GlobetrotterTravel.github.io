@@ -344,14 +344,14 @@ Once configured, these functions become available in your scripts:
 
 | Function | Description |
 |----------|-------------|
-| [IsBlobStorageEnabled](functions/blobstorage/IsBlobStorageEnabled.md) | Check if blob storage is enabled |
-| [WriteToBlobStorage](functions/blobstorage/WriteToBlobStorage.md) | Upload file to blob storage |
-| [ReadFromBlobStorage](functions/blobstorage/ReadFromBlobStorage.md) | Download file from blob storage |
-| [ListBlobStorage](functions/blobstorage/ListBlobStorage.md) | List files with wildcard support |
-| [DeleteFromBlobStorage](functions/blobstorage/DeleteFromBlobStorage.md) | Delete file from blob storage |
-| [BlobStorageExists](functions/blobstorage/BlobStorageExists.md) | Check if file exists |
-| [GetBlobStorageSasUrl](functions/blobstorage/GetBlobStorageSasUrl.md) | Generate time-limited download URL |
-| [GenerateExcelBytes](functions/blobstorage/GenerateExcelBytes.md) | Generate Excel as bytes for storage |
+| [IsBlobStorageEnabled](functions/blobstorage/IsBlobStorageEnabled) | Check if blob storage is enabled |
+| [WriteToBlobStorage](functions/blobstorage/WriteToBlobStorage) | Upload file to blob storage |
+| [ReadFromBlobStorage](functions/blobstorage/ReadFromBlobStorage) | Download file from blob storage |
+| [ListBlobStorage](functions/blobstorage/ListBlobStorage) | List files with wildcard support |
+| [DeleteFromBlobStorage](functions/blobstorage/DeleteFromBlobStorage) | Delete file from blob storage |
+| [BlobStorageExists](functions/blobstorage/BlobStorageExists) | Check if file exists |
+| [GetBlobStorageSasUrl](functions/blobstorage/GetBlobStorageSasUrl) | Generate time-limited download URL |
+| [GenerateExcelBytes](functions/blobstorage/GenerateExcelBytes) | Generate Excel as bytes for storage |
 
 ## Cost Considerations
 
@@ -369,6 +369,6 @@ Use Azure Cost Management to monitor actual costs.
 
 ## Next Steps
 
-- [GenerateExcelBytes](functions/blobstorage/GenerateExcelBytes.md) - Generate Excel files for blob storage
-- [Dynamic Endpoints](../automation-workflow/concepts/dynamic-endpoints.md) - Create file download endpoints
-- [Script Scheduling](../automation-workflow/concepts/script-scheduling.md) - Schedule automated exports
+- [GenerateExcelBytes](functions/blobstorage/GenerateExcelBytes) - Generate Excel files for blob storage
+- [Dynamic Endpoints](../automation-workflow/concepts/dynamic-endpoints) - Create file download endpoints
+- [Script Scheduling](../automation-workflow/concepts/script-scheduling) - Schedule automated exports

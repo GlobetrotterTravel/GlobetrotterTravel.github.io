@@ -199,7 +199,7 @@ Common errors include:
 
 ## Related Functions
 
-- [DownloadBlobFiles](DownloadBlobFiles.md) - Download files from external blob storage
-- [ReadFileContent](../files/ReadFileContent.md) - Read downloaded file content
-- [GetSecret](../secrets/GetSecret.md) - Retrieve connection string from secrets
-- [DeleteFromBlobStorage](../blobstorage/DeleteFromBlobStorage.md) - Delete from tenant blob storage
+- [DownloadBlobFiles](DownloadBlobFiles) - Download files from external blob storage
+- [ReadFileContent](../files/ReadFileContent) - Read downloaded file content
+- [GetSecret](../secrets/GetSecret) - Retrieve connection string from secrets
+- [DeleteFromBlobStorage](../blobstorage/DeleteFromBlobStorage) - Delete from tenant blob storage

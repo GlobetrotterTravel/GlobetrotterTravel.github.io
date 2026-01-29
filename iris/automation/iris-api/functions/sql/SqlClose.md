@@ -118,6 +118,6 @@ SqlClose("db")
 
 ## Related Functions
 
-- [SqlConnect](SqlConnect.md) - Establish a database connection
-- [SqlQuery](SqlQuery.md) - Execute SELECT queries
-- [SqlExecute](SqlExecute.md) - Execute non-query commands
+- [SqlConnect](SqlConnect) - Establish a database connection
+- [SqlQuery](SqlQuery) - Execute SELECT queries
+- [SqlExecute](SqlExecute) - Execute non-query commands

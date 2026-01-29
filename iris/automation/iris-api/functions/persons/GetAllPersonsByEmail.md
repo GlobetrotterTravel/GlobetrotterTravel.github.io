@@ -26,7 +26,7 @@ GetAllPersonsByEmail(emailAddress)
 
 ## Description
 
-Searches for all persons in the current tenant with the specified email address. The search is case-insensitive. Unlike [GetPersonByEmail](GetPersonByEmail.md) which returns only the first match, this function returns ALL persons with that email address.
+Searches for all persons in the current tenant with the specified email address. The search is case-insensitive. Unlike [GetPersonByEmail](GetPersonByEmail) which returns only the first match, this function returns ALL persons with that email address.
 
 This function is particularly useful for:
 - Finding duplicate person records that need to be merged
@@ -185,9 +185,9 @@ end
 
 ## Related Functions
 
-- [GetPersonByEmail](GetPersonByEmail.md) - Get first person with matching email
-- [GetPersonById](GetPersonById.md) - Get person by ID
-- [GetAllPersons](GetAllPersons.md) - Get all persons in tenant
-- [AddPersonToOrganization](AddPersonToOrganization.md) - Add person to organization
-- [RemovePersonFromOrganization](RemovePersonFromOrganization.md) - Remove person from organization
-- [DeletePerson](DeletePerson.md) - Delete a person
+- [GetPersonByEmail](GetPersonByEmail) - Get first person with matching email
+- [GetPersonById](GetPersonById) - Get person by ID
+- [GetAllPersons](GetAllPersons) - Get all persons in tenant
+- [AddPersonToOrganization](AddPersonToOrganization) - Add person to organization
+- [RemovePersonFromOrganization](RemovePersonFromOrganization) - Remove person from organization
+- [DeletePerson](DeletePerson) - Delete a person

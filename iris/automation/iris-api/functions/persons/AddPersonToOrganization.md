@@ -112,8 +112,8 @@ end
 
 ## Related Functions
 
-- [RemovePersonFromOrganization](RemovePersonFromOrganization.md) - Remove a person from an organization
-- [GetPersonById](GetPersonById.md) - Get person details including organization membership
-- [GetPersonByEmail](GetPersonByEmail.md) - Find a person by email address
-- [GetAllPersonsByEmail](GetAllPersonsByEmail.md) - Find all persons with matching email
-- [UpdatePerson](UpdatePerson.md) - Update person properties
+- [RemovePersonFromOrganization](RemovePersonFromOrganization) - Remove a person from an organization
+- [GetPersonById](GetPersonById) - Get person details including organization membership
+- [GetPersonByEmail](GetPersonByEmail) - Find a person by email address
+- [GetAllPersonsByEmail](GetAllPersonsByEmail) - Find all persons with matching email
+- [UpdatePerson](UpdatePerson) - Update person properties

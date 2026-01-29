@@ -188,6 +188,6 @@ Common error scenarios:
 
 ## Related Functions
 
-- [SqlConnect](SqlConnect.md) - Establish a database connection
-- [SqlQuery](SqlQuery.md) - Execute SELECT queries
-- [SqlClose](SqlClose.md) - Close a connection
+- [SqlConnect](SqlConnect) - Establish a database connection
+- [SqlQuery](SqlQuery) - Execute SELECT queries
+- [SqlClose](SqlClose) - Close a connection

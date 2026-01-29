@@ -126,7 +126,7 @@ BeforeOrganizationDeleted:
 
 ## See Also
 
-- [AddEntitlementInstance](AddEntitlementInstance.md) - Grant an entitlement
-- [RenewEntitlementInstance](RenewEntitlementInstance.md) - Modify expiration date
-- [GetAllOrganizationEntitlementInstances](GetAllOrganizationEntitlementInstances.md) - List all instances
-- [GetOrganizationEntitlementInstanceByName](GetOrganizationEntitlementInstanceByName.md) - Find instance by name
+- [AddEntitlementInstance](AddEntitlementInstance) - Grant an entitlement
+- [RenewEntitlementInstance](RenewEntitlementInstance) - Modify expiration date
+- [GetAllOrganizationEntitlementInstances](GetAllOrganizationEntitlementInstances) - List all instances
+- [GetOrganizationEntitlementInstanceByName](GetOrganizationEntitlementInstanceByName) - Find instance by name

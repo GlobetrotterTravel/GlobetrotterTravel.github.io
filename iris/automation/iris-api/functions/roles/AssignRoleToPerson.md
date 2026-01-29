@@ -145,7 +145,7 @@ end
 
 ## Related Functions
 
-- [RemoveRoleFromPerson](RemoveRoleFromPerson.md) - Remove a role from a person
-- [GetPersonRoles](GetPersonRoles.md) - Get roles assigned to a person
-- [GetCurrentUserRoles](GetCurrentUserRoles.md) - Get roles for the current authenticated user
-- [GetPersonById](../persons/GetPersonById.md) - Get person details
+- [RemoveRoleFromPerson](RemoveRoleFromPerson) - Remove a role from a person
+- [GetPersonRoles](GetPersonRoles) - Get roles assigned to a person
+- [GetCurrentUserRoles](GetCurrentUserRoles) - Get roles for the current authenticated user
+- [GetPersonById](../persons/GetPersonById) - Get person details

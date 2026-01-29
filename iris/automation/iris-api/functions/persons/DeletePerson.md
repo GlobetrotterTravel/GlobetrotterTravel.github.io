@@ -101,6 +101,6 @@ Log("Information", "Deleted " + deletedCount + " inactive persons")
 
 ## Related Functions
 
-- [GetPersonById](GetPersonById.md) - Retrieve a person by ID
-- [UpdatePerson](UpdatePerson.md) - Update a person (consider deactivating instead of deleting)
-- [CreatePerson](CreatePerson.md) - Create a new person
+- [GetPersonById](GetPersonById) - Retrieve a person by ID
+- [UpdatePerson](UpdatePerson) - Update a person (consider deactivating instead of deleting)
+- [CreatePerson](CreatePerson) - Create a new person

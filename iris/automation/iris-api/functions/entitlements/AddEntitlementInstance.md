@@ -147,7 +147,7 @@ end
 
 ## See Also
 
-- [RemoveEntitlementInstance](RemoveEntitlementInstance.md) - Revoke an entitlement
-- [RenewEntitlementInstance](RenewEntitlementInstance.md) - Extend expiration date
-- [GetAllOrganizationEntitlementInstances](GetAllOrganizationEntitlementInstances.md) - List all instances
-- [GetEntitlementDefinitionByName](GetEntitlementDefinitionByName.md) - Find definition by name
+- [RemoveEntitlementInstance](RemoveEntitlementInstance) - Revoke an entitlement
+- [RenewEntitlementInstance](RenewEntitlementInstance) - Extend expiration date
+- [GetAllOrganizationEntitlementInstances](GetAllOrganizationEntitlementInstances) - List all instances
+- [GetEntitlementDefinitionByName](GetEntitlementDefinitionByName) - Find definition by name

@@ -130,7 +130,7 @@ end
 
 ## See Also
 
-- [GetAllEntitlementDefinitions](GetAllEntitlementDefinitions.md) - Get all definitions
-- [DeleteEntitlementDefinition](DeleteEntitlementDefinition.md) - Delete a definition
-- [ActivateEntitlementDefinition](ActivateEntitlementDefinition.md) - Activate a definition
-- [AddEntitlementInstance](AddEntitlementInstance.md) - Grant entitlement to organization
+- [GetAllEntitlementDefinitions](GetAllEntitlementDefinitions) - Get all definitions
+- [DeleteEntitlementDefinition](DeleteEntitlementDefinition) - Delete a definition
+- [ActivateEntitlementDefinition](ActivateEntitlementDefinition) - Activate a definition
+- [AddEntitlementInstance](AddEntitlementInstance) - Grant entitlement to organization

@@ -154,6 +154,6 @@ The function returns an empty array on error, including:
 
 ## Related Functions
 
-- [ReadCsv](ReadCsv.md) - Read CSV files
-- [ReadJson](ReadJson.md) - Read JSON files
-- [ReadXml](ReadXml.md) - Read XML files
+- [ReadCsv](ReadCsv) - Read CSV files
+- [ReadJson](ReadJson) - Read JSON files
+- [ReadXml](ReadXml) - Read XML files

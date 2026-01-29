@@ -119,7 +119,7 @@ end
 
 ## Related Functions
 
-- [AssignRoleToPerson](AssignRoleToPerson.md) - Assign a role to a person
-- [GetPersonRoles](GetPersonRoles.md) - Get roles assigned to a person
-- [GetCurrentUserRoles](GetCurrentUserRoles.md) - Get roles for the current authenticated user
-- [GetPersonById](../persons/GetPersonById.md) - Get person details
+- [AssignRoleToPerson](AssignRoleToPerson) - Assign a role to a person
+- [GetPersonRoles](GetPersonRoles) - Get roles assigned to a person
+- [GetCurrentUserRoles](GetCurrentUserRoles) - Get roles for the current authenticated user
+- [GetPersonById](../persons/GetPersonById) - Get person details

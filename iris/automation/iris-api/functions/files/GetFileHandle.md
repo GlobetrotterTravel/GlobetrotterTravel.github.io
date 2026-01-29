@@ -178,5 +178,5 @@ var content = ReadFileContent(handleId)
 
 ## Related Functions
 
-- [DownloadBlobFiles](../externalblob/DownloadBlobFiles.md) - Download files from external blob storage
-- [ReadFileContent](ReadFileContent.md) - Read file text content
+- [DownloadBlobFiles](../externalblob/DownloadBlobFiles) - Download files from external blob storage
+- [ReadFileContent](ReadFileContent) - Read file text content

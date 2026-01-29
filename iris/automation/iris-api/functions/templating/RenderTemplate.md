@@ -108,5 +108,5 @@ Templates use Scriban syntax. Here's a quick reference:
 
 ## Related Functions
 
-- [SendEmail](../email/SendEmail.md) - Send the rendered content via email
-- [GetCurrentUser](../context/GetCurrentUser.md) - Get current user for template context
+- [SendEmail](../email/SendEmail) - Send the rendered content via email
+- [GetCurrentUser](../context/GetCurrentUser) - Get current user for template context

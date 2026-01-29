@@ -121,6 +121,6 @@ end
 
 ## Related Functions
 
-- [GetPersonById](GetPersonById.md) - Retrieve a person by ID
-- [CreatePerson](CreatePerson.md) - Create a new person
-- [DeletePerson](DeletePerson.md) - Delete a person
+- [GetPersonById](GetPersonById) - Retrieve a person by ID
+- [CreatePerson](CreatePerson) - Create a new person
+- [DeletePerson](DeletePerson) - Delete a person

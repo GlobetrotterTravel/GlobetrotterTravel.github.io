@@ -181,8 +181,8 @@ Log("Information", "Found " + Length(pdfFiles) + " PDFs and " + Length(excelFile
 
 ## Related Functions
 
-- [ReadFileContent](../files/ReadFileContent.md) - Read downloaded file content
-- [GetFileHandle](../files/GetFileHandle.md) - Get file handle metadata
-- [MoveBlob](MoveBlob.md) - Move blobs within storage
-- [ReadFromBlobStorage](../blobstorage/ReadFromBlobStorage.md) - Read from tenant blob storage
-- [GetSecret](../secrets/GetSecret.md) - Retrieve connection string from secrets
+- [ReadFileContent](../files/ReadFileContent) - Read downloaded file content
+- [GetFileHandle](../files/GetFileHandle) - Get file handle metadata
+- [MoveBlob](MoveBlob) - Move blobs within storage
+- [ReadFromBlobStorage](../blobstorage/ReadFromBlobStorage) - Read from tenant blob storage
+- [GetSecret](../secrets/GetSecret) - Retrieve connection string from secrets

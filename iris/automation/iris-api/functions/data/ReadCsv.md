@@ -131,6 +131,6 @@ Always check the length of the returned array before processing.
 
 ## Related Functions
 
-- [ReadExcel](ReadExcel.md) - Read Excel (.xlsx) files
-- [ReadJson](ReadJson.md) - Read JSON files
-- [ReadXml](ReadXml.md) - Read XML files
+- [ReadExcel](ReadExcel) - Read Excel (.xlsx) files
+- [ReadJson](ReadJson) - Read JSON files
+- [ReadXml](ReadXml) - Read XML files

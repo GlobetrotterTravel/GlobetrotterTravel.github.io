@@ -127,7 +127,7 @@ BeforeOrganizationDeleted:
 
 ## Related Functions
 
-- [AddPersonToOrganization](AddPersonToOrganization.md) - Add a person to an organization
-- [GetPersonById](GetPersonById.md) - Get person details including organization membership
-- [GetPersonByEmail](GetPersonByEmail.md) - Find a person by email address
-- [UpdatePerson](UpdatePerson.md) - Update person properties
+- [AddPersonToOrganization](AddPersonToOrganization) - Add a person to an organization
+- [GetPersonById](GetPersonById) - Get person details including organization membership
+- [GetPersonByEmail](GetPersonByEmail) - Find a person by email address
+- [UpdatePerson](UpdatePerson) - Update person properties

@@ -190,6 +190,6 @@ end
 
 ## Related Functions
 
-- [SqlConnect](SqlConnect.md) - Establish a database connection
-- [SqlExecute](SqlExecute.md) - Execute non-query commands
-- [SqlClose](SqlClose.md) - Close a connection
+- [SqlConnect](SqlConnect) - Establish a database connection
+- [SqlExecute](SqlExecute) - Execute non-query commands
+- [SqlClose](SqlClose) - Close a connection

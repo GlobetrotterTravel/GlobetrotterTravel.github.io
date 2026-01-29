@@ -196,8 +196,8 @@ end
 
 ## See Also
 
-- [GetOrganizationEntitlementInstanceByName](GetOrganizationEntitlementInstanceByName.md) - Find single instance by name
-- [GetAllEntitlementInstances](GetAllEntitlementInstances.md) - Get all instances across all organizations
-- [AddEntitlementInstance](AddEntitlementInstance.md) - Grant new entitlement
-- [RemoveEntitlementInstance](RemoveEntitlementInstance.md) - Revoke entitlement
-- [GetAllEntitlementDefinitions](GetAllEntitlementDefinitions.md) - Get all definitions
+- [GetOrganizationEntitlementInstanceByName](GetOrganizationEntitlementInstanceByName) - Find single instance by name
+- [GetAllEntitlementInstances](GetAllEntitlementInstances) - Get all instances across all organizations
+- [AddEntitlementInstance](AddEntitlementInstance) - Grant new entitlement
+- [RemoveEntitlementInstance](RemoveEntitlementInstance) - Revoke entitlement
+- [GetAllEntitlementDefinitions](GetAllEntitlementDefinitions) - Get all definitions

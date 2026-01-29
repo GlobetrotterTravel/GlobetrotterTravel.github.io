@@ -80,6 +80,6 @@ end
 
 ## See Also
 
-- [CreateEntitlementDefinition](CreateEntitlementDefinition.md) - Create a definition
-- [DeactivateEntitlementDefinition](DeactivateEntitlementDefinition.md) - Deactivate instead of delete
-- [GetEntitlementDefinitionByName](GetEntitlementDefinitionByName.md) - Find definition by name
+- [CreateEntitlementDefinition](CreateEntitlementDefinition) - Create a definition
+- [DeactivateEntitlementDefinition](DeactivateEntitlementDefinition) - Deactivate instead of delete
+- [GetEntitlementDefinitionByName](GetEntitlementDefinitionByName) - Find definition by name

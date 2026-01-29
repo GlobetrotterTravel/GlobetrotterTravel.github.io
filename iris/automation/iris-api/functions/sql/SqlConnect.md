@@ -116,8 +116,8 @@ Server=myserver.database.windows.net;Database=mydb;Authentication=Active Directo
 
 ## Related Functions
 
-- [SqlQuery](SqlQuery.md) - Execute SELECT queries
-- [SqlExecute](SqlExecute.md) - Execute INSERT/UPDATE/DELETE commands
-- [SqlClose](SqlClose.md) - Close a connection
-- [GetSecret](../secrets/GetSecret.md) - Retrieve secret values
-- [SetSecret](../secrets/SetSecret.md) - Store secret values
+- [SqlQuery](SqlQuery) - Execute SELECT queries
+- [SqlExecute](SqlExecute) - Execute INSERT/UPDATE/DELETE commands
+- [SqlClose](SqlClose) - Close a connection
+- [GetSecret](../secrets/GetSecret) - Retrieve secret values
+- [SetSecret](../secrets/SetSecret) - Store secret values

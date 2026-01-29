@@ -249,5 +249,5 @@ Common errors:
 
 ## Related Functions
 
-- [UploadFileToSharePoint](UploadFileToSharePoint.md) - Upload files to SharePoint
-- [GetSecret](../secrets/GetSecret.md) - Retrieve configuration secrets
+- [UploadFileToSharePoint](UploadFileToSharePoint) - Upload files to SharePoint
+- [GetSecret](../secrets/GetSecret) - Retrieve configuration secrets

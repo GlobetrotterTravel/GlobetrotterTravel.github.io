@@ -220,6 +220,6 @@ end
 
 ## See Also
 
-- [GenerateExcel](../GenerateExcel.md) - Generate Excel with temporary download URL
-- [WriteToBlobStorage](WriteToBlobStorage.md) - Upload bytes to blob storage
-- [GetBlobStorageSasUrl](GetBlobStorageSasUrl.md) - Generate download URLs
+- [GenerateExcel](../GenerateExcel) - Generate Excel with temporary download URL
+- [WriteToBlobStorage](WriteToBlobStorage) - Upload bytes to blob storage
+- [GetBlobStorageSasUrl](GetBlobStorageSasUrl) - Generate download URLs

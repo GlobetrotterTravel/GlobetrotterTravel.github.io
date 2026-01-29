@@ -156,7 +156,7 @@ Log("Information", "Batch renewal complete: " + renewalCount + " subscriptions r
 
 ## See Also
 
-- [AddEntitlementInstance](AddEntitlementInstance.md) - Grant new entitlement
-- [RemoveEntitlementInstance](RemoveEntitlementInstance.md) - Revoke entitlement
-- [GetOrganizationEntitlementInstanceByName](GetOrganizationEntitlementInstanceByName.md) - Find instance by name
-- [GetAllOrganizationEntitlementInstances](GetAllOrganizationEntitlementInstances.md) - List all instances
+- [AddEntitlementInstance](AddEntitlementInstance) - Grant new entitlement
+- [RemoveEntitlementInstance](RemoveEntitlementInstance) - Revoke entitlement
+- [GetOrganizationEntitlementInstanceByName](GetOrganizationEntitlementInstanceByName) - Find instance by name
+- [GetAllOrganizationEntitlementInstances](GetAllOrganizationEntitlementInstances) - List all instances

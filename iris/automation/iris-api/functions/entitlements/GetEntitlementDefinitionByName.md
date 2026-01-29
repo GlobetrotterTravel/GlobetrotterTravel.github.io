@@ -102,6 +102,6 @@ end
 
 ## See Also
 
-- [GetAllEntitlementDefinitions](GetAllEntitlementDefinitions.md) - Get all definitions
-- [CreateEntitlementDefinition](CreateEntitlementDefinition.md) - Create new definition
-- [AddEntitlementInstance](AddEntitlementInstance.md) - Grant entitlement to organization
+- [GetAllEntitlementDefinitions](GetAllEntitlementDefinitions) - Get all definitions
+- [CreateEntitlementDefinition](CreateEntitlementDefinition) - Create new definition
+- [AddEntitlementInstance](AddEntitlementInstance) - Grant entitlement to organization

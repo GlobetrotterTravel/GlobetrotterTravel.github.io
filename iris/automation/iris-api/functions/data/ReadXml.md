@@ -170,6 +170,6 @@ Returns empty array when XPath matches no elements.
 
 ## Related Functions
 
-- [ReadCsv](ReadCsv.md) - Read CSV files
-- [ReadJson](ReadJson.md) - Read JSON files
-- [ReadExcel](ReadExcel.md) - Read Excel (.xlsx) files
+- [ReadCsv](ReadCsv) - Read CSV files
+- [ReadJson](ReadJson) - Read JSON files
+- [ReadExcel](ReadExcel) - Read Excel (.xlsx) files

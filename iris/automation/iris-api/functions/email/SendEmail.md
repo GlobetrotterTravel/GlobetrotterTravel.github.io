@@ -121,5 +121,5 @@ The email service must be configured with valid Postmark credentials in the appl
 
 ## Related Functions
 
-- [RenderTemplate](../templating/RenderTemplate.md) - Render email templates
-- [SendNotification](../notifications/SendNotification.md) - Send in-app notifications
+- [RenderTemplate](../templating/RenderTemplate) - Render email templates
+- [SendNotification](../notifications/SendNotification) - Send in-app notifications

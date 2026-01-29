@@ -26,8 +26,8 @@ This documentation covers the Jyro scripting API available in Iris for Event Hoo
 
 | Document | Description |
 |----------|-------------|
-| [Data Context Reference](data-context.md) | Structure of the `Data` object passed to scripts |
-| [Host Functions](functions/README.md) | All available host functions for interacting with Iris |
+| [Data Context Reference](data-context) | Structure of the `Data` object passed to scripts |
+| [Host Functions](functions/README) | All available host functions for interacting with Iris |
 
 ## Data Context
 
@@ -59,7 +59,7 @@ Data._payload = { "message": "Hello, " + Data.request.user.name }
 Data._statusCode = 200
 ```
 
-See the [Data Context Reference](data-context.md) for complete details.
+See the [Data Context Reference](data-context) for complete details.
 
 ## Quick Reference
 
@@ -81,7 +81,7 @@ See the [Data Context Reference](data-context.md) for complete details.
 | `SendNotification(userId, title, message, type, link)` | Send push notification |
 | `GetSecret(name)` | Get decrypted secret value |
 
-See [Host Functions](functions/README.md) for the complete list.
+See [Host Functions](functions/README) for the complete list.
 
 ## External Resources
 

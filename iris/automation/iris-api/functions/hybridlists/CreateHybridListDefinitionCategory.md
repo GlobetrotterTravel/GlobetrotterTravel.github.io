@@ -110,6 +110,6 @@ end
 
 ## Related Functions
 
-- [CreateHybridListDefinition](CreateHybridListDefinition.md) - Create the parent definition
-- [CreateHybridListDefinitionItem](CreateHybridListDefinitionItem.md) - Add items to categories
-- [GetAllHybridListDefinitions](GetAllHybridListDefinitions.md) - Get all definitions with categories
+- [CreateHybridListDefinition](CreateHybridListDefinition) - Create the parent definition
+- [CreateHybridListDefinitionItem](CreateHybridListDefinitionItem) - Add items to categories
+- [GetAllHybridListDefinitions](GetAllHybridListDefinitions) - Get all definitions with categories

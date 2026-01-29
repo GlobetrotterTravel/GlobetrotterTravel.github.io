@@ -164,7 +164,7 @@ end
 
 ## Related Functions
 
-- [GetCurrentUser](../context/GetCurrentUser.md) - Get current user info (name, principalId)
-- [GetPersonRoles](GetPersonRoles.md) - Get roles for any person by ID
-- [AssignRoleToPerson](AssignRoleToPerson.md) - Assign a role to a person
-- [RemoveRoleFromPerson](RemoveRoleFromPerson.md) - Remove a role from a person
+- [GetCurrentUser](../context/GetCurrentUser) - Get current user info (name, principalId)
+- [GetPersonRoles](GetPersonRoles) - Get roles for any person by ID
+- [AssignRoleToPerson](AssignRoleToPerson) - Assign a role to a person
+- [RemoveRoleFromPerson](RemoveRoleFromPerson) - Remove a role from a person
