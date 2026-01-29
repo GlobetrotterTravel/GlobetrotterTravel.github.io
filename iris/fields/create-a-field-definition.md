@@ -31,6 +31,6 @@ Populate details:
 
 ### Settings tab
 
-If this field should be bound to a set, then select it in the `Select Set Definition` dropdown. See the section on sets for more information.
+If this field should be bound to a set, then select it in the `Select Set Definition` dropdown. See the section on [sets](/iris/sets.md) for more information.
 
 Click `Save`. The field definition is created.
