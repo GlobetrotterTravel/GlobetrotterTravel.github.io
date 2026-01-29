@@ -1,11 +1,11 @@
 ---
 layout: default
-title: Home
+title: Homepage
 parent: Globetrotter Iris
 nav_order: 10
 has_children: true
 has_toc: false
-permalink: /iris/home/
+permalink: /iris/homepage/
 ---
 
 # Home
