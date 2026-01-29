@@ -81,6 +81,7 @@ var html = RenderTemplate("OrganizationList", data)
 
 Templates use Scriban syntax. Here's a quick reference:
 
+{% raw %}
 ```html
 <!-- Variable output -->
 <p>Hello, {{ person.firstName }}!</p>
@@ -103,6 +104,7 @@ Templates use Scriban syntax. Here's a quick reference:
 <p>{{ person.name | string.upcase }}</p>
 <p>{{ createdAt | date.to_string "%Y-%m-%d" }}</p>
 ```
+{% endraw %}
 
 ## Related Functions
 
