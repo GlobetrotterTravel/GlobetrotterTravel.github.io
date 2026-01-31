@@ -22,8 +22,17 @@ This is the Tenant Administrator's Guide and it contains the complete documentat
 
 ## In this guide
 
-- [Homepage](/iris/homepage/): Configure the Iris homepage
+### Using Iris
+
+- [Organizations](/iris/organizations/): Manage organizations and their resources
+- [People](/iris/people/): Manage people and their organization memberships
 - [Facets](/iris/facets/): Manage flexible data capture with facet definitions
-- [Sets](/iris/sets/): Create dynamic filters for organizations and people
 - [Fields](/iris/fields/): Capture transactional information for organizations
+- [Sets](/iris/sets/): Create dynamic filters for organizations and people
+- [Hybrid lists](/iris/hybrid-lists/): Globally-available categorised collections of items
+
+### Configuring Iris
+
+- [Homepage](/iris/homepage/): Configure the Iris homepage
 - [Automation](/iris/automation/): Workflow engine with event hooks, dynamic endpoints, and scripting
+

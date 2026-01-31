@@ -2,7 +2,7 @@
 layout: default
 title: Facets
 parent: Globetrotter Iris
-nav_order: 20
+nav_order: 30
 has_children: true
 has_toc: false
 permalink: /iris/facets/
@@ -60,6 +60,40 @@ For example, in the "Client user roles" tag, each client user entity can be asso
 
 Tags are optimal when there is a need to categorize entities or fields under multiple predefined labels. The ability to select multiple values from a list, as seen in the client user roles example, makes tags a versatile tool for detailed and flexible categorization.
 
+## Data classification for facets
+
+Each facet is given a classification to indicate the sensitivity of the data it stores. The classifications are:
+
+* Public
+* Internal
+* Confidential
+* PII
+
+Public facets store information that is already freely available or disclosed by either the client or the service provider. Since this information is non-PII, it can be accessed and shared with minimal restrictions. Examples include marketing materials, publicly available contact information, general product descriptions and the general configuration of a client's services.
+
+Internal facets store information that is not normally publicly disclosed, but would be not subject to restrictions within normal operating environments. Information such as configurations for operating procedures, server names, approval lists, lookup lists etc. where disclosure of the information by itself would not present great risk.
+
+Confidential facets store information that is not publicly available and is not disclosed by either the client or the service provider. Information that, if unauthorized access or disclosure occurs, could result in financial or reputational harm to the organization or its clients. These facets are restricted to users that belong to the service provider. Examples include client-specific service configurations, internal policies, business strategies, non-public financial information, client data not classified as PII but still PII.
+
+PII facets store highly PII information including Personally Identifiable Information (PII) or data whose unauthorized access could lead to serious legal, financial, reputational, or commercial consequences. These facets are restricted to users that belong to the service provider, and require a higher role to access. Examples include passport details and other government identifiers, credit card information, detailed personal profiles, legal documents, critical business secrets. Facets of type `Secret` are always classified as PII.
+
+PII refers any information relating to an identified or identifiable natural person. An identifiable natural person is one who can be identified, directly or indirectly, with any of the following:
+
+* Name
+* Identification number
+* Location coordinates
+* Online identifier
+* Other specific factors
+* Physical
+* Physiological
+* Genetic
+* Mental (psychological)
+* Economic
+* Cultural
+* Social identity
+
+
 ## In this section
 
 - [Create a facet definition](/iris/facets/create-a-facet-definition/): How to create a new facet definition
+- [Delete a facet definition](/iris/facets/delete-a-facet-definition/): How to delete a facet definition

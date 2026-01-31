@@ -2,7 +2,7 @@
 layout: default
 title: Automation
 parent: Globetrotter Iris
-nav_order: 50
+nav_order: 80
 has_children: true
 has_toc: false
 permalink: /iris/automation/
