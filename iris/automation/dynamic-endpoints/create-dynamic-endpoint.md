@@ -1,8 +1,8 @@
 ---
 layout: default
 title: Create a dynamic endpoint
-parent: Automation
-grand_parent: Globetrotter Iris
+parent: Dynamic endpoints
+grand_parent: Automation
 nav_order: 10
 permalink: /iris/automation/dynamic-endpoints/create-dynamic-endpoint/
 ---
