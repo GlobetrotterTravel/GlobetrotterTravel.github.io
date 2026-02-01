@@ -36,4 +36,5 @@ This is the Tenant Administrator's Guide and it contains the complete documentat
 
 - [Homepage](/iris/homepage/): Configure the Iris homepage
 - [Automation](/iris/automation/): Workflow engine with event hooks, dynamic endpoints, and scripting
+- [Secrets](/iris/secrets/): Securely store and manage credentials for scripts and automations
 
