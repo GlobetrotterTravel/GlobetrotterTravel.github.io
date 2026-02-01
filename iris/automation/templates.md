@@ -40,11 +40,14 @@ Scriban is a fast, lightweight templating language. It allows you to:
 ### Basic Scriban Syntax
 
 **Variable Output**:
+{% raw %}
 ```
 Hello, {{ name }}!
 ```
+{% endraw %}
 
 **Conditionals**:
+{% raw %}
 ```
 {{ if is_active }}
   Status: Active
@@ -52,20 +55,25 @@ Hello, {{ name }}!
   Status: Inactive
 {{ end }}
 ```
+{% endraw %}
 
 **Loops**:
+{% raw %}
 ```
 {{ for org in organizations }}
   - {{ org.name }} ({{ org.id }})
 {{ end }}
 ```
+{% endraw %}
 
 **Filters**:
+{% raw %}
 ```
 {{ name | upcase }}           <!-- JOHN SMITH -->
 {{ created_at | date.to_string "%Y-%m-%d" }}  <!-- 2024-01-15 -->
 {{ amount | math.round 2 }}   <!-- 99.99 -->
 ```
+{% endraw %}
 
 ### Using Templates in Scripts
 
@@ -93,6 +101,7 @@ SendEmail(
 ### Template Examples
 
 **Simple Greeting**:
+{% raw %}
 ```
 Hello {{ name }},
 
@@ -101,8 +110,10 @@ Welcome to {{ organization_name }}!
 Best regards,
 The Team
 ```
+{% endraw %}
 
 **With Conditionals**:
+{% raw %}
 ```
 Hello {{ name }},
 
@@ -121,8 +132,10 @@ Welcome back! Here's what's new since your last visit:
 Best regards,
 The Team
 ```
+{% endraw %}
 
 **Data Table**:
+{% raw %}
 ```
 Organization Report
 Generated: {{ generated_at | date.to_string "%Y-%m-%d %H:%M" }}
@@ -135,6 +148,7 @@ Generated: {{ generated_at | date.to_string "%Y-%m-%d %H:%M" }}
 
 Total: {{ organizations | array.size }} organizations
 ```
+{% endraw %}
 
 ## Email Templates
 
@@ -156,6 +170,7 @@ SendEmail(to, subject, htmlBody, textBody, tag)
 ### Creating an Email Template
 
 **Template** (name: "WelcomeEmail"):
+{% raw %}
 ```html
 <!DOCTYPE html>
 <html>
@@ -188,6 +203,7 @@ SendEmail(to, subject, htmlBody, textBody, tag)
 </body>
 </html>
 ```
+{% endraw %}
 
 **Script using the template**:
 ```jyro
@@ -236,11 +252,13 @@ Email clients have limited CSS support. Use inline styles:
 Test your emails in multiple clients (Gmail, Outlook, Apple Mail) before sending to users.
 
 **4. Include Unsubscribe Information**:
+{% raw %}
 ```html
 <p style="font-size: 10px;">
   You're receiving this because you have an account at {{ organization_name }}.
 </p>
 ```
+{% endraw %}
 
 ## Articles
 
@@ -308,6 +326,7 @@ Common categories to organize your articles:
 For complex article content, use Scriban templates:
 
 **Template** (name: "WelcomeArticle"):
+{% raw %}
 ```html
 <div class="welcome-article">
   <p>We're excited to welcome <strong>{{ org_name }}</strong> to our platform!</p>
@@ -326,6 +345,7 @@ For complex article content, use Scriban templates:
   <p>Please join us in welcoming them to the community!</p>
 </div>
 ```
+{% endraw %}
 
 **Script**:
 ```jyro
@@ -391,14 +411,17 @@ Deactivate templates that are no longer needed:
 
 ### Variables
 
+{% raw %}
 ```
 {{ variable_name }}
 {{ object.property }}
 {{ array[0] }}
 ```
+{% endraw %}
 
 ### Conditionals
 
+{% raw %}
 ```
 {{ if condition }}
   content
@@ -408,9 +431,11 @@ Deactivate templates that are no longer needed:
   default content
 {{ end }}
 ```
+{% endraw %}
 
 ### Loops
 
+{% raw %}
 ```
 {{ for item in collection }}
   {{ item.property }}
@@ -420,35 +445,40 @@ Deactivate templates that are no longer needed:
   First 5 items only
 {{ end }}
 ```
+{% endraw %}
 
 ### Built-in Filters
 
 | Filter | Example | Result |
 |--------|---------|--------|
-| `upcase` | `{{ "hello" \| upcase }}` | HELLO |
-| `downcase` | `{{ "HELLO" \| downcase }}` | hello |
-| `capitalize` | `{{ "hello world" \| capitalize }}` | Hello world |
-| `size` | `{{ items \| array.size }}` | 5 |
-| `first` | `{{ items \| array.first }}` | First item |
-| `last` | `{{ items \| array.last }}` | Last item |
-| `date.to_string` | `{{ date \| date.to_string "%Y-%m-%d" }}` | 2024-01-15 |
-| `math.round` | `{{ 3.14159 \| math.round 2 }}` | 3.14 |
+| `upcase` | {% raw %}`{{ "hello" | upcase }}`{% endraw %} | HELLO |
+| `downcase` | {% raw %}`{{ "HELLO" | downcase }}`{% endraw %} | hello |
+| `capitalize` | {% raw %}`{{ "hello world" | capitalize }}`{% endraw %} | Hello world |
+| `size` | {% raw %}`{{ items | array.size }}`{% endraw %} | 5 |
+| `first` | {% raw %}`{{ items | array.first }}`{% endraw %} | First item |
+| `last` | {% raw %}`{{ items | array.last }}`{% endraw %} | Last item |
+| `date.to_string` | {% raw %}`{{ date | date.to_string "%Y-%m-%d" }}`{% endraw %} | 2024-01-15 |
+| `math.round` | {% raw %}`{{ 3.14159 | math.round 2 }}`{% endraw %} | 3.14 |
 
 ### Comments
 
+{% raw %}
 ```
 {{# This is a comment and won't appear in output #}}
 ```
+{% endraw %}
 
 ### Whitespace Control
 
+{% raw %}
 ```
 {{~ variable ~}}   <!-- Trims whitespace on both sides -->
 {{- variable -}}   <!-- Removes newlines on both sides -->
 ```
+{% endraw %}
 
 ## Next Steps
 
-- [Event Hooks](event-hooks) - Use templates in event hooks
-- [Dynamic Endpoints](dynamic-endpoints) - Return rendered content from APIs
-- [Script Scheduling](script-scheduling) - Generate scheduled reports with templates
+- [Event Hooks](/iris/automation/event-hooks/) - Use templates in event hooks
+- [Dynamic Endpoints](/iris/automation/dynamic-endpoints/) - Return rendered content from APIs
+- [Script Scheduling](/iris/automation/script-scheduling/) - Generate scheduled reports with templates

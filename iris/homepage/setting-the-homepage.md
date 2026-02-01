@@ -131,6 +131,7 @@ Navigate to `Automation & Workflow` -> `Templates` and click `+ Create Template`
 
 Replace the script with this one.
 
+{% raw %}
 ```html
 <!DOCTYPE html>
 <html>
@@ -151,6 +152,7 @@ Replace the script with this one.
     </body>
 </html>
 ```
+{% endraw %}
 
 Navigate to `Home`. The dynamic homepage appears, showing the current user's name and live data from Iris.
 
@@ -163,7 +165,7 @@ The script builds a data model by calling Iris API functions. Any function avail
 - `GetCurrentUser()`, `GetCurrentTenant()` - Access context information
 - `InvokeRestMethod()` - Fetch real-time data from external APIs
 
-The data model is passed to `RenderTemplate()`, which renders the Scriban template. The template accesses model properties directly (e.g., `{{ user.name }}`) and can iterate over collections using `{{ for }}` loops.
+The data model is passed to `RenderTemplate()`, which renders the Scriban template. The template accesses model properties directly (e.g., {% raw %}`{{ user.name }}`{% endraw %}) and can iterate over collections using {% raw %}`{{ for }}`{% endraw %} loops.
 
 This pattern allows you to build dashboards that combine Iris data with information from CRM systems, support platforms, or any other API-accessible source.
 
