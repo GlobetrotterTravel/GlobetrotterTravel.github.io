@@ -1,26 +1,26 @@
 ---
 layout: default
-title: Configure organization hybrid list
+title: Configure organization hybrid lists
 parent: Organizations
 grand_parent: Globetrotter Iris
 nav_order: 40
-permalink: /iris/organizations/configure-organization-hybrid-list/
+permalink: /iris/organizations/configure-organization-hybrid-lists/
 ---
 
-# Configure organization hybrid list
+# Configure organization hybrid lists
 {: .no_toc }
 
 Organizations can have their own custom items in hybrid list categories, which combines conformity and flexibility across all organizations.
 
 ## Set up a new hybrid list instance
 
-1. Go to `Organizations`
-2. Locate the organization to which you would like to add a new hybrid list.
-3. In the `Actions` menu, click `Manage Hybrid Lists`. The `Hybrid Lists` page opens, and all defined hybrid lists are displayed.
+10. Go to `Organizations`
+20. Locate the organization to which you would like to add a new hybrid list.
+30. In the `Actions` menu, click `Manage Hybrid Lists`. The `Hybrid Lists` page opens, and all defined hybrid lists are displayed.
 
 > 🛈 Because all organizations inherit all shared hybrid lists, it is not possible to add or remove a hybrid list definition for a specific client. Instead, create a shared hybrid list definition and configure items on it using this article.
 
-4. Locate the `hybrid list` you want to customise for this `organization` and click `Edit`. The edit panel appears.
+40. Locate the `hybrid list` you want to customise for this `organization` and click `Edit`. The edit panel appears.
 
 ### Add a new custom item
 
