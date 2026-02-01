@@ -16,7 +16,7 @@ Organizations can have attached field instances which set up a structure for cap
 
 1. Go to `Organizations`
 2. Locate the organization to which you would like to add a new field instance.
-3. In the `Actions` menu, click `Manage Field Instances`. The `Field Instances` page opens.
+3. In the `Actions` column, click `Manage Field Instances`. The `Field Instances` page opens.
 4. Click `+ Add Field Instance` and select the `field definition` that the instance will be derived from.
 
 > 🛈 Each organization can have at most one field instance per field definition.

@@ -21,5 +21,5 @@ Additionally, Iris has a rich API of data manipulation functions that can be cal
 
 ## In this section
 
-- [Create a dynamic endpoint](/iris/automation/dynamic-endpoints/create-dynamic-endpoint/): How to create custom REST API endpoints
-- [Iris API](/iris/automation/iris-api/): Documentation for the Jyro scripting API
+- [Create a dynamic endpoint](/iris/automation/dynamic-endpoints/create-dynamic-endpoint/)
+- [Iris API](/iris/automation/iris-api/)

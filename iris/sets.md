@@ -45,5 +45,5 @@ For target type person:
 
 ## In this section
 
-- [Create a set definition](/iris/sets/create-a-set-definition/): How to create a new set definition
-- [Run a set definition](/iris/sets/run-a-set-definition/): How to run and use set definitions
+- [Create a set definition](/iris/sets/create-a-set-definition/)
+- [Run a set definition](/iris/sets/run-a-set-definition/)

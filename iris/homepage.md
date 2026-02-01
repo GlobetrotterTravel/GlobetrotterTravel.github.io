@@ -28,4 +28,4 @@ Apart from these requirements, the data and template can be of almost any config
 
 ## In this section
 
-- [Setting the homepage](/iris/home/setting-the-homepage/): How to configure a static or dynamic homepage
+- [Setting the homepage](/iris/home/setting-the-homepage/)

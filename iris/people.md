@@ -50,5 +50,5 @@ See the section on facets for more information.
 
 ## In this section
 
-- [Create a person](/iris/people/create-a-person/): How to create a new person
-- [Delete a person](/iris/people/delete-a-person/): How to delete a person
+- [Create a person](/iris/people/create-a-person/)
+- [Delete a person](/iris/people/delete-a-person/)

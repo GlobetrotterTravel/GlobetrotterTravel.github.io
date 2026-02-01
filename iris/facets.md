@@ -95,6 +95,6 @@ PII refers any information relating to an identified or identifiable natural per
 
 ## In this section
 
-- [Create a facet definition](/iris/facets/create-a-facet-definition/): How to create a new facet definition
-- [Pause or unpause a facet definition](/iris/facets/pause-unpause-a-facet-definition/): How to pause or unpause a facet definition
-- [Delete a facet definition](/iris/facets/delete-a-facet-definition/): How to delete a facet definition
+- [Create a facet definition](/iris/facets/create-a-facet-definition/)
+- [Pause or unpause a facet definition](/iris/facets/pause-unpause-a-facet-definition/)
+- [Delete a facet definition](/iris/facets/delete-a-facet-definition/)
