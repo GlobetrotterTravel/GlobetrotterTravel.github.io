@@ -62,3 +62,5 @@ This powerful behaviour enables automatic sync between an organization or person
 ## In this section
 
 - [Create a field definition](/iris/fields/create-a-field-definition/): How to create a new field definition
+- [Pause or unpause a field definition](/iris/fields/pause-unpause-a-field-definition/): How to pause or unpause a field definition
+- [Delete a field definition](/iris/fields/delete-a-field-definition/): How to delete a field definition

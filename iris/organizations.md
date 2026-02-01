@@ -63,7 +63,8 @@ Field instances are flexible, allowing modification of the field's label, descri
 
 ## In this section
 
-- [Create an organization](/iris/organizations/create-an-organization/): How to add a new organization
-- [Delete an organization](/iris/organizations/delete-an-organization/): How to delete an organization
-- [Manage field instances](/iris/organizations/manage-field-instances/): How to manage organization field instances
-- [Configure organization hybrid list](/iris/organizations/configure-organization-hybrid-list/): How to configure custom hybrid list items
+- [Create an organization](/iris/organizations/create-an-organization/)
+- [Delete an organization](/iris/organizations/delete-an-organization/)
+- [Manage field instances](/iris/organizations/manage-field-instances/)
+- [Configure organization hybrid list](/iris/organizations/configure-organization-hybrid-list/)
+- [Create an entitlement instance](/iris/organizations/create-entitlement-instance/)

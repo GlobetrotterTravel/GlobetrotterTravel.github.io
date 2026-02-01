@@ -30,6 +30,7 @@ This is the Tenant Administrator's Guide and it contains the complete documentat
 - [Fields](/iris/fields/): Capture transactional information for organizations
 - [Sets](/iris/sets/): Create dynamic filters for organizations and people
 - [Hybrid lists](/iris/hybrid-lists/): Globally-available categorised collections of items
+- [Entitlements](/iris/entitlements/): Track services and benefits assigned to organizations
 
 ### Configuring Iris
 
