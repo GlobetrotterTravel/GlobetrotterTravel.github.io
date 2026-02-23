@@ -22,17 +22,17 @@ The `Create New Dynamic Endpoint` panel appears.
 
 Populate the form:
 
-10. `HTTP Method`: GET, POST, PUT, PATCH, or DELETE
-20. `Name`: Friendly name of the endpoint
-30. `Path`: The URL path for the endpoint. All endpoints start with `/api/dynamic`. It's recommended that endpoints are versioned for maintainability, so start with `/vx/` and then the url (e.g., `v1/org-summary`)
-40. `Category`: When this endpoint is used for generating a report for an organization or person, select the appropriate group in this dropdown. Endpoints that belong to `Organization Report` or `Person Report` appear in the report menus for organizations and people respectively.
-50. `Description`: Describe what the endpoint does
-60. `Active`: Toggle this switch to enable or disable the endpoint.
+1. `HTTP Method`: GET, POST, PUT, PATCH, or DELETE
+2. `Name`: Friendly name of the endpoint
+3. `Path`: The URL path for the endpoint. All endpoints start with `/api/dynamic`. It's recommended that endpoints are versioned for maintainability, so start with `/vx/` and then the url (e.g., `v1/org-summary`)
+4. `Category`: When this endpoint is used for generating a report for an organization or person, select the appropriate group in this dropdown. Endpoints that belong to `Organization Report` or `Person Report` appear in the report menus for organizations and people respectively.
+5. `Description`: Describe what the endpoint does
+6. `Active`: Toggle this switch to enable or disable the endpoint.
 
 ## Authentication
 
-10. `Requires Authentication`: Whether callers must be authenticated
-30. `Add Role`: To restrict access to this endpoint to a list of roles, select each role that should be granted access and click `+ Add`. The role appears in the `Allowed Roles` section. To remove a lised role, click the `Trash Can` icon next to the role to remove.
+1. `Requires Authentication`: Whether callers must be authenticated
+3. `Add Role`: To restrict access to this endpoint to a list of roles, select each role that should be granted access and click `+ Add`. The role appears in the `Allowed Roles` section. To remove a lised role, click the `Trash Can` icon next to the role to remove.
 
 ## Script
 

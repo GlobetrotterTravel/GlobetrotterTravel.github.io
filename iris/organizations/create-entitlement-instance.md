@@ -16,13 +16,13 @@ Entitlements can automatically configure downstream systems to apply correct ser
 
 ## Create a new entitlement instance
 
-10. Go to `Organizations`
-20. Locate the organization to which you would like to add a new entitlement instance.
-30. Click the `Bell` icon to open the `Manage Entitlement Instances` page.
-40. Click `+ Add Entitlement Instance`. The `Select Entitlement Definition` page opens.
-50. In the `Entitlement Definition` dropdown, select the entitlement definition you want to use for this assignment. Click `Create Instance`.
-60. Set the `Start Date` and optional `End Date`. Leave `End Date` blank for a perpetual entitlement.
-70. Add `Notes` for this entitlement if required, e.g. "30 day trial".
+1. Go to `Organizations`
+2. Locate the organization to which you would like to add a new entitlement instance.
+3. Click the `Bell` icon to open the `Manage Entitlement Instances` page.
+4. Click `+ Add Entitlement Instance`. The `Select Entitlement Definition` page opens.
+5. In the `Entitlement Definition` dropdown, select the entitlement definition you want to use for this assignment. Click `Create Instance`.
+6. Set the `Start Date` and optional `End Date`. Leave `End Date` blank for a perpetual entitlement.
+7. Add `Notes` for this entitlement if required, e.g. "30 day trial".
 
 The rest of the tabs contain facets for this entitlement definition. Populate them to ensure that the entitlement instance is configured for this specific client.
 
