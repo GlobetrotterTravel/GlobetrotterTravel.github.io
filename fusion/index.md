@@ -18,7 +18,7 @@ With Globetrotter Fusion you can:
 * Automatically keep track of your travellers' locations
 * Insert invoicing data directly into your general ledger without the need to receive individual invoices
 * Use your own analytics platform to mashup your travel data with other data from your business operations
-* Make workflow decisions based on real-time travel information
+* Make workflow decisions based on travel information
 * Deliver your travel information to your third party partners as required.
 
 Globetrotter Fusion is:
@@ -31,7 +31,7 @@ Globetrotter Fusion is:
 
 The API is intended for use by technical system integrators who wish to connect their organisation's analytics, CRM, HR or operations platforms to Globetrotter. If you would prefer to see predefined charts and reports, you can access Globetrotter Insight instead. Contact your Client Relationship Manager (CRM) to get an account for Globetrotter Insight.
 
-Globetrotter Fusion is copyright (c) 2020-2024 Globetrotter. All rights reserved.
+Globetrotter Fusion is copyright (c) 2020-2026 Globetrotter. All rights reserved.
 
 ## Table of contents
 {: .no_toc }
@@ -41,7 +41,7 @@ Globetrotter Fusion is copyright (c) 2020-2024 Globetrotter. All rights reserved
 
 ## Document version
 
-This guide was last updated in May 2025.
+This guide was last updated in May 2026.
 
 ## Getting an account for Globetrotter Fusion
 
@@ -62,9 +62,13 @@ We can be contacted:
 
 The following conventions are used in this guide.
 
-> **🛈 Notes are denoted by the information icon, and provide tips and reminders that assist with using Fusion.**
+{: .note }
 
-> **⚠ Warnings are denoted by the alert icon. These notices should be read carefully. Failure to follow warning advice can result in security issues, data compromise or data loss.**
+Notes are denoted by the information icon, and provide tips and reminders that assist with using Fusion.
+
+{: .warning }
+
+Warnings are denoted by the alert icon. These notices should be read carefully. Failure to follow warning advice can result in security issues, data compromise or data loss.
 
 Keys, fields, values and other items that are displayed on screen are denoted like `this`.
 

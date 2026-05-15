@@ -25,13 +25,17 @@ Fusion uses TLS 1.3 with fallback to TLS 1.2 for all API communication. Unencryp
 
 Client systems should have certificate issuer verification enabled and verify that the certificate is issued to `fusion.globetrotter.com.au`. The server's certificate fingerprint is available from the IT team upon request.
 
-> **⚠ Never send your Credential information in cleartext**
+{: .warning }
+
+Never send your Credential information in cleartext
 
 ## Organisational scope
 
 All information that Globetrotter stores for a particular accounting entity (i.e. your client number) is available on Fusion when a valid credential is supplied. Potentially sensitive information, such as financial data for traveller, cost centre or department, is returned upon request. Technical integration teams should take care to implement appropriate segregation of client data inside the client system, as well as ensuring that only appropriate staff have access to Fusion.
 
-> **⚠ Your credential gives unfettered access to ALL information stored by Globetrotter for your organisation**
+{: .warning }
+
+Your credential gives unfettered access to ALL information stored by Globetrotter for your organisation
 
 Your CRM can advise if separate accounting entities are set up for your organisation.
 
