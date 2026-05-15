@@ -1,0 +1,791 @@
+{
+  "openapi": "3.0.3",
+  "info": {
+    "title": "Globetrotter Fusion Client API",
+    "version": "2.0.0",
+    "description": "Read-only API exposing the authenticated client's bookings and invoices,\neach enriched with the client's custom data fields.\n\n## Authentication\nEvery request must include an `X-API-Key` header carrying a per-client\nservice-account key issued by Globetrotter. The key identifies the\nclient; all results are filtered to that client server-side. There are\nno client-number query parameters \u2014 the key is the sole tenant\nidentifier.\n\n## Data freshness\nResponses are served from periodically refreshed snapshots of the\nGlobetrotter data warehouse. Snapshots typically lag the source system\nby hours \u2014 do not rely on this API for real-time data.\n\n## Query language\n\nBoth list endpoints accept four query parameters for server-side\nfiltering, sorting, and pagination. Each parameter may be supplied\nwith or without the leading `$` (`$filter` and `filter` are\nequivalent). When any query parameter is used, the response gains a\n`_meta` object alongside the data array.\n\n### `$filter`\n\nA boolean expression evaluated per row. The matching rows are returned.\n\n| Construct       | Form                                              | Example                                                      |\n|-----------------|---------------------------------------------------|--------------------------------------------------------------|\n| Comparison      | `field <op> <literal>` where `<op>` is one of `eq`, `ne`, `gt`, `ge`, `lt`, `le` | `bookingDate ge '2026-01-01'`                                |\n| Set membership  | `field in (v1, v2, ...)` / `field nin (v1, v2, ...)` | `lineType in ('FARE', 'TAX')`                                |\n| Logical         | `and`, `or`, `not`, parentheses                    | `isInternational eq true and isTicketed eq true`             |\n| String contains | `contains(field, 'value')`                        | `contains(originatingAgency, 'Globetrotter')`                |\n| String prefix   | `startswith(field, 'value')`                      | `startswith(recordLocator, 'FV')`                            |\n| String suffix   | `endswith(field, 'value')`                        | `endswith(invoiceNumber, '01')`                              |\n\n**Literals**\n\n- Strings: single-quoted, with `''` to escape an embedded quote: `'O''Brien'`\n- Numbers: `42`, `-3.14`, `1.5e-3`\n- Booleans: `true`, `false`\n- Null: `null` (use with `eq` / `ne`, e.g. `recordLocator ne null`)\n\n**Field paths**\n\nUse dotted notation for nested fields. Wrap labels containing spaces\nin `['...']`. Example: `customDataFields['Cost Centre'] eq '12345'`.\n\n### `$orderby`\n\nComma-separated list of `field [asc|desc]` clauses. Direction\ndefaults to `asc`. Sorting is stable across multiple clauses.\n\nExample: `$orderby=bookingDate desc, recordLocator asc`\n\n### `$page` and `$pageSize`\n\n1-based pagination. `$pageSize` defaults to 50 and is capped at 500.\nWhen either is supplied the response `_meta` carries `page`,\n`pageSize`, `total`, `totalPages`, and `filteredCount`.\n\n### Errors\n\nInvalid query syntax returns `400` with a body identifying the\noffending parameter, column, and message \u2014 see the `QueryError`\nschema.\n"
+  },
+  "servers": [
+    {
+      "url": "https://fusion.globetrotter.com.au",
+      "description": "Production"
+    }
+  ],
+  "security": [
+    {
+      "ApiKeyAuth": []
+    }
+  ],
+  "tags": [
+    {
+      "name": "Bookings"
+    },
+    {
+      "name": "Invoices"
+    },
+    {
+      "name": "Itineraries"
+    }
+  ],
+  "paths": {
+    "/api/v2/bookings": {
+      "get": {
+        "tags": [
+          "Bookings"
+        ],
+        "summary": "List bookings for the authenticated client",
+        "description": "Returns every booking belonging to the client identified by the\n`X-API-Key` header. Each booking is enriched with a\n`customDataFields` object whose keys are the client's configured\ndisplay labels.\n",
+        "operationId": "listBookings",
+        "responses": {
+          "200": {
+            "description": "Success.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BookingsResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid query parameter syntax.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/QueryError"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Missing or unrecognised API key.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/Filter"
+          },
+          {
+            "$ref": "#/components/parameters/OrderBy"
+          },
+          {
+            "$ref": "#/components/parameters/Page"
+          },
+          {
+            "$ref": "#/components/parameters/PageSize"
+          }
+        ]
+      }
+    },
+    "/api/v2/invoices": {
+      "get": {
+        "tags": [
+          "Invoices"
+        ],
+        "summary": "List invoices for the authenticated client",
+        "description": "Returns every invoice belonging to the client identified by the\n`X-API-Key` header. Each invoice carries its line items (sorted by\n`lineNumber` ascending) and a `customDataFields` object resolved\nfrom the related booking, if any.\n",
+        "operationId": "listInvoices",
+        "responses": {
+          "200": {
+            "description": "Success.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/InvoicesResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid query parameter syntax.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/QueryError"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Missing or unrecognised API key.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/Filter"
+          },
+          {
+            "$ref": "#/components/parameters/OrderBy"
+          },
+          {
+            "$ref": "#/components/parameters/Page"
+          },
+          {
+            "$ref": "#/components/parameters/PageSize"
+          }
+        ]
+      }
+    },
+    "/api/v2/itineraries": {
+      "get": {
+        "tags": [
+          "Itineraries"
+        ],
+        "summary": "List itineraries for the authenticated client",
+        "description": "Returns every booking belonging to the client identified by the `X-API-Key` header, each enriched with its travel segments (sorted by `segmentNumber` ascending) and a `customDataFields` object whose keys are the client's configured display labels.\n",
+        "operationId": "listItineraries",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/Filter"
+          },
+          {
+            "$ref": "#/components/parameters/OrderBy"
+          },
+          {
+            "$ref": "#/components/parameters/Page"
+          },
+          {
+            "$ref": "#/components/parameters/PageSize"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ItinerariesResponse"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid query parameter syntax.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/QueryError"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Missing or unrecognised API key.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "securitySchemes": {
+      "ApiKeyAuth": {
+        "type": "apiKey",
+        "in": "header",
+        "name": "X-API-Key",
+        "description": "Per-client service-account API key issued by Globetrotter."
+      }
+    },
+    "schemas": {
+      "BookingsResponse": {
+        "type": "object",
+        "required": [
+          "clientNumber",
+          "count",
+          "bookings"
+        ],
+        "properties": {
+          "clientNumber": {
+            "type": "string",
+            "description": "Client number resolved from the authenticated service account.",
+            "example": "C01869"
+          },
+          "count": {
+            "type": "integer",
+            "description": "Number of bookings returned in this response.",
+            "example": 2222
+          },
+          "bookings": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Booking"
+            }
+          },
+          "_meta": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/QueryMeta"
+              }
+            ],
+            "description": "Present only when a query parameter was supplied."
+          }
+        }
+      },
+      "Booking": {
+        "type": "object",
+        "required": [
+          "clientNumber",
+          "recordLocator",
+          "originatingAgency",
+          "bookingDate",
+          "modifiedAt",
+          "isTicketed",
+          "isInternational",
+          "tripStartLocal",
+          "tripEndLocal",
+          "customDataFields"
+        ],
+        "properties": {
+          "clientNumber": {
+            "type": "string",
+            "maxLength": 20,
+            "example": "C01869"
+          },
+          "recordLocator": {
+            "type": "string",
+            "maxLength": 6,
+            "description": "GDS/PNR record locator. Unique per booking.",
+            "example": "FV9T6B"
+          },
+          "originatingAgency": {
+            "type": "string",
+            "maxLength": 50,
+            "description": "Name of the agency that created the booking.",
+            "example": "Globetrotter"
+          },
+          "bookingDate": {
+            "type": "string",
+            "format": "date",
+            "description": "Date the booking was created.",
+            "example": "2026-02-05"
+          },
+          "modifiedAt": {
+            "type": "string",
+            "description": "Timestamp of the most recent modification, truncated to minute\nresolution. Format `YYYY-MM-DDTHH:MM` (no seconds, no timezone\nsuffix \u2014 interpret as the source system's local time).\n",
+            "pattern": "^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}$",
+            "example": "2026-02-05T01:31"
+          },
+          "isTicketed": {
+            "type": "boolean",
+            "description": "True when at least one segment of the booking has been ticketed."
+          },
+          "isInternational": {
+            "type": "boolean",
+            "description": "True when the trip crosses an international border."
+          },
+          "tripStartLocal": {
+            "type": "string",
+            "description": "Local-time start of the trip at the origin, minute resolution.\nFormat `YYYY-MM-DDTHH:MM`.\n",
+            "pattern": "^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}$",
+            "example": "2026-02-12T00:00"
+          },
+          "tripEndLocal": {
+            "type": "string",
+            "description": "Local-time end of the trip at the final destination, minute\nresolution. Format `YYYY-MM-DDTHH:MM`.\n",
+            "pattern": "^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}$",
+            "example": "2026-02-13T09:30"
+          },
+          "customDataFields": {
+            "$ref": "#/components/schemas/CustomDataFields"
+          }
+        }
+      },
+      "InvoicesResponse": {
+        "type": "object",
+        "required": [
+          "clientNumber",
+          "count",
+          "invoices"
+        ],
+        "properties": {
+          "clientNumber": {
+            "type": "string",
+            "example": "C01869"
+          },
+          "count": {
+            "type": "integer",
+            "example": 42
+          },
+          "invoices": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Invoice"
+            }
+          },
+          "_meta": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/QueryMeta"
+              }
+            ],
+            "description": "Present only when a query parameter was supplied."
+          }
+        }
+      },
+      "Invoice": {
+        "type": "object",
+        "required": [
+          "company",
+          "clientNumber",
+          "recordLocator",
+          "invoiceNumber",
+          "invoiceDate",
+          "paymentTermsCode",
+          "dueDate",
+          "obtSource",
+          "sourceTravelHeader",
+          "collectiveStatementNo",
+          "custLedgerEntryNo",
+          "lineItems",
+          "customDataFields"
+        ],
+        "properties": {
+          "company": {
+            "type": "string",
+            "maxLength": 30,
+            "description": "Issuing company entity. Invoice numbers may be reused across\ncompanies, so `(company, invoiceNumber)` is the composite\nidentity of an invoice.\n"
+          },
+          "clientNumber": {
+            "type": "string",
+            "maxLength": 20,
+            "example": "C01869"
+          },
+          "recordLocator": {
+            "type": "string",
+            "maxLength": 6,
+            "nullable": true,
+            "description": "Linked booking record locator. Null when the invoice does not\noriginate from a tracked booking.\n"
+          },
+          "invoiceNumber": {
+            "type": "string",
+            "maxLength": 20
+          },
+          "invoiceDate": {
+            "type": "string",
+            "format": "date",
+            "description": "Date the invoice was raised."
+          },
+          "paymentTermsCode": {
+            "type": "string",
+            "maxLength": 6,
+            "nullable": true
+          },
+          "dueDate": {
+            "type": "string",
+            "format": "date"
+          },
+          "obtSource": {
+            "type": "string",
+            "maxLength": 50,
+            "nullable": true,
+            "description": "Online Booking Tool source identifier, if the booking originated in one."
+          },
+          "sourceTravelHeader": {
+            "type": "string",
+            "maxLength": 50,
+            "nullable": true
+          },
+          "collectiveStatementNo": {
+            "type": "string",
+            "maxLength": 50,
+            "nullable": true
+          },
+          "custLedgerEntryNo": {
+            "type": "string",
+            "maxLength": 50,
+            "nullable": true
+          },
+          "lineItems": {
+            "type": "array",
+            "description": "Line items belonging to this invoice, sorted by `lineNumber` ascending.",
+            "items": {
+              "$ref": "#/components/schemas/InvoiceLineItem"
+            }
+          },
+          "customDataFields": {
+            "$ref": "#/components/schemas/CustomDataFields"
+          }
+        }
+      },
+      "InvoiceLineItem": {
+        "type": "object",
+        "required": [
+          "lineNumber",
+          "lineType",
+          "productCode",
+          "description",
+          "quantity",
+          "unitPrice",
+          "lineDiscountAmount",
+          "lineAmountExGst",
+          "lineAmountIncGst",
+          "gstPercent"
+        ],
+        "properties": {
+          "lineNumber": {
+            "type": "integer",
+            "description": "Position of this line within its invoice. Unique per invoice."
+          },
+          "lineType": {
+            "type": "string",
+            "maxLength": 20,
+            "description": "Category of the line (e.g. fare, fee, tax)."
+          },
+          "productCode": {
+            "type": "string",
+            "maxLength": 20,
+            "nullable": true
+          },
+          "description": {
+            "type": "string",
+            "maxLength": 100,
+            "nullable": true
+          },
+          "quantity": {
+            "type": "number",
+            "nullable": true,
+            "description": "Decimal quantity (up to 5 decimal places)."
+          },
+          "unitPrice": {
+            "type": "number",
+            "nullable": true,
+            "description": "Decimal price per unit (up to 5 decimal places)."
+          },
+          "lineDiscountAmount": {
+            "type": "number",
+            "nullable": true,
+            "description": "Discount applied to this line, in invoice currency."
+          },
+          "lineAmountExGst": {
+            "type": "number",
+            "nullable": true,
+            "description": "Line amount excluding GST."
+          },
+          "lineAmountIncGst": {
+            "type": "number",
+            "nullable": true,
+            "description": "Line amount including GST."
+          },
+          "gstPercent": {
+            "type": "number",
+            "nullable": true,
+            "description": "GST rate applied to this line, as a percentage (e.g. 10 for 10%)."
+          }
+        }
+      },
+      "CustomDataFields": {
+        "type": "object",
+        "description": "Client-defined custom data captured at booking time and carried\nthrough to any invoices generated from that booking.\n\nKeys are the client's configured display labels (e.g. \"Cost\nCentre\", \"Project Code\"). Values are the captured strings. Both\nthe set of keys and their wording are entirely client-specific \u2014\nan empty object means no custom data was captured for this record\n(or the client has none configured).\n\nEmpty-string values are omitted; absent keys mean the field was\neither blank or not configured.\n",
+        "additionalProperties": {
+          "type": "string"
+        },
+        "example": {
+          "Cost Centre": "12345",
+          "Department": "Engineering",
+          "Project Code": "PRJ-2026-014"
+        }
+      },
+      "Error": {
+        "type": "object",
+        "required": [
+          "error"
+        ],
+        "properties": {
+          "error": {
+            "type": "string",
+            "example": "Unauthenticated: no service account on request"
+          }
+        }
+      },
+      "QueryMeta": {
+        "type": "object",
+        "description": "Pagination / filtering metadata. Present on responses when at least one query parameter (`$filter`, `$orderby`, `$page`, `$pageSize`) was supplied.",
+        "properties": {
+          "page": {
+            "type": "integer",
+            "description": "Page number that was returned (1-based). Present only when paging was applied."
+          },
+          "pageSize": {
+            "type": "integer",
+            "description": "Page size used. Present only when paging was applied."
+          },
+          "total": {
+            "type": "integer",
+            "description": "Total rows after filtering, before paging."
+          },
+          "totalPages": {
+            "type": "integer",
+            "description": "Total pages available at the current `pageSize`. Present only when paging was applied."
+          },
+          "filteredCount": {
+            "type": "integer",
+            "description": "Same as `total`. Retained for compatibility."
+          }
+        }
+      },
+      "QueryError": {
+        "type": "object",
+        "description": "Returned when a query parameter fails to parse.",
+        "required": [
+          "error",
+          "message"
+        ],
+        "properties": {
+          "error": {
+            "type": "string",
+            "description": "Identifies the offending parameter.",
+            "example": "Invalid $filter"
+          },
+          "message": {
+            "type": "string",
+            "description": "Human-readable explanation.",
+            "example": "Expected comparison operator after field 'bookingDate' at column 13 but found 'foo'"
+          },
+          "parameter": {
+            "type": "string",
+            "example": "$filter"
+          },
+          "column": {
+            "type": "integer",
+            "description": "Zero-based column in the input where parsing failed."
+          },
+          "input": {
+            "type": "string",
+            "description": "The raw input string supplied for the parameter."
+          }
+        }
+      },
+      "ItinerariesResponse": {
+        "type": "object",
+        "required": [
+          "clientNumber",
+          "count",
+          "itineraries"
+        ],
+        "properties": {
+          "clientNumber": {
+            "type": "string",
+            "description": "Client number resolved from the authenticated service account.",
+            "example": "C01869"
+          },
+          "count": {
+            "type": "integer",
+            "description": "Number of itineraries returned in this response.",
+            "example": 2222
+          },
+          "itineraries": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Itinerary"
+            }
+          },
+          "_meta": {
+            "allOf": [
+              {
+                "$ref": "#/components/schemas/QueryMeta"
+              }
+            ],
+            "description": "Present only when a query parameter was supplied."
+          }
+        }
+      },
+      "Itinerary": {
+        "description": "A booking together with its ordered travel segments. All booking fields and the booking-level `customDataFields` apply unchanged; `segments` carries the per-leg detail.",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Booking"
+          },
+          {
+            "type": "object",
+            "required": [
+              "segments"
+            ],
+            "properties": {
+              "segments": {
+                "type": "array",
+                "description": "Travel segments for this booking, sorted by `segmentNumber` ascending.",
+                "items": {
+                  "$ref": "#/components/schemas/BookingSegment"
+                }
+              }
+            }
+          }
+        ]
+      },
+      "BookingSegment": {
+        "type": "object",
+        "description": "A single leg of a booking (a flight, hotel night, car-hire period, etc.).",
+        "required": [
+          "segmentNumber",
+          "segmentType",
+          "startLocal",
+          "endLocal",
+          "origin",
+          "destination",
+          "vendor",
+          "code",
+          "status"
+        ],
+        "properties": {
+          "segmentNumber": {
+            "type": "integer",
+            "description": "Position of this segment within its booking. Sort order key."
+          },
+          "segmentType": {
+            "type": "string",
+            "maxLength": 8,
+            "description": "Kind of segment (e.g. `AIR`, `HOTEL`, `CAR`, `RAIL`)."
+          },
+          "startLocal": {
+            "type": "string",
+            "nullable": true,
+            "description": "Local-time start of the segment at the origin, minute resolution. Format `YYYY-MM-DDTHH:MM`. Null if not known.",
+            "pattern": "^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}$",
+            "example": "2026-02-12T08:30"
+          },
+          "endLocal": {
+            "type": "string",
+            "nullable": true,
+            "description": "Local-time end of the segment at the destination, minute resolution. Format `YYYY-MM-DDTHH:MM`. Null if not known.",
+            "pattern": "^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}$",
+            "example": "2026-02-12T11:45"
+          },
+          "origin": {
+            "type": "string",
+            "maxLength": 3,
+            "nullable": true,
+            "description": "IATA city/airport code for the origin (3 chars), or null for non-spatial segments.",
+            "example": "PER"
+          },
+          "destination": {
+            "type": "string",
+            "maxLength": 3,
+            "nullable": true,
+            "description": "IATA city/airport code for the destination (3 chars), or null for non-spatial segments.",
+            "example": "SYD"
+          },
+          "vendor": {
+            "type": "string",
+            "maxLength": 2,
+            "nullable": true,
+            "description": "IATA carrier code or supplier identifier (2 chars).",
+            "example": "QF"
+          },
+          "code": {
+            "type": "string",
+            "maxLength": 50,
+            "nullable": true,
+            "description": "Segment-specific code (e.g. flight number, hotel property code, fare class)."
+          },
+          "status": {
+            "type": "string",
+            "maxLength": 2,
+            "nullable": true,
+            "description": "GDS status code (2 chars, e.g. `HK` confirmed, `XX` cancelled)."
+          }
+        }
+      }
+    },
+    "parameters": {
+      "Filter": {
+        "name": "$filter",
+        "in": "query",
+        "required": false,
+        "description": "Boolean expression for server-side filtering. See the **Query language** section of this document for the full grammar. Accepts `$filter` or `filter` (case-insensitive).",
+        "schema": {
+          "type": "string"
+        },
+        "examples": {
+          "equality": {
+            "summary": "Equality on a scalar field",
+            "value": "isInternational eq true"
+          },
+          "dateRange": {
+            "summary": "Date range with AND",
+            "value": "bookingDate ge '2026-01-01' and bookingDate lt '2026-04-01'"
+          },
+          "setMembership": {
+            "summary": "Set membership",
+            "value": "lineType in ('FARE', 'TAX')"
+          },
+          "stringFunction": {
+            "summary": "Substring match",
+            "value": "contains(originatingAgency, 'Globetrotter')"
+          },
+          "nestedField": {
+            "summary": "Custom data field with spaces",
+            "value": "customDataFields['Cost Centre'] eq '12345'"
+          },
+          "nullCheck": {
+            "summary": "Null check",
+            "value": "recordLocator ne null"
+          }
+        }
+      },
+      "OrderBy": {
+        "name": "$orderby",
+        "in": "query",
+        "required": false,
+        "description": "Comma-separated sort clauses, each `field [asc|desc]`. Direction defaults to `asc`. Multiple clauses are applied left-to-right (primary, secondary, ...).",
+        "schema": {
+          "type": "string"
+        },
+        "examples": {
+          "single": {
+            "summary": "Single field descending",
+            "value": "bookingDate desc"
+          },
+          "multi": {
+            "summary": "Two clauses",
+            "value": "invoiceDate desc, invoiceNumber asc"
+          }
+        }
+      },
+      "Page": {
+        "name": "$page",
+        "in": "query",
+        "required": false,
+        "description": "1-based page number. Defaults to 1.",
+        "schema": {
+          "type": "integer",
+          "minimum": 1,
+          "default": 1
+        },
+        "example": 1
+      },
+      "PageSize": {
+        "name": "$pageSize",
+        "in": "query",
+        "required": false,
+        "description": "Page size. Defaults to 50, hard-capped at 500.",
+        "schema": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 500,
+          "default": 50
+        },
+        "example": 50
+      }
+    }
+  }
+}

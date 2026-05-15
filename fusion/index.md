@@ -76,26 +76,15 @@ like this.
 
 The term *field* is used generally to refer to an individual piece of information, whereas *key* refers to a specific item within a JSON document.
 
-## Endpoints
+## In this guide
 
-The following endpoints are available:
+- [Getting ready to use Fusion](/fusion/getting-ready-to-use-fusion/): How Fusion is hosted, versioned and accessed.
+- [Authentication](/fusion/authentication/): How callers authenticate to Fusion using the `X-API-Key` header and service accounts.
+- [Querying](/fusion/querying/): Filtering, sorting and paginating list-shaped endpoint payloads.
+- [SharePoint setup](/fusion/sharepoint-setup/): Preparing a SharePoint site to receive invoices from Fusion.
 
-- [Bookings](/fusion/endpoints/bookings/): The `bookings` endpoint contains the trip file data for a single passenger name record (PNR). Each booking/PNR is uniquely identified by the `recordLocator` which is a 6 character alphanumeric string.
-- [Itineraries](/fusion/endpoints/itineraries/): The `itineraries` endpoint provides one or more machine readable itineraries including PNR information and subsequent segments.
-- [Invoices](/fusion/endpoints/invoices/): The `invoices` endpoint provides one or more machine readable invoices, including line item and payment information. These invoices can be imported directly into an ERP or accounting system to support seamless financial processes.
-- [Unused Tickets](/fusion/endpoints/unused-tickets/): The `unusedtickets` endpoint provides the unused tickets (aka "tickets in credit") for the current client. 
-- [Traveller Location](/fusion/endpoints/traveller-location/): The `traveller location` endpoint is designed to help you determine the possible locations of your travellers based on their planned itinerary segments.
+## API specification
 
-## Jump to
+The full OpenAPI 3.0 specification for Fusion is available for download. Use it to generate client libraries, import into tools such as Postman or Insomnia, or browse the complete schema for every endpoint.
 
-[Getting ready to use Fusion](/fusion/getting-ready-to-use-fusion/)
-
-[Certificate Authentication](/fusion/certificate-authentication/)
-
-[Pre-Shared Key Authentication](/fusion/pre-shared-key-authentication/)
-
-[The query engine](/fusion/the-query-engine/)
-
-[Pagination](/fusion/pagination/)
-
-[Fusion Swagger Documentation](/fusion/swagger/)
+[Download the Fusion OpenAPI specification (JSON)](/fusion/fusion-openapi.json){: .btn }

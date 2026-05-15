@@ -13,12 +13,6 @@ Fusion listens on `https://fusion.globetrotter.com.au` port `443` and the API is
 
 Unencrypted requests (i.e. `http`/port `80`) are not supported.
 
-A well-formed URI looks like this
-
-````url
-https://fusion.globetrotter.com.au/api/v1/invoices?query=totalAmount^GT1000;department^EQOperations;recordLocator^CTRX0
-````
-
 ## Table of contents
 {: .no_toc }
 
@@ -43,58 +37,38 @@ Your CRM can advise if separate accounting entities are set up for your organisa
 
 ## Versioning
 
-The latest supported version is v1, for example:
+The supported API version is v2, for example:
 
 ````url
-GET https://fusion.globetrotter.com.au/api/v1/invoices
+GET https://fusion.globetrotter.com.au/api/v2/invoices
 ````
 
 Versioning the API allows continual improvement of Fusion without introducing breaking changes. The previous version of a particular endpoint is supported for 12 months from the release of the next version of that endpoint, or 60 days after the last access of the previous version, whichever comes first. After this time, the endpoint is removed.
 
+
+
 ## Cache and refresh
 
-Fusion's cache refreshes every ten minutes. If you receive a `503 Temporarily Unavailable` error message it means that Fusion's cache is not ready to serve your records yet. Please try again in a few minutes.
+Fusion's cache refreshes periodically. If you receive a `503 Temporarily Unavailable` error message it means that Fusion's cache is not ready to serve your records yet. Please try again in a few minutes.
 
-Fusion will return transactional data with date ranges plus/minus 365 days from the current date. If information outside of this date range is required, you may be able to get it from Globetrotter Insight, or alternatively by contacting your CRM for a custom search. A fee applies.
+Fusion will return transactional data with date ranges plus/minus 365 days from the current date (depending on the type of record). If information outside of this date range is required, you may be able to get it from Globetrotter Insight, or alternatively by contacting your CRM for a custom search. A fee may apply.
 
 ## Accessing endpoints
-
-Fusion listens on `https://fusion.globetrotter.com.au` port `443` and the API is accessed through `/api/<version>/<endpoint>`
-
-Unencrypted requests (i.e. `http`/port `80`) are not supported.
-
-A well-formed URI looks like this
-
-````url
-https://fusion.globetrotter.com.au/api/v1/invoices?query=totalAmount^GT1000;department^EQOperations;recordLocator^CTRX0
-````
 
 To access an informational endpoint, carry out the following steps:
 
 1. Create a GET query
-2. Add your `clientId` header (see the section on [authentication](#authentication) )
-3. Add your `psk` header
-4. Determine the endpoint and version
-5. Add an optional `query` argument
-6. Set the `Content-Type` and `Accept` headers to `application/json`
-7. Send the query and listen for a response.
+2. Add your `X-API-Key` header (see [Authentication](/fusion/authentication/))
+3. Determine the endpoint and version
+4. Add any optional filters, sorting and pagination (see [Querying](/fusion/querying/))
+5. Set the `Content-Type` and `Accept` headers to `application/json`
+6. Send the query and listen for a response.
 
 ## Endpoint responses
 
 Fusion sends responses in JSON format.
 
-Each document is prefixed by a result key that contains an array of objects representing the records returned:
-
-````json
-{
-  "result":
-            [
-              {...
-````
-
-To access individual results, deserialise the JSON and use `result[n].key...`
-
-See the later sections of this guide for the complete endpoint documentation.
+To access individual results, deserialise the JSON and step through the array of objects.
 
 Dates returned by Fusion are formatted in ISO8601 format: **YYYY-MM-DD** while times are formatted **hh:mm**. Datetimes are formatted **YYYY-MM-DDThh:mm**. Dates and times are in the time zone specified.
 
@@ -138,20 +112,20 @@ as opposed to
 
 ## How Globetrotter stores custom data
 
-Globetrotter provides eight `standard fields` for client custom data to be stored with each booking. The standard fields are:
+Globetrotter provides eleven `standard fields` for client custom data to be stored with each booking. The standard fields are:
 
 |Field|Data Type|Intended Purpose|
 |---|---|---|
-|department|string (30)|The department the booking is billed to|
-|employeeId|string (50)|Traveller's client employee number or client unique identifier|
+|department|string (50)|The department the booking is billed to|
 |costCentre|string (50)|The cost centre against which this booking is charged|
+|projectCode|string (50)|The project code against which this booking is charged|
+|reasonForTravel|string (50)|The reason that the travel was requested|
 |purchaseOrder|string (50)|The purchase order for the booking|
-|bookedBy|string (50)|The person who booked this travel|
-|authorisedBy|string (50)|The person who authorised this travel|
+|coordinator|string (50)|The person who booked this travel|
+|authoriser|string (50)|The person who authorised this travel|
 |customData1|string (50)|Client-specified custom data field 1|
 |customData2|string (50)|Client-specified custom data field 2|
+|customText1|string (50)|Client-specified custom text field 1|
+|customText2|string (50)|Client-specified custom text field 2|
 
-These standard fields capture information that most clients want to record against their bookings. However, it is important to note that organisations do not have to use the fields for their intended purpose. Because all `standard fields` store `String` data, your organisation may use any of these fields for a different purpose. Speak to your CRM for details.
-
-`customData1` and `customData2` are provided as unspecified-purpose fields for client convenience.
-
+These standard fields capture information that most clients want to record against their bookings. However, it is important to note that clients do not have to use the fields for their intended purpose. Because all `standard fields` store `String` data, your organisation may use any of these fields for a different purpose. Speak to your CRM for details.

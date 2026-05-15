@@ -1,12 +1,12 @@
 ---
 layout: default
+title: SharePoint setup
 parent: Globetrotter Fusion
-title: SharePoint Setup
-nav_order: 60
+nav_order: 40
 permalink: /fusion/sharepoint-setup/
 ---
 
-# SharePoint Setup
+# SharePoint setup
 {: .no_toc }
 
 Fusion can send invoices to Microsoft SharePoint document folders, tagging each PDF with is custom data. 
