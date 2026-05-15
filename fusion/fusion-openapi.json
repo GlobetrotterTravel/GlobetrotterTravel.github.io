@@ -25,6 +25,10 @@
     },
     {
       "name": "Itineraries"
+    },
+    {
+      "name": "Service Account",
+      "description": "Self-service management of the caller's own service account."
     }
   ],
   "paths": {
@@ -138,6 +142,38 @@
             "$ref": "#/components/parameters/PageSize"
           }
         ]
+      }
+    },
+    "/api/v2/service-accounts/me/rotate-api-key": {
+      "post": {
+        "tags": [
+          "Service Account"
+        ],
+        "summary": "Rotate the caller's own API key",
+        "description": "Generates a new API key for the service account that authenticated\nthe request and replaces the existing key in a single operation.\nThe new key is returned in the response body.\n\nThe old key is invalidated immediately on success — the *current*\nrequest still completes (authentication happened before the\nrotation), but every subsequent request must use the new key.\nStore the response securely; the new key is shown once and cannot\nbe retrieved later.\n\nThe target service account is derived entirely from the\n`X-API-Key` header. There is no request body and no path or query\nparameter identifying the account.\n",
+        "operationId": "rotateOwnApiKey",
+        "responses": {
+          "200": {
+            "description": "Key rotated. The body carries the new plaintext key.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/RotateApiKeyResponse"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Missing or unrecognised API key.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Error"
+                }
+              }
+            }
+          }
+        }
       }
     },
     "/api/v2/itineraries": {
@@ -631,6 +667,40 @@
             }
           }
         ]
+      },
+      "RotateApiKeyResponse": {
+        "type": "object",
+        "description": "Result of a successful self-service API key rotation. The `apiKey`\nfield is the new plaintext key and replaces the value used to\nauthenticate this request.\n",
+        "required": [
+          "id",
+          "name",
+          "apiKey",
+          "rotatedAt"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "format": "uuid",
+            "description": "Stable identifier of the rotated service account.",
+            "example": "f3c5d8a4-7e2b-4c91-b6f0-1d2e3a4b5c6d"
+          },
+          "name": {
+            "type": "string",
+            "description": "Display name of the service account.",
+            "example": "Acme Corp – production"
+          },
+          "apiKey": {
+            "type": "string",
+            "description": "The newly generated API key, base64-encoded (64 characters from 48 bytes of cryptographic randomness). Treat as a secret — it cannot be retrieved later.",
+            "example": "qf3p1c0Lz5y8Wn6Tj2Rh7Vk4Mb9Sg1Xa8Dc7Fe2Nq5Up0Ji3Yo6Lr4Hd9Bv1Sx2A=="
+          },
+          "rotatedAt": {
+            "type": "string",
+            "format": "date-time",
+            "description": "Server timestamp when the rotation was persisted (RFC 3339 with offset).",
+            "example": "2026-05-16T14:32:07+10:00"
+          }
+        }
       },
       "BookingSegment": {
         "type": "object",
