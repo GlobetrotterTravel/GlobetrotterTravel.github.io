@@ -52,6 +52,7 @@ Ensure that you have administration rights to your SharePoint instance.
 6. **Immediately copy the secret value** - it will not be shown again
 
 {: .warning }
+
 Store the client secret securely. You'll need to provide it to the Globetrotter IT team, and it cannot be retrieved from Azure after leaving this page.
 
 ### Step 4: Configure API Permissions
@@ -68,6 +69,7 @@ Store the client secret securely. You'll need to provide it to the Globetrotter 
 8. Confirm by clicking **Yes**
 
 {: .note }
+
 The permissions will show a green checkmark when admin consent has been granted successfully.
 
 ### Step 5: Prepare Your SharePoint Site
@@ -93,11 +95,11 @@ Once you've completed the setup, provide the following information to the Globet
 | **Target Folder** | (Optional) Specific folder within the library | `Vendor Invoices/Fusion` |
 
 {: .warning }
-**Security Note**: Transmit the client secret securely (encrypted email, secure portal, or phone call). Do not send it in plain text email.
+Transmit the client secret securely (encrypted email, secure portal, or phone call). Do not send it in plain text email.
 
 ## Folder Structure and File Naming
 
-Fusion will organize uploaded invoices using the following structure:
+Fusion will organize uploaded invoices using the format you specify. The following structure is typical:
 
 ```
 📁 [Document Library]
@@ -108,10 +110,55 @@ Fusion will organize uploaded invoices using the following structure:
         📄 20250116_091500_Invoice_12346.pdf
 ```
 
-Files are named with:
-- **Timestamp**: When the invoice was processed
-- **Invoice Reference**: Extracted from the original filename or email subject
-- **Original Extension**: Typically `.pdf`
+Files are also named with the the pattern you specify.
+
+### Available placeholder fields
+
+The following placeholder fields can be used in your filename pattern and are also populated as SharePoint columns on each uploaded file.
+
+#### Client info
+
+| Placeholder | Description | SharePoint column |
+|---|---|---|
+| `clientNumber` | Client number from filename | Client Number |
+| `clientName` | Organization name (entitlement) | Client Name |
+
+#### Date components
+
+Derived from the Dynamics invoice date.
+
+| Placeholder | Description | Example | SharePoint column |
+|---|---|---|---|
+| `invoiceYear4` | 4-digit year | `2025` | Invoice Year |
+| `invoiceYear2` | 2-digit year | `25` | Invoice Year Short |
+| `invoiceMonth2` | 2-digit month | `01` | Invoice Month |
+| `invoiceMonthName` | Full month name | `January` | Invoice Month Name |
+| `invoiceDay2` | 2-digit day | `30` | Invoice Day |
+| `invoiceDate` | Full date | `2025-01-30` | Invoice Date |
+
+#### Dynamics invoice fields
+
+| Placeholder | SharePoint column |
+|---|---|
+| `invoiceNumber` | Invoice Number |
+| `totalAmountExcludingTax` | Total Amount Excl. |
+| `totalTaxAmount` | Total Tax Amount |
+| `totalAmountIncludingTax` | Total Amount Incl. |
+
+#### Standard PDF fields
+
+Extracted automatically from each invoice PDF.
+
+| Placeholder | Example | SharePoint column |
+|---|---|---|
+| `recordLocator` | `DSJ4NZ` | Record Locator |
+| `bookingType` | `Offline`, `Online` | Booking Type |
+
+#### Custom data fields
+
+Client-specific custom data field values can be placed directly in folders, filenames or SharePoint metadata columns.
+
+The exact set of custom data fields available depends on your configuration. Speak to your CRM for the full list.
 
 ## Ongoing Maintenance
 
