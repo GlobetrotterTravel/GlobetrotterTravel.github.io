@@ -21,6 +21,10 @@ With Globetrotter Fusion you can:
 * Make workflow decisions based on travel information
 * Deliver your travel information to your third party partners as required.
 
+{: .warning }
+
+Fusion is **not** a safety-critical system. It does not provide real-time data and should not be relied upon for traveller safety or other critical processes. Please speak to your CRM about options for traveller safety services.
+
 Globetrotter Fusion is:
 
 * **Fast**: The lightweight API transfers information immediately, doing away with old Excel files and slow emails

@@ -49,11 +49,13 @@ GET https://fusion.globetrotter.com.au/api/v2/invoices
 
 Versioning the API allows continual improvement of Fusion without introducing breaking changes. The previous version of a particular endpoint is supported for 12 months from the release of the next version of that endpoint, or 60 days after the last access of the previous version, whichever comes first. After this time, the endpoint is removed.
 
-
-
 ## Cache and refresh
 
 Fusion's cache refreshes periodically. If you receive a `503 Temporarily Unavailable` error message it means that Fusion's cache is not ready to serve your records yet. Please try again in a few minutes.
+
+{: .warning }
+
+Fusion's data is refreshed multiple times per day on schedule. The data is not real-time. Fusion's dataset may lag source systems by a few hours at any one time.
 
 Fusion will return transactional data with date ranges plus/minus 365 days from the current date (depending on the type of record). If information outside of this date range is required, you may be able to get it from Globetrotter Insight, or alternatively by contacting your CRM for a custom search. A fee may apply.
 
