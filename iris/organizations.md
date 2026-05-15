@@ -27,7 +27,7 @@ Organizations can be assigned the following resources:
 
 Each organization is identified by a unique **Organization Number** and a unique **Organization Name**, which is normally the organization's trading name. An optional **Description** can provide additional context about the organization.
 
-Organizations can be arranged hierarchically by specifying a **Parent Organization**, allowing you to model corporate structures and relationships. The **Hybrid List Item Policy** controls how the organization's custom hybrid lists interact with global lists—either `Replace` to override global items entirely, or `Extend` to add to them.
+Organizations can be arranged hierarchically by specifying a **Parent Organization**, allowing you to model corporate structures and relationships. The **Hybrid List Item Policy** controls how the organization's custom hybrid lists interact with global lists-either `Replace` to override global items entirely, or `Extend` to add to them.
 
 ## Inheritence
 

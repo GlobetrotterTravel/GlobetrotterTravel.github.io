@@ -9,7 +9,7 @@ permalink: /fusion/authentication/
 # Authentication
 {: .no_toc }
 
-Fusion authenticates callers using an API key carried in the `X-API-Key` HTTP request header. Each key is bound to a **service account** — a named identity managed within Fusion — and confers the access granted to that account.
+Fusion authenticates callers using an API key carried in the `X-API-Key` HTTP request header. Each key is bound to a **service account** - a named identity managed within Fusion - and confers the access granted to that account.
 
 ## Table of contents
 {: .no_toc }

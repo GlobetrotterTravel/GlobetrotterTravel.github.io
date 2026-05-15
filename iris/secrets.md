@@ -15,7 +15,7 @@ Secrets provide a secure way to store sensitive information such as API keys, pa
 
 ## How secrets work
 
-Secrets are stored securely and can only be accessed programmatically through the Iris API. When you create a secret, the value is encrypted and cannot be retrieved through the user interface—only scripts running within Iris can read secret values using the `GetSecret()` function.
+Secrets are stored securely and can only be accessed programmatically through the Iris API. When you create a secret, the value is encrypted and cannot be retrieved through the user interface-only scripts running within Iris can read secret values using the `GetSecret()` function.
 
 Each secret has a unique name that serves as its identifier. Scripts reference secrets by name, allowing you to update credential values without modifying your code. This separation between the secret reference and its value makes it straightforward to rotate credentials or update configurations across all dependent scripts simultaneously.
 

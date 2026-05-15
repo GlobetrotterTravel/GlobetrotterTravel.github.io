@@ -69,7 +69,7 @@ When a path segment resolves to a missing key or to `null`, the entire reference
 
 | Kind | Form |
 |---|---|
-| String | `'text'` — single-quoted; a single quote is escaped by doubling it (`'don''t'`). |
+| String | `'text'` - single-quoted; a single quote is escaped by doubling it (`'don''t'`). |
 | Number | Integer, decimal, or scientific notation (e.g. `42`, `-3.14`, `1.5e-2`). A leading minus sign is permitted. |
 | Boolean | `true` or `false` (case-insensitive). |
 | Null | `null` (case-insensitive). |
@@ -121,9 +121,9 @@ All three functions perform case-insensitive ordinal matching. The second argume
 
 | Operator | Precedence |
 |---|---|
-| `not` | Highest — applies to the immediately following expression. |
-| `and` | Middle — left-associative. |
-| `or` | Lowest — left-associative. |
+| `not` | Highest - applies to the immediately following expression. |
+| `and` | Middle - left-associative. |
+| `or` | Lowest - left-associative. |
 
 Parentheses may be used to override precedence and to group sub-expressions. Logical operator keywords are case-insensitive.
 
@@ -183,7 +183,7 @@ When the query is applied to an array inside an object payload, a `_meta` proper
 
 If the payload is itself an array (rather than an object containing an array), no metadata is attached. Callers that need result counts in that case should request paging, which forces the response shape to include metadata when supported by the endpoint, or rely on the array length.
 
-If neither filtering nor paging is applied — for example, when only `orderby` is supplied — no `_meta` property is added.
+If neither filtering nor paging is applied - for example, when only `orderby` is supplied - no `_meta` property is added.
 
 ## Errors
 

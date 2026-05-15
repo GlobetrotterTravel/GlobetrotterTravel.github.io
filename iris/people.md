@@ -28,7 +28,7 @@ Each person is identified by the following properties:
 
 ## Organization membership
 
-People must belong to at least one organization, but can be members of multiple organizations simultaneously. This flexibility allows you to model scenarios where individuals have relationships with several entities—for example, a consultant who works with multiple clients, or an employee who belongs to both a parent company and a subsidiary.
+People must belong to at least one organization, but can be members of multiple organizations simultaneously. This flexibility allows you to model scenarios where individuals have relationships with several entities-for example, a consultant who works with multiple clients, or an employee who belongs to both a parent company and a subsidiary.
 
 Organization membership determines which people appear in organization-scoped views and influences the results of person-based sets.
 
