@@ -713,8 +713,7 @@
           "origin",
           "destination",
           "vendor",
-          "code",
-          "status"
+          "code"
         ],
         "properties": {
           "segmentNumber": {
@@ -766,12 +765,6 @@
             "maxLength": 50,
             "nullable": true,
             "description": "Segment-specific code (e.g. flight number, hotel property code, fare class)."
-          },
-          "status": {
-            "type": "string",
-            "maxLength": 2,
-            "nullable": true,
-            "description": "GDS status code (2 chars, e.g. `HK` confirmed, `XX` cancelled)."
           }
         }
       }
