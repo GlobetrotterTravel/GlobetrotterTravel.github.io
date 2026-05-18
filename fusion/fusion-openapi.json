@@ -247,7 +247,6 @@
         "type": "object",
         "required": [
           "clientNumber",
-          "count",
           "bookings"
         ],
         "properties": {
@@ -255,11 +254,6 @@
             "type": "string",
             "description": "Client number resolved from the authenticated service account.",
             "example": "C01869"
-          },
-          "count": {
-            "type": "integer",
-            "description": "Number of bookings returned in this response.",
-            "example": 2222
           },
           "bookings": {
             "type": "array",
@@ -350,17 +344,12 @@
         "type": "object",
         "required": [
           "clientNumber",
-          "count",
           "invoices"
         ],
         "properties": {
           "clientNumber": {
             "type": "string",
             "example": "C01869"
-          },
-          "count": {
-            "type": "integer",
-            "example": 42
           },
           "invoices": {
             "type": "array",
@@ -615,7 +604,6 @@
         "type": "object",
         "required": [
           "clientNumber",
-          "count",
           "itineraries"
         ],
         "properties": {
@@ -623,11 +611,6 @@
             "type": "string",
             "description": "Client number resolved from the authenticated service account.",
             "example": "C01869"
-          },
-          "count": {
-            "type": "integer",
-            "description": "Number of itineraries returned in this response.",
-            "example": 2222
           },
           "itineraries": {
             "type": "array",

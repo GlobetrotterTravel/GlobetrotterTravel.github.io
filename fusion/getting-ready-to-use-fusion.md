@@ -47,7 +47,7 @@ The supported API version is v2, for example:
 GET https://fusion.globetrotter.com.au/api/v2/invoices
 ````
 
-Versioning the API allows continual improvement of Fusion without introducing breaking changes. The previous version of a particular endpoint is supported for 12 months from the release of the next version of that endpoint, or 60 days after the last access of the previous version, whichever comes first. After this time, the endpoint is removed.
+Versioning lets us improve Fusion without introducing breaking changes. When we publish a new version of an endpoint, the previous version remains available for at least 12 months - or until the previous version has not been accessed for 60 days, whichever comes first. After that, the older version is withdrawn. We may also withdraw endpoints that have not been meaningfully used for 60 days.
 
 ## Cache and refresh
 

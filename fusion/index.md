@@ -15,7 +15,6 @@ Use Globetrotter Fusion to easily query your data to gain even more insight into
 With Globetrotter Fusion you can:
 
 * Electronically check booking status and other information from your ERP without using flat files
-* Automatically keep track of your travellers' locations
 * Insert invoicing data directly into your general ledger without the need to receive individual invoices
 * Use your own analytics platform to mashup your travel data with other data from your business operations
 * Make workflow decisions based on travel information
