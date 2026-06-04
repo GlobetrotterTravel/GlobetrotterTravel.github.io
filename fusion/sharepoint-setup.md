@@ -9,7 +9,7 @@ permalink: /fusion/sharepoint-setup/
 # SharePoint setup
 {: .no_toc }
 
-Fusion can send invoices to Microsoft SharePoint document folders, tagging each PDF with is custom data. 
+Fusion can send invoices to Microsoft SharePoint document folders, tagging each PDF with its custom data. 
 
 This section is intended for client system administrators to properly prepare their SharePoint sites to receive invoices from Fusion.
 
