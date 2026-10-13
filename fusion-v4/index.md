@@ -8,6 +8,9 @@ permalink: /fusion-v4/
 # Globetrotter Fusion 4
 {: .no_toc }
 
+{: .note }
+Fusion version 4 is pre-release software.
+
 Globetrotter Fusion is Globetrotter's client-facing REST API platform.
 
 Use Globetrotter Fusion to query your data and gain more insight into your travel programme. Access your information on demand, 24 hours a day.

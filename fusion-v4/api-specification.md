@@ -91,16 +91,3 @@ Most OpenAPI 3.1 tools can generate a client library from the specification, for
 
 Import the downloaded `fusion-openapi.json` file. Then set the `X-API-Key` header, or an API key authorisation, on the collection, so that every request sends it.
 
-## Keeping up to date
-
-Globetrotter may add endpoints, and change an endpoint's request or response schema, for example to add a key. To find out when an endpoint you use has changed:
-
-1. Keep the copy of the specification your integration was built from.
-2. Download the specification regularly, for example in a scheduled job or before each release of your system.
-3. Compare the two, looking at the `paths` your system calls and the schemas they use.
-
-If a change affects your integration, contact Globetrotter before changing your system, so that we can agree when to make the change.
-
-{: .note }
-
-Download the specification for reading, not on every request: it is built afresh each time, so it is slower than an ordinary endpoint.
